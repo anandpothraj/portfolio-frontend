@@ -1,0 +1,37 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-btn{
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    background-color: #6fc2c5;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+}
+
+.top-btn-icon{
+    font-size: 25px;
+    color: black;
+    animation: goToTop 1.2s linear infinite alternate-reverse;
+}
+
+@keyframes goToTop {
+    0% {
+        transform: translateY(-0.5rem);
+    }
+    100%{
+        transform: translateY(1rem);
+    }
+}

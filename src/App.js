@@ -11,11 +11,13 @@ import Privacy from './pages/Privacy';
 import Feedback from './pages/Feedback';
 import Projects from './pages/Projects';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import GoToTop from './components/GoToTop/GoToTop';
 
 
 const App = () => {
   return (
     <Router>
+        <GoToTop/>
         <Header/>
         <div className="bg-dark p-1">
         <Routes>
