@@ -1,0 +1,9 @@
+{
+    "url": {
+        "production": "https://backend-portfolio-anand.onrender.com/",
+        "development": "http://localhost:6678/"
+    },
+    "api": {
+        "SEND_MESSAGE": "api/contact/sendMessage"
+    }
+}

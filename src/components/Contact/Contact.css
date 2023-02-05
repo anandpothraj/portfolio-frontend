@@ -1,0 +1,18 @@
+.contactBg{
+    background-color:#486074;
+}
+.twitterId{
+    color:#ff5403;
+}
+.twitterId:hover{
+    color:#ca6434;
+}
+.flexColumn{
+    flex-direction: row !important;
+}
+
+@media screen and (max-width: 1100px) {
+    .flexColumn{
+        flex-direction: column !important;
+    }
+}
