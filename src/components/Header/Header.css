@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+
+.brandDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 50em; */
+}
+
+.line {
+  font-family: 'Wendy One', sans-serif;
+  color:  #FFA01B;
+  cursor: pointer;
+  position: relative;
+  text-shadow:
+    -2px 4px 0 #E8476A,
+    -2px 8px 0 purple;
+    font-size: 40px;
+}
+
+.line:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0px;
+  left: -4px;
+  transform: scaleX(0);
+  box-shadow:
+     0 5px 0 #E8476A,
+    0 10px 0 purple;
+  background: #FFA01B ;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.line:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

@@ -1,0 +1,146 @@
+.primaryOrange{
+    color:#ff5403;
+}
+.primaryBlue{
+    color:#84a1ff;
+}
+.primaryGreen{
+    color:rgb(106, 225, 106);
+}
+.primaryLightBlue{
+    color:#6fc2c5;
+}
+.interestedBg{
+    background-color: #cd921e !important;
+}
+.hireText{
+    color:#6fc2c5;
+}
+.projectCardBg{
+    background-color: #212529;
+}
+.testBg{
+    background-color: #FA8BFF;
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+}
+.knowMore{
+    font-size: 18px;
+}
+.follow{
+    margin-right: 5px;
+}
+.logo{
+    font-size: 25px;
+}
+.border-none{
+    border: none !important;
+}
+.socialIcon{
+    font-size : 25px !important;
+    color : white;
+    cursor: pointer;
+}
+.emailBtn{
+    color: black !important;
+    background-color: #84a1ff !important;
+    border: 2px solid #84a1ff !important;
+}
+.resumeBtn{
+    color: black !important;
+    background-color: #ff5403 !important;
+    border: 2px solid #ff5403 !important;
+}
+.seeMoreBtn{
+    background-color:transparent !important;
+    border: 2px solid white !important;
+}
+.testimonialImage{
+    width: 25% !important;
+}
+
+/* Css for testimonial section */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #212529;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 40px;
+    color: #000;
+    background: rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+    border: 3px solid white;
+    padding: 5px;
+}
+.swiper-pagination-bullet-active {
+    color: #fff !important;
+    background: white !important; 
+}
+
+.socialIcon:hover{
+    color: rgb(48, 144, 147);
+}
+.emailBtn:hover{
+    border: 2px solid #84a1ff !important;
+    background-color: transparent !important;
+    color: #7e9cfd !important;
+}
+.resumeBtn:hover{
+    border: 2px solid #ff5403 !important;
+    background-color: transparent !important;
+    color:#ff5403 !important;
+}
+.seeMoreBtn:hover{
+    background-color:white !important;
+    color: black !important;
+}
+.hoverGrey:hover{
+    background-color: lightgrey !important;
+}
+.hoverBlack:hover{
+    color: black !important;
+}
+
+@media screen and (max-width: 767px) {
+    .center{
+        text-align: center !important;
+    }
+    .socialIcon{
+        font-size : 20px !important;
+    }
+    .btnDiv{
+        display: flex !important;
+        justify-content: space-around !important;
+    }
+    .testimonialImage{
+        width: 50% !important;
+    }
+}
