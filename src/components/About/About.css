@@ -22,6 +22,10 @@
 .colorYellow{
     color:#cd921e !important;
 }
+.bioText{
+    color:rgb(155,159,167);
+    line-height: 30px;
+}
 
 @media screen and (max-width: 768px) {
     .imgWidth{

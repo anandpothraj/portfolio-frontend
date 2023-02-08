@@ -1,12 +1,14 @@
 import React from 'react';
-import AboutInfo from '../components/About/AboutInfo';
 import '../components/About/About.css';
+import Bio from '../components/About/Bio';
+import AboutInfo from '../components/About/AboutInfo';
 
 const About = () => {
   return (
     <div className='col-11 col-md-9 m-auto text-light'>
       <AboutInfo/>
       <hr/>
+      <Bio/>
     </div>
   );
 };
