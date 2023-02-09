@@ -1,74 +1,74 @@
-.bgBlueGreen{
-    background-color:#386163 !important;
+.bgBlueGreen {
+  background-color: #386163 !important;
 }
-.bgOrange{
-    background-color:#ff5403 !important;
+.bgOrange {
+  background-color: #ff5403 !important;
 }
-.bgLightBlue{
-    background-color:#84a1ff !important;
+.bgLightBlue {
+  background-color: #84a1ff !important;
 }
-.bgYellow{
-    background-color:#cd921e !important;
+.bgYellow {
+  background-color: #cd921e !important;
 }
-.colorBlueGreen{
-    color:#386163 !important;
+.colorBlueGreen {
+  color: #386163 !important;
 }
-.colorOrange{
-    color:#ff5403 !important;
+.colorOrange {
+  color: #ff5403 !important;
 }
-.colorLightBlue{
-    color:#84a1ff !important;
+.colorLightBlue {
+  color: #84a1ff !important;
 }
-.colorYellow{
-    color:#cd921e !important;
+.colorYellow {
+  color: #cd921e !important;
 }
-.bioText{
-    color:rgb(155,159,167);
-    line-height: 30px;
+.bioText {
+  color: #9b9fa7;
+  line-height: 30px;
+}
+.js-calendar-graph-svg {
+  margin: auto;
+}
+.contributions-graph .calendar {
+  border: none;
+  background: #2f2f2f;
+  padding: 2rem;
+  margin: 2%;
+}
+.contributions-graph .calendar .border,
+.contributions-graph .calendar .contrib-column {
+  border: none !important;
+}
+.contributions-graph .calendar .contrib-number {
+    color: #9b9fa7 !important;
+}
+
+@media screen and (max-width: 992px) {
+  .contributions-graph .calendar {
+    padding: 1rem;
+  }
+  .contributions-graph .calendar .border,
+  .contributions-graph .calendar .contrib-column {
+    display: block;
+    width: 100%;
+  }
+  .contributions-graph .calendar .overflow-hidden {
+    overflow-x: scroll !important;
+  }
+  .contributions-graph .calendar .overflow-hidden::-webkit-scrollbar {
+    height: 0.7rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .imgWidth{
-        width: 50% !important;
-    } 
-    .textCenter{
-        text-align: center !important;
+    .imgWidth {
+      width: 50% !important;
     }
-    .mAuto{
-        width: fit-content !important;
-        margin: auto !important;
+    .textCenter {
+      text-align: center !important;
     }
-}
-.js-calendar-graph-svg{
-    margin: auto;
-}
-
-.contributions-graph {
-    margin: 5%;
-  }
-  .contributions-graph .calendar {
-    border: none;
-    background: #2f2f2f;
-    padding: 2rem;
-    margin: 2%;
-  }
-  .contributions-graph .calendar .border, .contributions-graph .calendar .contrib-column {
-    border: none !important;
-  }
-  @media screen and (max-width: 992px) {
-    .contributions-graph .calendar .border, .contributions-graph .calendar .contrib-column {
-      display: block;
-      width: 100%;
-    }
-  }
-  .contributions-graph .calendar .contrib-number {
-    color: #9b9fa7 !important;
-  }
-  @media screen and (max-width: 992px) {
-    .contributions-graph .calendar .overflow-hidden {
-      overflow-x: scroll !important;
-    }
-    .contributions-graph .calendar .overflow-hidden::-webkit-scrollbar {
-      height: 0.7rem;
+    .mAuto {
+      width: fit-content !important;
+      margin: auto !important;
     }
   }
