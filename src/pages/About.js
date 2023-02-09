@@ -2,6 +2,7 @@ import React from 'react';
 import '../components/About/About.css';
 import Bio from '../components/About/Bio';
 import AboutInfo from '../components/About/AboutInfo';
+import ContributionsGraph from '../components/About/ContributionGraph';
 
 const About = () => {
   return (
@@ -9,6 +10,7 @@ const About = () => {
       <AboutInfo/>
       <hr/>
       <Bio/>
+      <ContributionsGraph/>
     </div>
   );
 };
