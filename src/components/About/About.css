@@ -39,3 +39,36 @@
         margin: auto !important;
     }
 }
+.js-calendar-graph-svg{
+    margin: auto;
+}
+
+.contributions-graph {
+    margin: 5%;
+  }
+  .contributions-graph .calendar {
+    border: none;
+    background: #2f2f2f;
+    padding: 2rem;
+    margin: 2%;
+  }
+  .contributions-graph .calendar .border, .contributions-graph .calendar .contrib-column {
+    border: none !important;
+  }
+  @media screen and (max-width: 992px) {
+    .contributions-graph .calendar .border, .contributions-graph .calendar .contrib-column {
+      display: block;
+      width: 100%;
+    }
+  }
+  .contributions-graph .calendar .contrib-number {
+    color: #9b9fa7 !important;
+  }
+  @media screen and (max-width: 992px) {
+    .contributions-graph .calendar .overflow-hidden {
+      overflow-x: scroll !important;
+    }
+    .contributions-graph .calendar .overflow-hidden::-webkit-scrollbar {
+      height: 0.7rem;
+    }
+  }
