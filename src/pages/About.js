@@ -1,8 +1,10 @@
 import React from 'react';
 import '../components/About/About.css';
 import Bio from '../components/About/Bio';
+// import Stats from '../components/About/Stats';
 import AboutInfo from '../components/About/AboutInfo';
 import ContributionsGraph from '../components/About/ContributionGraph';
+import Experience from '../components/About/Experience/Experience';
 
 const About = () => {
   return (
@@ -11,6 +13,8 @@ const About = () => {
       <hr/>
       <Bio/>
       <ContributionsGraph/>
+      {/* <Stats/> */}
+      <Experience/>
     </div>
   );
 };
