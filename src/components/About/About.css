@@ -22,6 +22,9 @@
 .colorYellow {
   color: #cd921e !important;
 }
+.colorOffWhite {
+  color: #97acbe !important;
+}
 .bioText {
   color: #9b9fa7;
   line-height: 30px;
@@ -42,6 +45,27 @@
 .contributions-graph .calendar .contrib-number {
     color: #9b9fa7 !important;
 }
+.imageDiv{
+  max-width: 5rem;
+  max-height: 5rem;
+}
+.type{
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid darken(#5463ff, 30%);
+  background-color: #5462ff60;
+}
+.subType{
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.lineMark {
+  border-left: 6px solid #ff5403;
+  height: 70px;
+  margin-left: 3%;
+}
 
 @media screen and (max-width: 992px) {
   .contributions-graph .calendar {
@@ -61,14 +85,17 @@
 }
 
 @media screen and (max-width: 768px) {
-    .imgWidth {
-      width: 50% !important;
-    }
-    .textCenter {
-      text-align: center !important;
-    }
-    .mAuto {
-      width: fit-content !important;
-      margin: auto !important;
-    }
+  .imgWidth {
+    width: 50% !important;
   }
+  .textCenter {
+    text-align: center !important;
+  }
+  .mAuto {
+    width: fit-content !important;
+    margin: auto !important;
+  }
+  .lineMark{
+    margin-left: 7%;
+  }
+}
