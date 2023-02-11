@@ -5,7 +5,7 @@ const ExperienceItem = ({props}) => {
     return (
         <div className='text-light'>
           <Stack direction="horizontal" gap={5}>
-            <div className="imageDiv">
+            <div className="imageDiv rounded">
               <img
                 src={props.companyImgUrl}
                 alt={props.company}
@@ -13,8 +13,8 @@ const ExperienceItem = ({props}) => {
               />
             </div>
             <div className=" mt-3">
-              <h3>{props.company}</h3>
-              <h5 className='colorOffWhite'>{props.position}</h5>
+              <h3>{props.position}</h3>
+              <h5 className='colorOffWhite'>{props.company}</h5>
               <span className="type my-2">
                 <span className='subType'
                   style={{

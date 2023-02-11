@@ -48,6 +48,8 @@
 .imageDiv{
   max-width: 5rem;
   max-height: 5rem;
+  padding: 10px;
+  background-color: white;
 }
 .type{
   padding: 0.15rem 0.5rem;
