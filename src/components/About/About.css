@@ -25,6 +25,9 @@
 .colorOffWhite {
   color: #97acbe !important;
 }
+.colorLimeYellow {
+  color: #ffcc00 !important;
+}
 .bioText {
   color: #9b9fa7;
   line-height: 30px;
@@ -67,6 +70,28 @@
   border-left: 6px solid #ff5403;
   height: 70px;
   margin-left: 3%;
+}
+.techContainer{
+  margin-top: 5%;
+  max-height: 20rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0 1rem;
+}
+.techCard{
+  max-width: 6rem;
+  max-height: 7rem;
+  min-width: 7rem;
+  min-height: 7rem;
+  padding: 1.5rem;
+  margin: 2%;
+  text-align: center;
+  /* background: lighten($color-secondary-6, 7%); */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+  /* border-radius: $border-radius-1; */
+}
+.techName{
+  font-size: 0.7rem;
 }
 
 @media screen and (max-width: 992px) {
