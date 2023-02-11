@@ -14,7 +14,7 @@ const Technology = () => {
             <Row className="mt-5">
               {TechData.map((item, i) => {
                 return (
-                  <Col key={i}>
+                  <Col key={i} className="my-1">
                     <TechCard
                       imageUrl={item.imageUrl}
                       title={item.techName}
@@ -28,6 +28,6 @@ const Technology = () => {
         </div>
     </div>
   )
-}
+};
 
-export default Technology
+export default Technology;
