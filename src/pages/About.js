@@ -2,6 +2,7 @@ import React from 'react';
 import '../components/About/About.css';
 import Bio from '../components/About/Bio';
 // import Stats from '../components/About/Stats';
+import Services from '../components/About/Services';
 import AboutInfo from '../components/About/AboutInfo';
 import Experience from '../components/About/Experience/Experience';
 import Technology from '../components/About/Technology/Technology';
@@ -17,6 +18,7 @@ const About = () => {
       {/* <Stats/> */}
       <Experience/>
       <Technology/>
+      <Services/>
     </div>
   );
 };
