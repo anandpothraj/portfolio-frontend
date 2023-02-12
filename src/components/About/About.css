@@ -94,6 +94,9 @@
 .techName{
   font-size: 0.7rem;
 }
+.skillDiv{
+  background-color: #2f2f2f;
+}
 
 @media screen and (max-width: 1290px) {
   .techContainer{
