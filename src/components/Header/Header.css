@@ -7,6 +7,18 @@
   /* height: 50em; */
 }
 
+.hamburger{
+  display: none;
+  background-color: #ff5403 !important;
+  padding: 11px;
+  border-radius: 50%;
+  font-size: 25px;
+  position: fixed;
+  right: 12vw;
+  z-index: 999;
+  cursor: pointer;
+}
+
 .line {
   font-family: 'Wendy One', sans-serif;
   color:  #FFA01B;
@@ -37,4 +49,16 @@
 .line:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+@media screen and (max-width: 576px) {
+  .hamburger{
+    right: 5vw;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hamburger{
+    display: block;
+    display: flex !important;
+  }
 }
