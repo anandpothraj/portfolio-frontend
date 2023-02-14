@@ -110,6 +110,11 @@
   transform-origin: bottom left;
 }
 
+.mobileNavBar{
+  min-height: 100vh;
+  z-index: 999;
+}
+
 @media screen and (max-width: 576px) {
   .hamburger{
     right: 5vw;
