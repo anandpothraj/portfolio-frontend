@@ -1,17 +1,26 @@
-import React, { useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import React, { useState, useRef } from 'react';
 
 const Hamburger = () => {
 
+  const Hamburger = useRef();
   const [ showNavbar, setShowNavbar ] = useState(false);
 
   const toggleNavbar = () => {
-    console.log(showNavbar);
-    setShowNavbar(true);
+    if(!showNavbar){
+      Hamburger.current.classList.add("open");
+      setShowNavbar(true);
+    }else{
+      Hamburger.current.classList.remove("open");
+      setShowNavbar(false);
+    }
   }
 
   return (
-    <span className='hamburger' onClick={toggleNavbar}><GiHamburgerMenu className='text-white m-auto'/></span>
+    <div className='hamburger' ref={Hamburger} onClick={toggleNavbar}>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   );
 };
 
