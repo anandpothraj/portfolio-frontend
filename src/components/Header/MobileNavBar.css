@@ -1,0 +1,15 @@
+.mobileNavBar {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  z-index: 3;
+  font-size: 20px;
+}
+
+.mobileNavBar ul{
+  list-style: none;
+  width: 100%;
+}
+
