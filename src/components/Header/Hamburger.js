@@ -1,17 +1,16 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 
-const Hamburger = () => {
+const Hamburger = (props) => {
 
   const Hamburger = useRef();
-  const [ showNavbar, setShowNavbar ] = useState(false);
 
   const toggleNavbar = () => {
-    if(!showNavbar){
+    if(!props.showMenuBar){
       Hamburger.current.classList.add("open");
-      setShowNavbar(true);
+      props.setShowMenuBar(true);
     }else{
       Hamburger.current.classList.remove("open");
-      setShowNavbar(false);
+      props.setShowMenuBar(false);
     }
   }
 

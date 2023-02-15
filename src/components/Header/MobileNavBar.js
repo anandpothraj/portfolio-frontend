@@ -2,7 +2,7 @@ import React from 'react';
 
 const MobileNavBar = () => {
   return (
-    <div className=''>MobileNavBar</div>
+    <div className='mobileNavBar'>MobileNavBar</div>
   )
 }
 
