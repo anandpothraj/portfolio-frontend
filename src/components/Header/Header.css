@@ -110,14 +110,10 @@
   transform-origin: bottom left;
 }
 
-.mobileNavBar{
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  background-color: black;
-  z-index: 3;
-}
+/* .SubNavbar{
+  height: auto;
+  display: block;
+} */
 
 @media screen and (max-width: 576px) {
   .hamburger{
@@ -129,4 +125,10 @@
     display: block;
     display: flex !important;
   }
+  /* .SubNavbar{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+  } */
 }
