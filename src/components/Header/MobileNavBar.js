@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 const MobileNavBar = () => {
   return (
-    <div>MobileNavBar</div>
+    <div className='mobileNavBar'>MobileNavBar</div>
   )
 }
 
-export default MobileNavBar
+export default MobileNavBar;
