@@ -20,6 +20,8 @@ const MobileNavBar = (props) => {
   const navigateLinks = (path) => {
     props.setShowMenuBar(false);
     navigate(`/${path}`);
+    const hamburger = document.getElementById("hamburger");
+    hamburger.classList.remove("open");
   }
 
   return (

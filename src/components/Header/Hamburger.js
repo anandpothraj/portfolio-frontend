@@ -15,7 +15,7 @@ const Hamburger = (props) => {
   }
 
   return (
-    <div className='hamburger' ref={Hamburger} onClick={toggleNavbar}>
+    <div className='hamburger' id='hamburger' ref={Hamburger} onClick={toggleNavbar}>
       <span></span>
       <span></span>
       <span></span>
