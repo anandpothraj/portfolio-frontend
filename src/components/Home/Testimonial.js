@@ -17,12 +17,15 @@ const Testimonial = () => {
     return (
         <div className="col-11 col-md-9 mx-auto">
             <h1 className="primaryLightBlue">Testimonials</h1>
-            <Swiper slidesPerView={1} spaceBetween={30} pagination={{clickable: true}} autoplay={{dalay:2000, disableOnInteraction:false}} modules={[Pagination,Autoplay]} className="mySwiper">
+            <Swiper slidesPerView={1} spaceBetween={30}  className="mySwiper">
+            {/* pagination={{clickable: true}} autoplay={{dalay:2000, disableOnInteraction:false}} modules={[Pagination,Autoplay]} */}
                 <SwiperSlide>
                     <div className="col-11 mx-auto my-4 bg-light rounded text-dark d-flex flex-column flex-md-row">
                         <div className="col-12 col-md-4 testBg d-flex pt-2 rounded flex-column">
-                            <Image src={Avatar1} fluid className="testimonialImage h-auto rounded-circle m-auto"/>
-                            <div className="my-1">
+                            <div className="h-75 bg-primary d-flex">
+                                <Image src={Avatar1} fluid className="testimonialImage h-auto rounded-circle m-auto"/>
+                            </div>
+                            <div className="my-1 h-25 bg-danger">
                                 <a href="https://www.linkedin.com/in/" target="_blank" rel="noreferrer"><BsLinkedin className="m-2 socialIcon text-dark"/></a>
                                 <a href='https://twitter.com/' target="_blank" rel="noreferrer"><BsTwitter className="m-2 socialIcon text-dark"/></a>
                             </div>

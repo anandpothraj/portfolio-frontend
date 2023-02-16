@@ -14,6 +14,7 @@
 }
 .mobileNavBar li{
   cursor: pointer !important;
+  font-weight: bold;
 }
 .mobileNavBar li:hover{
   color: white !important;
