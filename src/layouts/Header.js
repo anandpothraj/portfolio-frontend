@@ -11,7 +11,7 @@ const Header = () => {
     <div>
       <ContactPrompt/>
       <NavigationBar showMenuBar={showMenuBar} setShowMenuBar={setShowMenuBar}/>
-      {showMenuBar ? <MobileNavBar/> : null} 
+      {showMenuBar ? <MobileNavBar setShowMenuBar={setShowMenuBar}/> : null} 
     </div>
   );
 };

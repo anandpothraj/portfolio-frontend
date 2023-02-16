@@ -1,17 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Wendy+One&display=swap");
 
-.brandDiv{
+.brandDiv {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.hamburger{
+.line {
+  font-family: "Wendy One", sans-serif;
+  color: #ffa01b;
+  cursor: pointer;
+  position: relative;
+  text-shadow: -2px 4px 0 #e8476a, -2px 8px 0 purple;
+  font-size: 40px;
+}
+.line:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0px;
+  left: -4px;
+  transform: scaleX(0);
+  box-shadow: 0 5px 0 #e8476a, 0 10px 0 purple;
+  background: #ffa01b;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+.line:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.hamburger {
   display: none;
   background-color: #ff5403 !important;
   width: 40px;
   height: 40px;
-  border-radius: 50% ;
+  border-radius: 50%;
   position: fixed;
   right: 12vw;
   z-index: 999;
@@ -20,12 +44,11 @@
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
-
 .hamburger span {
   display: block;
   position: absolute;
@@ -39,24 +62,20 @@
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
-
 .hamburger span:nth-child(1) {
   top: 10px;
 }
-
 .hamburger span:nth-child(2) {
   top: 18px;
 }
-
 .hamburger span:nth-child(3) {
   top: 26px;
 }
-
 .hamburger.open span:nth-child(1) {
   top: 18px;
   -webkit-transform: rotate(135deg);
@@ -64,12 +83,10 @@
   -o-transform: rotate(135deg);
   transform: rotate(135deg);
 }
-
 .hamburger.open span:nth-child(2) {
   opacity: 0;
   left: -60px;
 }
-
 .hamburger.open span:nth-child(3) {
   top: 18px;
   -webkit-transform: rotate(-135deg);
@@ -78,57 +95,15 @@
   transform: rotate(-135deg);
 }
 
-.line {
-  font-family: 'Wendy One', sans-serif;
-  color:  #FFA01B;
-  cursor: pointer;
-  position: relative;
-  text-shadow:
-    -2px 4px 0 #E8476A,
-    -2px 8px 0 purple;
-    font-size: 40px;
-}
-
-.line:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  bottom: 0px;
-  left: -4px;
-  transform: scaleX(0);
-  box-shadow:
-     0 5px 0 #E8476A,
-    0 10px 0 purple;
-  background: #FFA01B ;
-  transform-origin: bottom right;
-  transition: transform 0.5s ease-out;
-}
-
-.line:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-/* .SubNavbar{
-  height: auto;
-  display: block;
-} */
-
 @media screen and (max-width: 576px) {
-  .hamburger{
+  .hamburger {
     right: 5vw;
   }
 }
+
 @media screen and (max-width: 991px) {
-  .hamburger{
+  .hamburger {
     display: block;
     display: flex !important;
   }
-  /* .SubNavbar{
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    flex-direction: column;
-  } */
 }
