@@ -98,7 +98,9 @@
     color: #fff !important;
     background: white !important; 
 }
-
+.testimonialText{
+    font-size: 20px;
+}
 .socialIcon:hover{
     color: rgb(48, 144, 147);
 }
@@ -123,9 +125,21 @@
     color: black !important;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
     .testimonialImage{
         width: 40% !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .testimonialImage{
+        width: 50% !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .testimonialImage{
+        width: 70% !important;
     }
 }
 
@@ -142,8 +156,20 @@
     }
     .testimonialImage{
         width: 25% !important;
-    }
-    /* .testimonialImage{
+    }  
+}
+
+@media screen and (max-width: 450px) {
+    .testimonialImage{
         width: 50% !important;
-    } */
+    } 
+    .testimonialText{
+        font-size: 15px;
+    } 
+}
+
+@media screen and (max-width: 300px) {
+    .interestedText{
+        font-size: 20px;
+    }
 }
