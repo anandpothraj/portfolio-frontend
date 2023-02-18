@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import Home from './pages/Home';
-import Blogs from './pages/Blogs';
+// import Blogs from './pages/Blogs';
 import About from './pages/About';
 import Report from './pages/Report';
 import Header from './layouts/Header';
@@ -26,7 +26,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home/>} exact/>
           <Route path='/projects' element={<Projects/>} exact/>
-          <Route path='/blogs' element={<Blogs/>} exact/>
+          {/* <Route path='/blogs' element={<Blogs/>} exact/> */}
           <Route path='/about' element={<About/>} exact/>
           <Route path='/contact' element={<Contact/>} exact/>
           <Route path='/report' element={<Report/>} exact/>
