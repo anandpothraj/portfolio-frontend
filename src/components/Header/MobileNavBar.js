@@ -29,7 +29,7 @@ const MobileNavBar = (props) => {
       <ul className='m-auto text-center d-flex flex-column p-0'>
         <li className='my-5 m-auto w-100' style={location.pathname === "/" ? active : linkCss} onClick={()=>navigateLinks("")}>Home</li>
         <li className='my-5 m-auto w-100' style={location.pathname === "/projects" ? active : linkCss} onClick={()=>navigateLinks("projects")}>Projects</li>
-        <li className='my-5 m-auto w-100' style={location.pathname === "/blogs" ? active : linkCss} onClick={()=>navigateLinks("blogs")}>Blogs</li>
+        {/* <li className='my-5 m-auto w-100' style={location.pathname === "/blogs" ? active : linkCss} onClick={()=>navigateLinks("blogs")}>Blogs</li> */}
         <li className='my-5 m-auto w-100' style={location.pathname === "/about" ? active : linkCss} onClick={()=>navigateLinks("about")}>About</li>
         <li className='my-5 m-auto w-100' style={location.pathname === "/contact" ? active : linkCss} onClick={()=>navigateLinks("contact")}>Contact</li>
       </ul>
