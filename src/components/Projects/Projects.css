@@ -1,4 +1,4 @@
-.techImage{
+.techStackImage{
   width: 10%;
 }
 
@@ -7,19 +7,19 @@
 }
 
 @media screen and (max-width: 1500px) {
-  .techImage{
+  .techStackImage{
     width: 15%;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .techImage{
+  .techStackImage{
     width: 20%;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .techImage{
+  .techStackImage{
     width: 25%;
   }
   .projectItem{
@@ -31,7 +31,7 @@
   .textCenter {
     text-align: center !important;
   }  
-  .techImage{
+  .techStackImage{
     width: 20%;
   }
 }
