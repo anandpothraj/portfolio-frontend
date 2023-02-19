@@ -1,0 +1,30 @@
+.techImage{
+  width: 10%;
+}
+
+@media screen and (max-width: 1500px) {
+  .techImage{
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .techImage{
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .techImage{
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .textCenter {
+    text-align: center !important;
+  }  
+  .techImage{
+    width: 20%;
+  }
+}
