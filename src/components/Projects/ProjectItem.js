@@ -24,7 +24,7 @@ const ProjectItem = (props) => {
                 src={tech.url}
                 alt={tech.title}
                 loading="lazy"
-                className='techImage'
+                className='techStackImage'
               />
               </OverlayTrigger>
             ))
