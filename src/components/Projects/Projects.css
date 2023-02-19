@@ -2,6 +2,10 @@
   width: 10%;
 }
 
+.projectItem{
+  width: 75% !important;
+}
+
 @media screen and (max-width: 1500px) {
   .techImage{
     width: 15%;
@@ -17,6 +21,9 @@
 @media screen and (max-width: 900px) {
   .techImage{
     width: 25%;
+  }
+  .projectItem{
+    width: 100% !important;
   }
 }
 

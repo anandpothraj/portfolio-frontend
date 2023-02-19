@@ -59,12 +59,12 @@ const Projects = () => {
   return (
     <div className='col-11 col-md-9 my-3 my-md-5 mx-auto text-light'>
       <h1 className='textCenter'>Projects</h1>
-      <div className="projects__container">
+      <div className="my-3 my-md-5">
         <Row>
         {projects &&
           projects.map((project, i) => {
             return (
-              <Col key={i} className="mt-5" sm={6} md={6}>
+              <Col key={i} className="mt-3 mt-md-5" sm={6} md={6}>
                 <ProjectItem
                   title={project.title}
                   image={project.image}
