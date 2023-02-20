@@ -1,54 +1,112 @@
-{
-    "name" : "Anand Pothraj",
-    "designation": ["MERN Stack Developer", "Frontend Developer","OS Contributor"],
-    "introBio" : "I have a passion for technology",
-    "mailTo" : "mailto:pothrajanand@gmail.com",
-    "images" : {
-        "avatar1" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676910355/Secondary.25bdad2d724160c68f54_uwl0oe.png"
+{   
+    "header" : {
+        "navLink" : [
+            {
+                "title" : "Home",
+                "path" : "/",
+                "navigate" : ""
+            },
+            {
+                "title" : "Projects",
+                "path" : "/projects",
+                "navigate" : "projects"
+            },
+            {
+                "title" : "About Me",
+                "path" : "/about",
+                "navigate" : "about"
+            },
+            {
+                "title" : "Contact",
+                "path" : "/contact",
+                "navigate" : "contact"
+            }
+        ]
     },
-    "navLink" : [
-        {
-            "title" : "Home",
-            "path" : "/",
-            "navigate" : ""
+    "home" : {
+        "profile" : {
+            "name" : "Anand Pothraj",
+            "designation": ["MERN Stack Developer", "Frontend Developer","OS Contributor"],
+            "introBio" : "I have a passion for technology",
+            "mailTo" : "mailto:pothrajanand@gmail.com",
+            "images" : {
+                "avatar1" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676910355/Secondary.25bdad2d724160c68f54_uwl0oe.png"
+            },
+            "socials"  : {
+                "linkedIn" :  "https://www.linkedin.com/in/anand-pothraj-599910195",
+                "github" : "https://github.com/anandpothraj",
+                "twitter" : "https://twitter.com/PothrajAnand",
+                "devCommunity" : "https://dev.to/anandpothraj",
+                "medium" : "https://medium.com/@anandpothraj11052001"
+            }
         },
-        {
-            "title" : "Projects",
-            "path" : "/projects",
-            "navigate" : "projects"
-        },
-        {
-            "title" : "About Me",
-            "path" : "/about",
-            "navigate" : "about"
-        },
-        {
-            "title" : "Contact",
-            "path" : "/contact",
-            "navigate" : "contact"
+        "work" : {
+            "workImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676911145/Achievement.796a1ac06301310a4803_t79yxu.gif",
+            "projectCompleted" : 50,
+            "workHeading" : "Glad to work with you!",
+            "workSubHeading" : "As a Software Engineer and Full Stack Developer, I'm always looking for new challenges and opportunities to further improve my knowledge and skills."
         }
-    ],
-    "footerLink" : [
-        {
-            "title" : "Report",
-            "path" : "/report"
-        },
-        {
-            "title" : "FeedBack",
-            "path" : "/feedback"
-        },
-        {
-            "title" : "Privacy Policy",
-            "path" : "/privacy-policy"
+        ,
+        "recentProjects": {
+            "projects" : [
+                {
+                    "projectImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676723074/htpyrnd1lyylgfijomz5.png",
+                    "projectName" : "CryptoSwitch",
+                    "projectRepo" : "https://github.com/anandpothraj/CryptoSwitch",
+                    "projectUrl" : "https://anand-cryptoswitch.netlify.app",
+                    "techStack" : [
+                        {
+                            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                            "title": "React"
+                        },
+                        {
+                            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+                            "title": "Bootstrap"
+                        }
+                    ]
+                },
+                {
+                    "projectImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676723121/gxorvwgsbdpjolcivtpp.png",
+                    "projectName" : "NewsHut",
+                    "projectRepo" : "https://github.com/anandpothraj/newshut",
+                    "projectUrl" : "https://anand-newshut.netlify.app/",
+                    "techStack" : [
+                        {
+                            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                            "title": "React"
+                        },
+                        {
+                            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+                            "title": "Bootstrap"
+                        }
+                    ]
+                }
+            ]
         }
-    ],
-    "socials"  : {
-        "linkedIn" :  "https://www.linkedin.com/in/anand-pothraj-599910195",
-        "github" : "https://github.com/anandpothraj",
-        "twitter" : "https://twitter.com/PothrajAnand",
-        "devCommunity" : "https://dev.to/anandpothraj",
-        "medium" : "https://medium.com/@anandpothraj11052001"
     },
-    "version": "v1.0.0",
-    "copyright": "© 2023 anandpothraj. All rights reserved."
+    "footer" : {
+        "footerLink" : [
+            {
+                "title" : "Report",
+                "path" : "/report"
+            },
+            {
+                "title" : "FeedBack",
+                "path" : "/feedback"
+            },
+            {
+                "title" : "Privacy Policy",
+                "path" : "/privacy-policy"
+            }
+        ],
+        "socials"  : {
+            "linkedIn" :  "https://www.linkedin.com/in/anand-pothraj-599910195",
+            "github" : "https://github.com/anandpothraj",
+            "twitter" : "https://twitter.com/PothrajAnand",
+            "devCommunity" : "https://dev.to/anandpothraj",
+            "medium" : "https://medium.com/@anandpothraj11052001"
+        },
+        "version": "v1.0.0",
+        "copyright": "© 2023 anandpothraj. All rights reserved."
+    }
 }

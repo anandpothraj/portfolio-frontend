@@ -17,21 +17,21 @@ const Profile = () => {
         <div className="w-100 w-md-50 m-auto p-2">
           <div className="center">
             <h5 className='my-2'>Hey!</h5>
-            <h1 className='my-2'>I'm <b className='primaryOrange'>{data.name}</b></h1>
+            <h1 className='my-2'>I'm <b className='primaryOrange'>{data.home.profile.name}</b></h1>
             <div className="d-flex m-auto">
             <div className='my-2 primaryBlue d-inline-flex mx-auto mx-md-0'>
               <TypeWriterEffect
                 className="Anand"
                 startDelay={1000}
                 cursorColor="#84a1ff"
-                multiText={data.designation}
+                multiText={data.home.profile.designation}
                 multiTextDelay={1000}
                 typeSpeed={60}
                 multiTextLoop
               />
             </div>
             </div>
-            <p className='my-2 text-secondary font-weight-normal'>{data.introBio}</p>
+            <p className='my-2 text-secondary font-weight-normal'>{data.home.profile.introBio}</p>
           </div>
           <div className="my-3 center">
             <p className='knowMore'>
@@ -43,20 +43,20 @@ const Profile = () => {
             </p>
             <div className="my-1 my-md-4">
                 <h5 className='d-md-inline follow'>Follow Me</h5>
-                <a href={data.socials.linkedIn} target="_blank" rel="noreferrer"><BsLinkedin className="m-2 socialIcon"/></a>
-                <a href={data.socials.github} target="_blank" rel="noreferrer"><BsGithub className="m-1 m-md-2 socialIcon"/></a>
-                <a href={data.socials.twitter} target="_blank" rel="noreferrer"><BsTwitter className="m-2 socialIcon"/></a>
-                <a href={data.socials.devCommunity} target="_blank" rel="noreferrer"><FaDev className="m-2 socialIcon"/></a>
-                <a href={data.socials.medium} target="_blank" rel="noreferrer"><BsMedium className="m-2 socialIcon"/></a>
+                <a href={data.home.profile.socials.linkedIn} target="_blank" rel="noreferrer"><BsLinkedin className="m-2 socialIcon"/></a>
+                <a href={data.home.profile.socials.github} target="_blank" rel="noreferrer"><BsGithub className="m-1 m-md-2 socialIcon"/></a>
+                <a href={data.home.profile.socials.twitter} target="_blank" rel="noreferrer"><BsTwitter className="m-2 socialIcon"/></a>
+                <a href={data.home.profile.socials.devCommunity} target="_blank" rel="noreferrer"><FaDev className="m-2 socialIcon"/></a>
+                <a href={data.home.profile.socials.medium} target="_blank" rel="noreferrer"><BsMedium className="m-2 socialIcon"/></a>
             </div>
           </div>
           <div className="my-3 p-1 btnDiv mx-auto mx-md-0">
-              <Button className='emailBtn btn-sm' href={data.mailTo}><FiMail className='mx-1 logo2'/>Email Me</Button>
+              <Button className='emailBtn btn-sm' href={data.home.profile.mailTo}><FiMail className='mx-1 logo2'/>Email Me</Button>
               <Button className='resumeBtn btn-sm mx-0 mx-md-3' href={Resume} target="_blank" rel="noopener noreferrer"><BsDownload className='mx-1 logo2'/>Resume</Button>
           </div>
         </div>
         <div className="w-75 w-md-50 m-auto my-1">
-          <Image src={data.images.avatar1} fluid alt="avatar1" className='d-block m-auto'/>
+          <Image src={data.home.profile.images.avatar1} fluid alt="avatar1" className='d-block m-auto'/>
         </div>
       </div>
     </>

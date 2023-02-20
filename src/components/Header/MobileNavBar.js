@@ -28,7 +28,7 @@ const MobileNavBar = (props) => {
   return (
     <div className='mobileNavBar'>
       <ul className='m-auto text-center d-flex flex-column p-0'>
-        {data.navLink.map((link, i) => {
+        {data.header.navLink.map((link, i) => {
           return(
             <li className='my-5 m-auto w-100' key={i} style={location.pathname === link.path ? active : linkCss} onClick={()=>navigateLinks(link.navigate)}>{link.title}</li>
           )
