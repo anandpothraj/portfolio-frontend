@@ -21,17 +21,17 @@ const MainFooter = () => {
                     <p>Visits : <Badge bg="warning" text="dark">12345</Badge></p>
                 </div>
                 <div className="d-flex m-md-auto py-3">
-                    <a href={data.socials.linkedIn} target="_blank" rel="noreferrer"><BsLinkedin className="m-2" style={style}/></a>
-                    <a href={data.socials.github} target="_blank" rel="noreferrer"><BsGithub className="m-2" style={style}/></a>
-                    <a href={data.socials.twitter} target="_blank" rel="noreferrer"><BsTwitter className="m-2" style={style}/></a>
-                    <a href={data.socials.devCommunity} target="_blank" rel="noreferrer"><FaDev className="m-2" style={style}/></a>
-                    <a href={data.socials.medium} target="_blank" rel="noreferrer"><BsMedium className="m-2" style={style}/></a>
+                    <a href={data.footer.socials.linkedIn} target="_blank" rel="noreferrer"><BsLinkedin className="m-2" style={style}/></a>
+                    <a href={data.footer.socials.github} target="_blank" rel="noreferrer"><BsGithub className="m-2" style={style}/></a>
+                    <a href={data.footer.socials.twitter} target="_blank" rel="noreferrer"><BsTwitter className="m-2" style={style}/></a>
+                    <a href={data.footer.socials.devCommunity} target="_blank" rel="noreferrer"><FaDev className="m-2" style={style}/></a>
+                    <a href={data.footer.socials.medium} target="_blank" rel="noreferrer"><BsMedium className="m-2" style={style}/></a>
                 </div>
             </div>
             <hr className='w-75 m-auto text-white'/>
             <div className="w-75 mx-auto my-2">
                 {
-                    data.footerLink.map((link, i) => {
+                    data.footer.footerLink.map((link, i) => {
                         return(
                             <p key={i}><Link to={link.path} className='text-decoration-none text-light'>{link.title}</Link></p>
                         )

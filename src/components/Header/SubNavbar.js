@@ -19,7 +19,7 @@ const SubNavBar = () => {
   return (
     <Nav className='text-center h5'>
       {
-        data.navLink.map((link, i) => {
+        data.header.navLink.map((link, i) => {
           return(
             <Link to={link.path} key={i} className='m-2' style={location.pathname === link.path ? active : linkCss}>{link.title}</Link>
           )

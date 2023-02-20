@@ -173,3 +173,41 @@
         font-size: 20px;
     }
 }
+
+.techStackImage{
+    width: 10%;
+  }
+  
+  .projectItem{
+    width: 75% !important;
+  }
+  
+  @media screen and (max-width: 1500px) {
+    .techStackImage{
+      width: 15%;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .techStackImage{
+      width: 20%;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .techStackImage{
+      width: 25%;
+    }
+    .projectItem{
+      width: 100% !important;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .textCenter {
+      text-align: center !important;
+    }  
+    .techStackImage{
+      width: 20%;
+    }
+  }
