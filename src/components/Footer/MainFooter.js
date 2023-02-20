@@ -2,6 +2,7 @@ import React from 'react';
 import { FaDev } from 'react-icons/fa';
 import { Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import data from '../../SourceData/data.json';
 import { BsTwitter, BsGithub, BsMedium, BsLinkedin } from 'react-icons/bs';
 
 const MainFooter = () => {
@@ -20,18 +21,22 @@ const MainFooter = () => {
                     <p>Visits : <Badge bg="warning" text="dark">12345</Badge></p>
                 </div>
                 <div className="d-flex m-md-auto py-3">
-                    <a href="https://www.linkedin.com/in/anand-pothraj-599910195" target="_blank" rel="noreferrer"><BsLinkedin className="m-2" style={style}/></a>
-                    <a href="https://github.com/anandpothraj" target="_blank" rel="noreferrer"><BsGithub className="m-2" style={style}/></a>
-                    <a href='https://twitter.com/PothrajAnand' target="_blank" rel="noreferrer"><BsTwitter className="m-2" style={style}/></a>
-                    <a href="https://dev.to/anandpothraj" target="_blank" rel="noreferrer"><FaDev className="m-2" style={style}/></a>
-                    <a href="https://medium.com/@anandpothraj11052001" target="_blank" rel="noreferrer"><BsMedium className="m-2" style={style}/></a>
+                    <a href={data.socials.linkedIn} target="_blank" rel="noreferrer"><BsLinkedin className="m-2" style={style}/></a>
+                    <a href={data.socials.github} target="_blank" rel="noreferrer"><BsGithub className="m-2" style={style}/></a>
+                    <a href={data.socials.twitter} target="_blank" rel="noreferrer"><BsTwitter className="m-2" style={style}/></a>
+                    <a href={data.socials.devCommunity} target="_blank" rel="noreferrer"><FaDev className="m-2" style={style}/></a>
+                    <a href={data.socials.medium} target="_blank" rel="noreferrer"><BsMedium className="m-2" style={style}/></a>
                 </div>
             </div>
             <hr className='w-75 m-auto text-white'/>
             <div className="w-75 mx-auto my-2">
-                <p><Link to="/report" className='text-decoration-none text-light'>Report</Link></p>
-                <p><Link to="/feedback" className='text-decoration-none text-light'>Feedback</Link></p>
-                <p><Link to="/privacy-policy" className='text-decoration-none text-light'>Privacy Policy</Link></p>
+                {
+                    data.footerLink.map((link, i) => {
+                        return(
+                            <p key={i}><Link to={link.path} className='text-decoration-none text-light'>{link.title}</Link></p>
+                        )
+                    })
+                }
             </div>
         </div>
     );
