@@ -57,9 +57,9 @@ const Projects = () => {
   ];
 
   return (
-    <div className='col-11 col-md-9 my-3 my-md-5 mx-auto text-light'>
+    <div className='col-11 col-md-9 my-3 mx-auto text-light'>
       <h1 className='textCenter'>Projects</h1>
-      <div className="my-3 my-md-5">
+      <div>
         <Row>
         {projects &&
           projects.map((project, i) => {
