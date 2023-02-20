@@ -1,0 +1,54 @@
+{
+    "name" : "Anand Pothraj",
+    "designation": ["MERN Stack Developer", "Frontend Developer","OS Contributor"],
+    "introBio" : "I have a passion for technology",
+    "mailTo" : "mailto:pothrajanand@gmail.com",
+    "images" : {
+        "avatar1" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676910355/Secondary.25bdad2d724160c68f54_uwl0oe.png"
+    },
+    "navLink" : [
+        {
+            "title" : "Home",
+            "path" : "/",
+            "navigate" : ""
+        },
+        {
+            "title" : "Projects",
+            "path" : "/projects",
+            "navigate" : "projects"
+        },
+        {
+            "title" : "About Me",
+            "path" : "/about",
+            "navigate" : "about"
+        },
+        {
+            "title" : "Contact",
+            "path" : "/contact",
+            "navigate" : "contact"
+        }
+    ],
+    "footerLink" : [
+        {
+            "title" : "Report",
+            "path" : "/report"
+        },
+        {
+            "title" : "FeedBack",
+            "path" : "/feedback"
+        },
+        {
+            "title" : "Privacy Policy",
+            "path" : "/privacy-policy"
+        }
+    ],
+    "socials"  : {
+        "linkedIn" :  "https://www.linkedin.com/in/anand-pothraj-599910195",
+        "github" : "https://github.com/anandpothraj",
+        "twitter" : "https://twitter.com/PothrajAnand",
+        "devCommunity" : "https://dev.to/anandpothraj",
+        "medium" : "https://medium.com/@anandpothraj11052001"
+    },
+    "version": "v1.0.0",
+    "copyright": "© 2023 anandpothraj. All rights reserved."
+}
