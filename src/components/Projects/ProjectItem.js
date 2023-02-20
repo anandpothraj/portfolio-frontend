@@ -5,7 +5,7 @@ import { Image, OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 const ProjectItem = (props) => {
   return (
-    <div className="rounded shadow-lg bg-black m-auto my-0 my-md-3 projectItem">
+    <div className="rounded shadow-lg bg-black m-auto projectItem">
       <Image src={props.image} className='w-100 h-auto rounded-top'/>
       <div className='w-100 d-flex p-2 p-md-3'>
         <p className='w-50 my-auto'><b>{props.title}</b></p>
