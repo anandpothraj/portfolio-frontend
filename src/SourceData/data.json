@@ -150,6 +150,56 @@
             "email" : "mailto:pothrajanand@gmail.com"
         }
     },
+    "projects" : [
+        {
+          "title":"NewsHut",
+          "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723121/gxorvwgsbdpjolcivtpp.png",
+          "repoName":"https://github.com/anandpothraj/newshut",
+          "liveUrl":"https://anand-newshut.netlify.app/",
+          "techs": [
+            {
+              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+              "title": "React"
+            },
+            {
+              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+              "title": "Bootstrap"
+            }
+          ]
+        },
+        {
+          "title":"Crypto Switch",
+          "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723074/htpyrnd1lyylgfijomz5.png",
+          "repoName":"https://github.com/anandpothraj/cryptoswitch",
+          "liveUrl":"https://anand-cryptoswitch.netlify.app/",
+          "techs": [
+            {
+              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+              "title": "React"
+            },
+            {
+              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+              "title": "Bootstrap"
+            }
+          ] 
+        },
+        {
+          "title":"Todo",
+          "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723687/mrpedgodcxlqkhhuklbc.png",
+          "repoName":"https://github.com/anandpothraj/todo",
+          "liveUrl":"https://anand-todo.netlify.app/",
+          "techs": [
+            {
+              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+              "title": "React"
+            },
+            {
+              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+              "title": "Bootstrap"
+            }
+          ]        
+        }
+    ],
     "footer" : {
         "footerLink" : [
             {
