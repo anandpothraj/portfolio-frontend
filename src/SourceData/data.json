@@ -82,6 +82,72 @@
                     ]
                 }
             ]
+        },
+        "hire" : {
+            "strength" : [
+                {
+                  "image" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676974952/Communicative.d0f0dc8f6d4cccd7279e_myxjij.gif",
+                  "title" : "Communicative",
+                  "subTitle" : "I balance talking and listening hence ensuring effective communication.",
+                  "show" : true  
+                },
+                {
+                  "image" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676974971/Collaborative.9838efcfb286b54c1eed_xwqn8o.gif",
+                  "title" : "Collaborative",
+                  "subTitle" : "Teamwork makes the dream work. Collaboration first, then work.",
+                  "show" : true  
+                },
+                {
+                  "image" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676974985/Workaholic.cec349cd2eaf401690d1_q2dbst.gif",
+                  "title" : "Workaholic",
+                  "subTitle" : "I don't wait for deadlines, deadlines wait for me.",
+                  "show" : false  
+                },
+                {
+                  "image" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676975845/Superhero_zjtkiq.gif",
+                  "title" : "Self Motivated",
+                  "subTitle" : "I put myself into action to achieve my goals.",
+                  "show" : true  
+                }
+            ]
+        },
+        "testimonials" : [
+            {
+                "userImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676976950/Avatar1_gccgag.png",
+                "userLinkedIn" : "www.linkedin.com",
+                "userTwitter" : "www.twitter.com",
+                "userName" : "Testimonial 1",
+                "userDesignation" : "Software Developer",
+                "userReview" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            },
+            {
+                "userImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676977098/Avatar2_vouqdi.png",
+                "userLinkedIn" : "www.linkedin.com",
+                "userTwitter" : "www.twitter.com",
+                "userName" : "Testimonial 2",
+                "userDesignation" : "Full Stack Developer",
+                "userReview" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            },
+            {
+                "userImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676977098/Avatar3_zw8xui.jpg",
+                "userLinkedIn" : "www.linkedin.com",
+                "userTwitter" : "www.twitter.com",
+                "userName" : "Testimonial 3",
+                "userDesignation" : "MERN Stack Developer",
+                "userReview" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            },
+            {
+                "userImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676977098/Avatar4_yzjmxo.jpg",
+                "userLinkedIn" : "www.linkedin.com",
+                "userTwitter" : "www.twitter.com",
+                "userName" : "Testimonial 4",
+                "userDesignation" : "Frondend Developer",
+                "userReview" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            }
+        ],
+        "interested" : {
+            "interestedText" : "Interested working with me?",
+            "email" : "mailto:pothrajanand@gmail.com"
         }
     },
     "footer" : {
