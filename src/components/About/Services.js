@@ -1,16 +1,20 @@
 import React from 'react';
+import data from '../../SourceData/data.json';
 
 const Services = () => {
   return (
     <div className='my-3 my-md-5'>
         <h2 className='textCenter colorOrange'>Skills</h2>
         <div className="d-flex flex-column my-2 my-md-4">
-            <div className="w-100 w-md-75 rounded mx-auto my-md-3 my-1 py-3 skillDiv">
-                <h3 className='text-center'>Web Developer</h3>
-            </div>
-            <div className="w-100 w-md-75 rounded mx-auto my-md-3 my-1 py-3 skillDiv">
-                <h3 className='text-center'>Technical Writer</h3>
-            </div>
+          {
+            data.about.services.skills.map((skill, i) => {
+              return (
+                <div className="w-100 w-md-75 rounded mx-auto my-md-3 my-1 py-3 skillDiv" key={i}>
+                  <h3 className='text-center'>{skill}</h3>
+              </div>
+              )
+            })
+          }
         </div>
     </div>
   );

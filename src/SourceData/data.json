@@ -1,0 +1,342 @@
+{   
+    "header" : {
+        "navLink" : [
+            {
+                "title" : "Home",
+                "path" : "/",
+                "navigate" : ""
+            },
+            {
+                "title" : "Projects",
+                "path" : "/projects",
+                "navigate" : "projects"
+            },
+            {
+                "title" : "About Me",
+                "path" : "/about",
+                "navigate" : "about"
+            },
+            {
+                "title" : "Contact",
+                "path" : "/contact",
+                "navigate" : "contact"
+            }
+        ]
+    },
+    "home" : {
+        "profile" : {
+            "name" : "Anand Pothraj",
+            "designation": ["MERN Stack Developer", "Frontend Developer","OS Contributor"],
+            "introBio" : "I have a passion for technology",
+            "mailTo" : "mailto:pothrajanand@gmail.com",
+            "images" : {
+                "avatar1" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676910355/Secondary.25bdad2d724160c68f54_uwl0oe.png"
+            },
+            "socials"  : {
+                "linkedIn" :  "https://www.linkedin.com/in/anand-pothraj-599910195",
+                "github" : "https://github.com/anandpothraj",
+                "twitter" : "https://twitter.com/PothrajAnand",
+                "devCommunity" : "https://dev.to/anandpothraj",
+                "medium" : "https://medium.com/@anandpothraj11052001"
+            }
+        },
+        "work" : {
+            "workImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676911145/Achievement.796a1ac06301310a4803_t79yxu.gif",
+            "projectCompleted" : 50,
+            "workHeading" : "Glad to work with you!",
+            "workSubHeading" : "As a Software Engineer and Full Stack Developer, I'm always looking for new challenges and opportunities to further improve my knowledge and skills."
+        }
+        ,
+        "recentProjects": {
+            "projects" : [
+                {
+                    "projectImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676723074/htpyrnd1lyylgfijomz5.png",
+                    "projectName" : "CryptoSwitch",
+                    "projectRepo" : "https://github.com/anandpothraj/CryptoSwitch",
+                    "projectUrl" : "https://anand-cryptoswitch.netlify.app",
+                    "techStack" : [
+                        {
+                            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                            "title": "React"
+                        },
+                        {
+                            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+                            "title": "Bootstrap"
+                        }
+                    ]
+                },
+                {
+                    "projectImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676723121/gxorvwgsbdpjolcivtpp.png",
+                    "projectName" : "NewsHut",
+                    "projectRepo" : "https://github.com/anandpothraj/newshut",
+                    "projectUrl" : "https://anand-newshut.netlify.app/",
+                    "techStack" : [
+                        {
+                            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                            "title": "React"
+                        },
+                        {
+                            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+                            "title": "Bootstrap"
+                        }
+                    ]
+                }
+            ]
+        },
+        "hire" : {
+            "strength" : [
+                {
+                  "image" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676974952/Communicative.d0f0dc8f6d4cccd7279e_myxjij.gif",
+                  "title" : "Communicative",
+                  "subTitle" : "I balance talking and listening hence ensuring effective communication.",
+                  "show" : true  
+                },
+                {
+                  "image" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676974971/Collaborative.9838efcfb286b54c1eed_xwqn8o.gif",
+                  "title" : "Collaborative",
+                  "subTitle" : "Teamwork makes the dream work. Collaboration first, then work.",
+                  "show" : true  
+                },
+                {
+                  "image" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676974985/Workaholic.cec349cd2eaf401690d1_q2dbst.gif",
+                  "title" : "Workaholic",
+                  "subTitle" : "I don't wait for deadlines, deadlines wait for me.",
+                  "show" : false  
+                },
+                {
+                  "image" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676975845/Superhero_zjtkiq.gif",
+                  "title" : "Self Motivated",
+                  "subTitle" : "I put myself into action to achieve my goals.",
+                  "show" : true  
+                }
+            ]
+        },
+        "testimonials" : [
+            {
+                "userImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676976950/Avatar1_gccgag.png",
+                "userLinkedIn" : "www.linkedin.com",
+                "userTwitter" : "www.twitter.com",
+                "userName" : "Testimonial 1",
+                "userDesignation" : "Software Developer",
+                "userReview" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            },
+            {
+                "userImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676977098/Avatar2_vouqdi.png",
+                "userLinkedIn" : "www.linkedin.com",
+                "userTwitter" : "www.twitter.com",
+                "userName" : "Testimonial 2",
+                "userDesignation" : "Full Stack Developer",
+                "userReview" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            },
+            {
+                "userImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676977098/Avatar3_zw8xui.jpg",
+                "userLinkedIn" : "www.linkedin.com",
+                "userTwitter" : "www.twitter.com",
+                "userName" : "Testimonial 3",
+                "userDesignation" : "MERN Stack Developer",
+                "userReview" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            },
+            {
+                "userImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676977098/Avatar4_yzjmxo.jpg",
+                "userLinkedIn" : "www.linkedin.com",
+                "userTwitter" : "www.twitter.com",
+                "userName" : "Testimonial 4",
+                "userDesignation" : "Frondend Developer",
+                "userReview" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            }
+        ],
+        "interested" : {
+            "interestedText" : "Interested working with me?",
+            "email" : "mailto:pothrajanand@gmail.com"
+        }
+    },
+    "projects" : [
+        {
+          "title":"NewsHut",
+          "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723121/gxorvwgsbdpjolcivtpp.png",
+          "repoName":"https://github.com/anandpothraj/newshut",
+          "liveUrl":"https://anand-newshut.netlify.app/",
+          "techs": [
+            {
+              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+              "title": "React"
+            },
+            {
+              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+              "title": "Bootstrap"
+            }
+          ]
+        },
+        {
+          "title":"Crypto Switch",
+          "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723074/htpyrnd1lyylgfijomz5.png",
+          "repoName":"https://github.com/anandpothraj/cryptoswitch",
+          "liveUrl":"https://anand-cryptoswitch.netlify.app/",
+          "techs": [
+            {
+              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+              "title": "React"
+            },
+            {
+              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+              "title": "Bootstrap"
+            }
+          ] 
+        },
+        {
+          "title":"Todo",
+          "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723687/mrpedgodcxlqkhhuklbc.png",
+          "repoName":"https://github.com/anandpothraj/todo",
+          "liveUrl":"https://anand-todo.netlify.app/",
+          "techs": [
+            {
+              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+              "title": "React"
+            },
+            {
+              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+              "title": "Bootstrap"
+            }
+          ]        
+        }
+    ],
+    "about" : {
+        "aboutInfo" : {
+            "aboutImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1677051001/Third.3f76f85b2c22d0c9ec44_kjgk62.png",
+            "name" : "Anand Pothraj",
+            "intro" : "MERN Stack Developer, technical writer, and a passionate learner.",
+            "email" : "pothrajanand@gmail.com",
+            "socials"  : {
+                "linkedIn" :  "https://www.linkedin.com/in/anand-pothraj-599910195",
+                "github" : "https://github.com/anandpothraj",
+                "twitter" : "https://twitter.com/PothrajAnand",
+                "devCommunity" : "https://dev.to/anandpothraj",
+                "medium" : "https://medium.com/@anandpothraj11052001"
+            }
+        },
+        "bio" : {
+            "bioWelcomeText" : "Hi there! Thanks for visiting my portfolio.",
+            "bioLinkedIn" : "https://www.linkedin.com/in/anand-pothraj-599910195",
+            "bioName" : "Anand Pothraj",
+            "bioIntroText" : "a MERN Stack Developer, Content Writer, and a passionate learner. I had completed Bachelor's In Computer Science from",
+            "bioCollegeName" : "Mumbai University",
+            "passoutYear" : 2022,
+            "collegeLink" : "https://mu.ac.in/",
+            "bioText" : "I have worked on a wide range of technologies and have worked on projects ranging from small to large scale. I am a self-motivated and self-driven individual who is always looking for new challenges and opportunities. I love to get engage in communities and learn from others."
+        },
+        "experience" : {
+            "ExperienceDetails" : [
+                {
+                    "company" : "Tech Sierra",
+                    "companyImgUrl" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676124557/dnsn9cbrwc3rzek5hkhm.jpg",
+                    "type" : "Full Time", 
+                    "position" : "Software Development Engineer - 1",
+                    "startDate" : "Aug 2022",
+                    "endDate" : "Present"
+                },
+                {
+                    "company" : "Tech Sierra",
+                    "companyImgUrl" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676124557/dnsn9cbrwc3rzek5hkhm.jpg",
+                    "type" : "Internship", 
+                    "position" : "Intern React Developer",
+                    "startDate" : "May 2022",
+                    "endDate" : "July 2022"
+                }
+            ]
+        },
+        "technology" : {
+            "techData" : [
+                {
+                    "techName" : "REACT JS",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                    "bg" : "#121212"
+                  },
+                  {
+                    "techName" : "REDUX",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+                    "bg" : "#121212"
+                  },
+                  {
+                    "techName" : "NODE JS",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+                    "bg" : "#121212"
+                  },
+                  {
+                    "techName" : "MONGODB",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                  },
+                  {
+                    "techName" : "EXPRESS JS",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+                    "bg" : "#fff"
+                  },
+                  {
+                    "techName" : "JAVASCRIPT",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  },
+                  {
+                    "techName" : "GIT",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                  },
+                  {
+                    "techName" : "PYTHON",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                  },
+                  {
+                    "techName" : "BOOTSTRAP",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+                    "bg" : "#121212"
+                  },
+                  {
+                    "techName" : "GITHUB",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+                    "bg" : "#fff"
+                  },
+                  {
+                    "techName" : "HTML",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  },
+                  {
+                    "techName" : "CSS",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  },
+                  {
+                    "techName" : "SASS",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                  },
+                  {
+                    "techName" : "M-UI",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
+                  }
+            ]
+        },
+        "services" : {
+            "skills" : [ "Frontend Web Developer", "Passionate Learner" ]
+        }
+    },
+    "footer" : {
+        "footerLink" : [
+            {
+                "title" : "Report",
+                "path" : "/report"
+            },
+            {
+                "title" : "FeedBack",
+                "path" : "/feedback"
+            },
+            {
+                "title" : "Privacy Policy",
+                "path" : "/privacy-policy"
+            }
+        ],
+        "socials"  : {
+            "linkedIn" :  "https://www.linkedin.com/in/anand-pothraj-599910195",
+            "github" : "https://github.com/anandpothraj",
+            "twitter" : "https://twitter.com/PothrajAnand",
+            "devCommunity" : "https://dev.to/anandpothraj",
+            "medium" : "https://medium.com/@anandpothraj11052001"
+        },
+        "version": "v1.0.0",
+        "copyright": "© 2023 anandpothraj. All rights reserved."
+    }
+}

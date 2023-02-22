@@ -1,0 +1,28 @@
+.mobileNavBar {
+  display: none !important;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  z-index: 3;
+  font-size: 20px;
+}
+.mobileNavBar ul{
+  list-style: none;
+  width: 100%;
+}
+.mobileNavBar li{
+  cursor: pointer !important;
+  font-weight: bold;
+}
+.mobileNavBar li:hover{
+  color: white !important;
+}
+
+@media screen and (max-width: 991px) {
+  .mobileNavBar{
+    display: block;
+    display: flex !important;
+  }
+}
