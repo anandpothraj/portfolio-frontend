@@ -314,6 +314,10 @@
             "skills" : [ "Frontend Web Developer", "Passionate Learner" ]
         }
     },
+    "contact" : {
+      "twitterUserName" : "@Anand Pothraj",
+      "twitterLink" : "https://twitter.com/PothrajAnand"
+    },
     "footer" : {
         "footerLink" : [
             {
