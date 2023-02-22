@@ -1,9 +1,12 @@
 import React from 'react';
 import TechCard from './TechCard';
-import TechData from './TechData';
 import { Row, Col } from 'react-bootstrap';
+import data from '../../../SourceData/data.json';
 
 const Technology = () => {
+
+  const TechData = data.about.technology.techData;
+  
   return (
       <div className="my-2 my-md-4">
         <div className="text-light">

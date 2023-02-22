@@ -200,6 +200,120 @@
           ]        
         }
     ],
+    "about" : {
+        "aboutInfo" : {
+            "aboutImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1677051001/Third.3f76f85b2c22d0c9ec44_kjgk62.png",
+            "name" : "Anand Pothraj",
+            "intro" : "MERN Stack Developer, technical writer, and a passionate learner.",
+            "email" : "pothrajanand@gmail.com",
+            "socials"  : {
+                "linkedIn" :  "https://www.linkedin.com/in/anand-pothraj-599910195",
+                "github" : "https://github.com/anandpothraj",
+                "twitter" : "https://twitter.com/PothrajAnand",
+                "devCommunity" : "https://dev.to/anandpothraj",
+                "medium" : "https://medium.com/@anandpothraj11052001"
+            }
+        },
+        "bio" : {
+            "bioWelcomeText" : "Hi there! Thanks for visiting my portfolio.",
+            "bioLinkedIn" : "https://www.linkedin.com/in/anand-pothraj-599910195",
+            "bioName" : "Anand Pothraj",
+            "bioIntroText" : "a MERN Stack Developer, Content Writer, and a passionate learner. I had completed Bachelor's In Computer Science from",
+            "bioCollegeName" : "Mumbai University",
+            "passoutYear" : 2022,
+            "collegeLink" : "https://mu.ac.in/",
+            "bioText" : "I have worked on a wide range of technologies and have worked on projects ranging from small to large scale. I am a self-motivated and self-driven individual who is always looking for new challenges and opportunities. I love to get engage in communities and learn from others."
+        },
+        "experience" : {
+            "ExperienceDetails" : [
+                {
+                    "company" : "Tech Sierra",
+                    "companyImgUrl" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676124557/dnsn9cbrwc3rzek5hkhm.jpg",
+                    "type" : "Full Time", 
+                    "position" : "Software Development Engineer - 1",
+                    "startDate" : "Aug 2022",
+                    "endDate" : "Present"
+                },
+                {
+                    "company" : "Tech Sierra",
+                    "companyImgUrl" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676124557/dnsn9cbrwc3rzek5hkhm.jpg",
+                    "type" : "Internship", 
+                    "position" : "Intern React Developer",
+                    "startDate" : "May 2022",
+                    "endDate" : "July 2022"
+                }
+            ]
+        },
+        "technology" : {
+            "techData" : [
+                {
+                    "techName" : "REACT JS",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                    "bg" : "#121212"
+                  },
+                  {
+                    "techName" : "REDUX",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+                    "bg" : "#121212"
+                  },
+                  {
+                    "techName" : "NODE JS",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+                    "bg" : "#121212"
+                  },
+                  {
+                    "techName" : "MONGODB",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                  },
+                  {
+                    "techName" : "EXPRESS JS",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+                    "bg" : "#fff"
+                  },
+                  {
+                    "techName" : "JAVASCRIPT",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  },
+                  {
+                    "techName" : "GIT",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                  },
+                  {
+                    "techName" : "PYTHON",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                  },
+                  {
+                    "techName" : "BOOTSTRAP",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+                    "bg" : "#121212"
+                  },
+                  {
+                    "techName" : "GITHUB",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+                    "bg" : "#fff"
+                  },
+                  {
+                    "techName" : "HTML",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  },
+                  {
+                    "techName" : "CSS",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  },
+                  {
+                    "techName" : "SASS",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                  },
+                  {
+                    "techName" : "M-UI",
+                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
+                  }
+            ]
+        },
+        "services" : {
+            "skills" : [ "Frontend Web Developer", "Passionate Learner" ]
+        }
+    },
     "footer" : {
         "footerLink" : [
             {
