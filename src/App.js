@@ -8,6 +8,7 @@ import Header from './layouts/Header';
 import Footer from './layouts/Footer';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
+import Socials from './pages/Socials';
 import Feedback from './pages/Feedback';
 import Projects from './pages/Projects';
 import "react-toastify/dist/ReactToastify.css";
@@ -29,6 +30,7 @@ const App = () => {
           {/* <Route path='/blogs' element={<Blogs/>} exact/> */}
           <Route path='/about' element={<About/>} exact/>
           <Route path='/contact' element={<Contact/>} exact/>
+          <Route path='/socials' element={<Socials/>} exact/>
           <Route path='/report' element={<Report/>} exact/>
           <Route path='/privacy-policy' element={<Privacy/>} exact/>
           <Route path='/feedback' element={<Feedback/>} exact/>
