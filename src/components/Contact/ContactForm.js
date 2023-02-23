@@ -87,7 +87,7 @@ const ContactForm = () => {
   return (
     <div className="col-12 col-md-6 mx-auto my-2 my-md-4">
       <h4 className='text-center'>Simply leave a message</h4>
-      <Form className='w-100 m-auto' name='contact' method='POST' action='/contact' data-netlify="true">
+      <Form className='w-100 m-auto' name='contact' action='/contact' method='POST'>
         <input type="hidden" name="form-name" value="contact"/>
         <Form.Group className="my-3">
           <Form.Control type="text" className="w-75 m-auto text-center bg-dark text-light border-dark" placeholder="Name" name="name" required/>
