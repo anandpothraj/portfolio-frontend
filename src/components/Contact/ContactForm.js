@@ -28,7 +28,11 @@ const ContactForm = () => {
       const config = {
         "Content-type": "application/json"
       };
-      const response = await axios.post(`${server.url.production}${SEND_MESSAGE}`,sendMessageDetails,{ headers: config });
+      const response = await axios.post(
+        `${server.url.development}${SEND_MESSAGE}`,
+        sendMessageDetails,
+        { headers: config }
+      );
       if (response.status === 201) {
         toast.success(response.data.message, {
           autoClose: 3000,
