@@ -14,7 +14,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from 'react-toastify';
 import GoToTop from './components/GoToTop/GoToTop';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Success from './pages/Success';
 
 
 const App = () => {
@@ -33,7 +32,6 @@ const App = () => {
           <Route path='/report' element={<Report/>} exact/>
           <Route path='/privacy-policy' element={<Privacy/>} exact/>
           <Route path='/feedback' element={<Feedback/>} exact/>
-          <Route path='/pages/success' element={<Success/>} exact/>
         </Routes>
         </div>
         <Footer/>
