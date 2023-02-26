@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import server from "../../config/server.json";
 import { Form, Button, Spinner } from 'react-bootstrap';
 
-const ContactForm = () => {
+const ContactForm = (props) => {
 
   const navigate = useNavigate();
   const [ name, setName ] = useState("");
@@ -29,7 +29,7 @@ const ContactForm = () => {
         "Content-type": "application/json"
       };
       const response = await axios.post(
-        `${server.url.development}${SEND_MESSAGE}`,
+        `${server.url.production}${SEND_MESSAGE}`,
         sendMessageDetails,
         { headers: config }
       );
@@ -40,8 +40,11 @@ const ContactForm = () => {
         });
         resetFields();
         setTimeout(function() {
+          props.setContacted(true);
+        }, 1000);
+        setTimeout(function() {
           navigate("/")
-        }, 5000);
+        }, 7000);
       } else {
         setDisableBtn(false);
         setShowSpinner(false);
