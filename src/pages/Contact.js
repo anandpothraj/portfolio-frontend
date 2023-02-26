@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../components/Contact/Contact.css';
 import Twitter from '../components/Contact/Twitter';
 import ContactForm from '../components/Contact/ContactForm';
 import Meet from '../components/Contact/Meet';
+import ContactedSuccess from '../components/Contact/ContactedSuccess';
 
 const Contact = () => {
+  const [ contacted, setContacted ] = useState(false);
+
   return (
     <div className='contactBg col-11 col-md-9 m-auto rounded px-2 py-3 p-md-5 text-light my-2 my-md-5'>
-      <Twitter/>
-      <div className="d-flex w-100 flexColumn m-auto">
-        <ContactForm/>
-        <Meet/>
-      </div>
+      {
+        contacted ? <ContactedSuccess/> :
+        <>
+          <Twitter/>
+          <div className="d-flex w-100 flexColumn m-auto">
+            <ContactForm setContacted={setContacted}/>
+            <Meet/>
+          </div>
+        </>
+      }
     </div>
   );
 };
