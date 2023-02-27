@@ -101,7 +101,7 @@ const ContactForm = (props) => {
           <Form.Control type="email" className="w-75 m-auto text-center bg-dark text-light border-dark" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
         </Form.Group>
         <Form.Group className="my-3">
-          <Form.Control as="textarea" rows={1} className="w-75 m-auto text-center bg-dark text-light border-dark" value={message} onChange={(e)=>setMessage(e.target.value)} placeholder="Message" required/>
+          <Form.Control as="textarea" rows={1} className="w-75 m-auto text-center bg-dark text-light border-dark contactMessageBar" value={message} onChange={(e)=>setMessage(e.target.value)} placeholder="Message" required/>
         </Form.Group>
         <Form.Group className="mt-3 d-flex">
           <Button variant="outline-warning" type="submit" size='sm' className="m-auto" disabled={disableBtn}>Send Message 
