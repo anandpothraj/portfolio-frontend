@@ -8,7 +8,7 @@ const Technology = () => {
   const TechData = data.about.technology.techData;
   
   return (
-      <div className="my-2 my-md-4">
+      <div className="my-2 my-md-4 techBar">
         <div className="text-light">
           <h2 className="colorLimeYellow textCenter">
             Tools, Languages &amp; Frameworks/Libraries
