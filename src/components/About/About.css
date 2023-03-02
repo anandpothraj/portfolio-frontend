@@ -105,6 +105,20 @@
   }
 }
 
+.js-calendar-graph{
+  scroll-snap-align: end;
+}
+
+.js-calendar-graph::-webkit-scrollbar-track {
+  background-color: #c5c5c5 !important;
+}
+
+.js-calendar-graph::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(0, 255, 17) !important;
+  background-image: none !important;
+}
+
 @media screen and (max-width: 992px) {
   .contributions-graph .calendar {
     padding: 1rem;
