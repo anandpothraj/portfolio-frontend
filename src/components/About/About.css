@@ -105,17 +105,23 @@
   }
 }
 
-.js-calendar-graph::-webkit-scrollbar {
+.techContainer .js-calendar-graph::-webkit-scrollbar {
   background-color: none !important;
 }
 
-.js-calendar-graph::-webkit-scrollbar-track {
+.techContainer .js-calendar-graph::-webkit-scrollbar-track {
   background-color: #c5c5c5 !important;
 }
 
 .js-calendar-graph::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: rgb(0, 255, 17) !important;
+  background-image: none !important;
+}
+
+.techContainer::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ffcc00 !important;
   background-image: none !important;
 }
 
