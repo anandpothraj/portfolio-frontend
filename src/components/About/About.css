@@ -105,8 +105,8 @@
   }
 }
 
-.js-calendar-graph{
-  scroll-snap-align: end;
+.js-calendar-graph::-webkit-scrollbar {
+  background-color: none !important;
 }
 
 .js-calendar-graph::-webkit-scrollbar-track {
@@ -119,10 +119,7 @@
   background-image: none !important;
 }
 
-@media screen and (max-width: 992px) {
-  .contributions-graph .calendar {
-    padding: 1rem;
-  }
+@media screen and (max-width: 1200px) {
   .contributions-graph .calendar .border,
   .contributions-graph .calendar .contrib-column {
     display: block;
@@ -133,6 +130,12 @@
   }
   .contributions-graph .calendar .overflow-hidden::-webkit-scrollbar {
     height: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contributions-graph .calendar {
+    padding: 1rem;
   }
 }
 
