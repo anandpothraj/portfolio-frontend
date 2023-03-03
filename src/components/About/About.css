@@ -105,10 +105,27 @@
   }
 }
 
-@media screen and (max-width: 992px) {
-  .contributions-graph .calendar {
-    padding: 1rem;
-  }
+.techContainer .js-calendar-graph::-webkit-scrollbar {
+  background-color: none !important;
+}
+
+.techContainer .js-calendar-graph::-webkit-scrollbar-track {
+  background-color: #c5c5c5 !important;
+}
+
+.js-calendar-graph::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(0, 255, 17) !important;
+  background-image: none !important;
+}
+
+.techContainer::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ffcc00 !important;
+  background-image: none !important;
+}
+
+@media screen and (max-width: 1200px) {
   .contributions-graph .calendar .border,
   .contributions-graph .calendar .contrib-column {
     display: block;
@@ -119,6 +136,12 @@
   }
   .contributions-graph .calendar .overflow-hidden::-webkit-scrollbar {
     height: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contributions-graph .calendar {
+    padding: 1rem;
   }
 }
 
