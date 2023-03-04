@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import server from "../../config/server.json";
 import { Form, Button, Spinner } from 'react-bootstrap';
 
-const ContactForm = () => {
+const ContactForm = (props) => {
 
   const navigate = useNavigate();
   const [ name, setName ] = useState("");
@@ -28,7 +28,11 @@ const ContactForm = () => {
       const config = {
         "Content-type": "application/json"
       };
-      const response = await axios.post(`${server.url.production}${SEND_MESSAGE}`,sendMessageDetails,{ headers: config });
+      const response = await axios.post(
+        `${server.url.production}${SEND_MESSAGE}`,
+        sendMessageDetails,
+        { headers: config }
+      );
       if (response.status === 201) {
         toast.success(response.data.message, {
           autoClose: 3000,
@@ -36,8 +40,11 @@ const ContactForm = () => {
         });
         resetFields();
         setTimeout(function() {
+          props.setContacted(true);
+        }, 1000);
+        setTimeout(function() {
           navigate("/")
-        }, 5000);
+        }, 7000);
       } else {
         setDisableBtn(false);
         setShowSpinner(false);
@@ -94,7 +101,7 @@ const ContactForm = () => {
           <Form.Control type="email" className="w-75 m-auto text-center bg-dark text-light border-dark" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
         </Form.Group>
         <Form.Group className="my-3">
-          <Form.Control as="textarea" rows={1} className="w-75 m-auto text-center bg-dark text-light border-dark" value={message} onChange={(e)=>setMessage(e.target.value)} placeholder="Message" required/>
+          <Form.Control as="textarea" rows={1} className="w-75 m-auto text-center bg-dark text-light border-dark contactMessageBar" value={message} onChange={(e)=>setMessage(e.target.value)} placeholder="Message" required/>
         </Form.Group>
         <Form.Group className="mt-3 d-flex">
           <Button variant="outline-warning" type="submit" size='sm' className="m-auto" disabled={disableBtn}>Send Message 

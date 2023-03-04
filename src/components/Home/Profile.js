@@ -21,7 +21,6 @@ const Profile = () => {
             <div className="d-flex m-auto">
             <div className='my-2 primaryBlue d-inline-flex mx-auto mx-md-0'>
               <TypeWriterEffect
-                className="Anand"
                 startDelay={1000}
                 cursorColor="#84a1ff"
                 multiText={data.home.profile.designation}
