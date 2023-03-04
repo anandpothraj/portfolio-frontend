@@ -1,38 +1,31 @@
 import React from 'react';
-import { Image } from 'react-bootstrap';
-import { GrSend } from 'react-icons/gr';
+import '../components/Socials/SocialCard';
+import SocialCard from '../components/Socials/SocialCard';
+import data from '../SourceData/data.json';
+import { Row, Col } from 'react-bootstrap';
 
 const Socials = () => {
-  return (
-    <div className='col-11 col-md-9 my-3 mx-auto text-light bg-primary'>
-        <h1>Want to connect me?</h1>
-        <p>Please follow the links.</p>
-        <div className="col-11 col-md-6 rounded bg-secondary d-flex m-auto py-1 my-3">
-            <div className="w-25 d-flex">
-                <Image src='https://res.cloudinary.com/de3bkua6f/image/upload/v1677071293/75027034_epigx7.png' className='w-75 h-auto rounded-circle m-auto'/>
-            </div>
-            <div className="w-75 m-auto">
-            <h5 class="text-center">Anand Pothraj</h5>
-                <div className='d-flex justify-content-center align-items-center'>
-                    <span>LinkedIn</span>
-                    <button><GrSend/></button>
-                </div>
-            </div>
-        </div>
-        <div className="col-11 col-md-6 rounded bg-secondary d-flex m-auto py-1 my-3">
-            <div className="w-25 d-flex">
-                <Image src='https://res.cloudinary.com/de3bkua6f/image/upload/v1677071293/75027034_epigx7.png' className='w-75 h-auto rounded-circle m-auto'/>
-            </div>
-            <div className="w-75 m-auto">
-            <h5 class="text-center">Anand Pothraj</h5>
-                <div className='d-flex justify-content-center align-items-center'>
-                    <span>LinkedIn</span>
-                    <button><GrSend/></button>
-                </div>
+    const socials = data.socials;
+
+    return (
+        <div className='col-11 col-md-9 my-3 mx-auto text-light'>
+            <h1 className='textCenter'>Want to connect me?</h1>
+            <p className='textCenter'>Please follow the links.</p>
+            <div className="py-3 socialContainer h-100">
+                <Row>
+                {
+                    socials.map((social, i) => {
+                        return (
+                            <Col  key={i}>
+                                <SocialCard social={social} className="my-1"/>
+                            </Col>
+                        );
+                    })
+                }
+                </Row>
             </div>
         </div>
-    </div>
-  )
-}
+    );
+};
 
 export default Socials;

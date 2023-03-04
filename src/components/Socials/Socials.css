@@ -1,0 +1,24 @@
+.visitBtn{
+    background-color: #ff5403 !important;
+    border-radius: 20px;
+}
+
+.visit{
+    font-size: 20px;
+}
+
+.socialContainer{
+    margin-top: 5%;
+    padding: 0 1rem;
+}
+
+.socialCard{
+    min-width: 12rem;
+    min-height: 12rem;
+    max-width: 12rem;
+    max-height: 12rem;
+    margin: 2%;
+    text-align: center;
+    background: #121212;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+}

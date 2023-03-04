@@ -20,6 +20,11 @@
                 "title" : "Contact",
                 "path" : "/contact",
                 "navigate" : "contact"
+            },
+            {
+                "title" : "Socials",
+                "path" : "/socials",
+                "navigate" : "socials"
             }
         ]
     },
@@ -318,6 +323,33 @@
       "twitterUserName" : "@Anand Pothraj",
       "twitterLink" : "https://twitter.com/PothrajAnand"
     },
+    "socials" : [
+        {
+            "profilePhoto" : "https://media.licdn.com/dms/image/C4D03AQFqoYSQF4p_-A/profile-displayphoto-shrink_200_200/0/1664021791921?e=1683158400&v=beta&t=Ibbdpb1C7keyiXxKVprr8AAbXnXx8J9IS46RR1Bpo8M",
+            "platform" : "LinkedIn",
+            "url" : "https://www.linkedin.com/in/anand-pothraj-599910195/"
+        },
+        {
+            "profilePhoto" : "https://avatars.githubusercontent.com/u/75027034?s=400&u=d637f8a2c6cbfa49c9303831e844fa6a9d9208bd&v=4",
+            "platform" : "Github",
+            "url" : "https://github.com/anandpothraj"
+        },
+        {
+            "profilePhoto" : "https://pbs.twimg.com/profile_images/1613631971669995520/2-VQGsLX_400x400.jpg",
+            "platform" : "Twitter",
+            "url" : "https://twitter.com/PothrajAnand"
+        },
+        {
+            "profilePhoto" : "https://res.cloudinary.com/practicaldev/image/fetch/s--xcGFx6y0--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/891499/5fc8d26a-d22d-475b-a6e0-bc2b234edf20.jpg",
+            "platform" : "DevCom",
+            "url" : "https://dev.to/anandpothraj"
+        },
+        {
+            "profilePhoto" : "https://miro.medium.com/v2/resize:fill:88:88/1*D9Yw5zsRt9FuyyXLwKyCbw.png",
+            "platform" : "Medium",
+            "url" : "https://medium.com/@anandpothraj11052001"
+        }
+    ],
     "footer" : {
         "footerLink" : [
             {
