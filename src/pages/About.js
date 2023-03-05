@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../components/About/About.css';
 import Bio from '../components/About/Bio';
 // import Stats from '../components/About/Stats';
@@ -10,6 +10,15 @@ import ContributionsGraph from '../components/About/ContributionGraph';
 import Support from '../components/About/Support';
 
 const About = () => {
+
+  const goToTop = () => {
+    window.scrollTo({ top : 0, left: 0, behavior: "smooth"});
+  };
+
+  useEffect(()=> {
+    goToTop();
+  },[]);
+
   return (
     <div className='col-11 col-md-9 m-auto text-light'>
       <AboutInfo/>

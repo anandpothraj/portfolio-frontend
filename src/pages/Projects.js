@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import data from '../SourceData/data.json';
 import { Col, Row } from 'react-bootstrap';
 import '../components/Projects/Projects.css';
 import ProjectItem from '../components/Projects/ProjectItem';
 
 const Projects = () => {
+
+  const goToTop = () => {
+    window.scrollTo({ top : 0, left: 0, behavior: "smooth"});
+  };
+
+  useEffect(()=> {
+    goToTop();
+  },[]);
 
   return (
     <div className='col-11 col-md-9 my-3 mx-auto text-light'>
