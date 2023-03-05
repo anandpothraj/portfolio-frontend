@@ -4,6 +4,7 @@ import Twitter from '../components/Contact/Twitter';
 import ContactForm from '../components/Contact/ContactForm';
 import Meet from '../components/Contact/Meet';
 import ContactedSuccess from '../components/Contact/ContactedSuccess';
+import PhoneCall from '../components/Contact/PhoneCall';
 
 const Contact = () => {
   const [ contacted, setContacted ] = useState(false);
@@ -24,7 +25,10 @@ const Contact = () => {
           <Twitter/>
           <div className="d-flex w-100 flexColumn m-auto">
             <ContactForm setContacted={setContacted}/>
-            <Meet/>
+            <div className="d-flex flex-column">
+              <PhoneCall/>
+              <Meet/>
+            </div>
           </div>
         </>
       }
