@@ -26,7 +26,7 @@ const Report = () => {
         <>
           <Twitter messageType="Report an issue!" textColor="text-danger"/>
           <div className="d-flex w-100 flexColumn m-auto">
-            <FormComponent btnText="Report Issue" btnVariant="outline-danger" placeholderText="Report Message" formType="Report" setShowSuccess={setShowSuccess} />
+            <FormComponent btnText="Report Issue" btnVariant="outline-danger" placeholderText="Report Message" formType="Report" setShowSuccess={setShowSuccess} requestType="sendReport"/>
           </div>
         </>
       }
