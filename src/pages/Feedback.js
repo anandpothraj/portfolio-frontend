@@ -26,7 +26,7 @@ const Feedback = () => {
         <>
           <Twitter messageType="Share your experience!" textColor="text-success"/>
           <div className="d-flex w-100 flexColumn m-auto">
-            <FormComponent btnText="Send Feedback" btnVariant="outline-success" placeholderText="Feedback Message" formType="Feedback" setShowSuccess={setShowSuccess} textColor="text-light"/>
+            <FormComponent btnText="Send Feedback" btnVariant="outline-success" placeholderText="Feedback Message" formType="Feedback" setShowSuccess={setShowSuccess} textColor="text-light" requestType="sendFeedback"/>
           </div>
         </>
       }

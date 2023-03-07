@@ -12,6 +12,8 @@ const FormComponent = (props) => {
   const [ email, setEmail ] = useState("");
   const [ message, setMessage ] = useState("");
   const SEND_MESSAGE = server.api.SEND_MESSAGE;
+  const SEND_REPORT = server.api.SEND_REPORT;
+  const SEND_FEEDBACK = server.api.SEND_FEEDBACK;
   const [ disableBtn, setDisableBtn ] = useState(false);
   const [ showSpinner, setShowSpinner ] = useState(false);
 
@@ -23,13 +25,13 @@ const FormComponent = (props) => {
     setShowSpinner(false);
   };
 
-  const sendMessage = async (sendMessageDetails) => {
+  const sendMessage = async (sendMessageDetails, requestType) => {
     try {
       const config = {
         "Content-type": "application/json"
       };
       const response = await axios.post(
-        `${server.url.production}${SEND_MESSAGE}`,
+        `${server.url.production}${requestType}`,
         sendMessageDetails,
         { headers: config }
       );
@@ -71,6 +73,18 @@ const FormComponent = (props) => {
     }
   }
 
+  const sendRequest = (sendMessageDetails) => {
+    if(props.requestType === "sendMessage"){
+      sendMessage(sendMessageDetails,SEND_MESSAGE);
+    }
+    else if(props.requestType === "sendReport"){
+      sendMessage(sendMessageDetails,SEND_REPORT);
+    }
+    else if(props.requestType === "sendFeedback"){
+      sendMessage(sendMessageDetails,SEND_FEEDBACK);
+    }
+  }
+
   const handleOnSubmit = (e) => {
     e.preventDefault();
     if(name && email && message){
@@ -81,7 +95,7 @@ const FormComponent = (props) => {
       }
       setDisableBtn(true);
       setShowSpinner(true);
-      sendMessage(sendMessageDetails);
+      sendRequest(sendMessageDetails);
     }
     else{
       toast.error("Please fill all the fields", {

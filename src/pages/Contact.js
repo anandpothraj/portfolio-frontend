@@ -28,7 +28,7 @@ const Contact = () => {
         <>
           <Twitter messageType={"I'd love to hear from you."}/>
           <div className="d-flex w-100 flexColumn m-auto">
-            <FormComponent setShowSuccess={setShowSuccess} btnText={"Send Message"} btnVariant="outline-warning" placeholderText={"Message"} formType={"Message"} textColor={"text-danger"}/>
+            <FormComponent setShowSuccess={setShowSuccess} btnText={"Send Message"} btnVariant="outline-warning" placeholderText={"Message"} formType={"Message"} textColor={"text-danger"} requestType="sendMessage"/>
             <div className="d-flex flex-column">
               <PhoneCall/>
               <Meet/>
