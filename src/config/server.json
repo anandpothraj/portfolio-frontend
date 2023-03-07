@@ -5,6 +5,8 @@
         "production" : "https://backend-portfolio-anand.onrender.com/"
     },
     "api": {
-        "SEND_MESSAGE": "api/contact/sendMessage"
+        "SEND_MESSAGE": "api/contact/sendMessage",
+        "SEND_REPORT": "api/contact/sendReport",
+        "SEND_FEEDBACK": "api/contact/sendFeedback"
     }
 }

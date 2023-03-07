@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
 import '../components/Contact/Contact.css';
+import React, { useState, useEffect } from 'react';
 import Twitter from '../components/Contact/Twitter';
-import ContactForm from '../components/Contact/ContactForm';
-import Meet from '../components/Contact/Meet';
 import Success from '../components/Success/Success';
-import PhoneCall from '../components/Contact/PhoneCall';
+import FormComponent from '../components/Form/FormComponent';
 
 const Feedback = () => {
-  const [ contacted, setContacted ] = useState(false);
+  const [ showSuccess, setShowSuccess ] = useState(false);
 
   const goToTop = () => {
     window.scrollTo({ top : 0, left: 0, behavior: "smooth"});
@@ -18,17 +16,17 @@ const Feedback = () => {
   },[]);
 
   return (
-    <div className='contactBg col-11 col-md-9 m-auto rounded px-2 py-3 p-md-5 text-light my-2 my-md-5'>
+    <div className='bg-black col-11 col-md-9 m-auto rounded px-2 py-3 p-md-5 text-light my-2 my-md-5'>
       {
-        contacted ? 
+        showSuccess ? 
         <Success 
-          thankyouText={"Thanks for valueable feedback!"} 
-          subText={"It was a pleasure to receive your feedback. We work on your feedback as soon as!"}
+          thankyouText="Thanks for valueable feedback!"
+          subText="It was a pleasure to receive your feedback. We work on your feedback as soon as!"
         /> :
         <>
-          <Twitter/>
+          <Twitter messageType="Share your experience!" textColor="text-success"/>
           <div className="d-flex w-100 flexColumn m-auto">
-            <ContactForm setContacted={setContacted}/>
+            <FormComponent btnText="Send Feedback" btnVariant="outline-success" placeholderText="Feedback Message" formType="Feedback" setShowSuccess={setShowSuccess} textColor="text-light"/>
           </div>
         </>
       }
