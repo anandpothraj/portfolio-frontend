@@ -27,10 +27,10 @@ const MobileNavBar = (props) => {
 
   return (
     <div className='mobileNavBar'>
-      <ul className='m-auto text-center d-flex flex-column p-0'>
+      <ul className='m-auto text-center d-flex flex-column p-0' style={{maxHeight:"80vh"}}>
         {data.header.navLink.map((link, i) => {
           return(
-            <li className='my-5 m-auto w-100' key={i} style={location.pathname === link.path ? active : linkCss} onClick={()=>navigateLinks(link.navigate)}>{link.title}</li>
+            <li className='my-4 m-auto' key={i} style={location.pathname === link.path ? active : linkCss} onClick={()=>navigateLinks(link.navigate)}>{link.title}</li>
           )
         })}
       </ul>
