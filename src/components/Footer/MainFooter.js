@@ -1,17 +1,33 @@
-import React from 'react';
 import { FaDev } from 'react-icons/fa';
 import { Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import data from '../../SourceData/data.json';
+import React, { useState, useEffect } from 'react';
 import { BsTwitter, BsGithub, BsMedium, BsLinkedin } from 'react-icons/bs';
 
 const MainFooter = () => {
+
+    const [ siteVisits, setSiteVisits ] = useState(0);
 
     const style = {
         fontSize:"25px",
         cursor:"pointer",
         color:"white"
     };
+
+    const getsiteVisits = () => {
+        console.log("getSiteVisits : ", siteVisits);
+    }
+
+    const updateSiteVisits = () => {
+        setSiteVisits(siteVisits + 1);
+    }
+
+    useEffect(() => {
+        getsiteVisits();
+        updateSiteVisits();
+        console.log("updateSiteVisits : ", siteVisits);
+    },[])
 
     return (
         <div className='text-light bg-black p-3 p-md-5'>
