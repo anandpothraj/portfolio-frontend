@@ -7,7 +7,7 @@ import { BsTwitter, BsGithub, BsMedium, BsLinkedin } from 'react-icons/bs';
 
 const MainFooter = () => {
 
-    const [ siteVisits, setSiteVisits ] = useState(0);
+    const [ siteVisits, setSiteVisits ] = useState(1105);
 
     const style = {
         fontSize:"25px",
@@ -27,6 +27,7 @@ const MainFooter = () => {
         getsiteVisits();
         updateSiteVisits();
         console.log("updateSiteVisits : ", siteVisits);
+        // eslint-disable-next-line
     },[])
 
     return (
@@ -34,7 +35,7 @@ const MainFooter = () => {
             <div className="w-75 d-flex justify-content-between m-auto flex-column flex-md-row">
                 <div className="">
                     <h1>Let's Connect</h1>
-                    <p>Visits : <Badge bg="warning" text="dark">12345</Badge></p>
+                    <p>Visits : <Badge bg="warning" text="dark">{siteVisits}</Badge></p>
                 </div>
                 <div className="d-flex m-md-auto py-3">
                     <a href={data.footer.socials.linkedIn} target="_blank" rel="noreferrer"><BsLinkedin className="m-2" style={style}/></a>
