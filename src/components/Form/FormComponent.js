@@ -10,9 +10,9 @@ const FormComponent = (props) => {
   const navigate = useNavigate();
   const [ name, setName ] = useState("");
   const [ email, setEmail ] = useState("");
+  const SEND_REPORT = server.api.SEND_REPORT;
   const [ message, setMessage ] = useState("");
   const SEND_MESSAGE = server.api.SEND_MESSAGE;
-  const SEND_REPORT = server.api.SEND_REPORT;
   const SEND_FEEDBACK = server.api.SEND_FEEDBACK;
   const [ disableBtn, setDisableBtn ] = useState(false);
   const [ showSpinner, setShowSpinner ] = useState(false);
