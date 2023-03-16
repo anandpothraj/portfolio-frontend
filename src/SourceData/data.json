@@ -20,6 +20,11 @@
                 "title" : "Contact",
                 "path" : "/contact",
                 "navigate" : "contact"
+            },
+            {
+                "title" : "Socials",
+                "path" : "/socials",
+                "navigate" : "socials"
             }
         ]
     },
