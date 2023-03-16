@@ -1,5 +1,5 @@
-import React from 'react';
 import './Contact.css';
+import React from 'react';
 // import { InlineWidget } from 'react-calendly';
 
 const Meet = () => {
