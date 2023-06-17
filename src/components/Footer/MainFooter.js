@@ -1,13 +1,15 @@
+import axios from 'axios';
 import { FaDev } from 'react-icons/fa';
 import { Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import data from '../../SourceData/data.json';
+import server from '../../config/server.json';
 import React, { useState, useEffect } from 'react';
 import { BsTwitter, BsGithub, BsMedium, BsLinkedin } from 'react-icons/bs';
 
 const MainFooter = () => {
 
-    const [ siteVisits, setSiteVisits ] = useState(1105);
+    const [ siteVisits, setSiteVisits ] = useState(0);
 
     const style = {
         fontSize:"25px",
@@ -15,18 +17,43 @@ const MainFooter = () => {
         color:"white"
     };
 
-    const getsiteVisits = () => {
-        console.log("getSiteVisits : ", siteVisits);
+    const updateSiteVisits = async (pastVisits) => {
+        try {
+            const config = {"Content-type": "application/json"};
+            const response = await axios.post(`${server.url.production}${server.api.UPDATE_SITE_VISITS}`,{"visitsCount": pastVisits+1},{ headers: config });
+            if (response.status === 201) {
+                setSiteVisits(pastVisits+1);
+            } else {
+                console.log("Unable to update the site count");
+            }
+        } catch (e) {
+            if (e.response && e.response.status !== 201) {
+                console.log("Unable to update the site count");
+            } else {
+                console.log("Something went wrong, please try again later.");
+            }
+        }
     }
 
-    const updateSiteVisits = () => {
-        setSiteVisits(siteVisits + 1);
+    const getsiteVisits = async () => {
+        try {
+            const response = await axios.get(`${server.url.production}${server.api.FETCH_SITE_VISITS}`);
+            if (response.status === 200) {
+                updateSiteVisits(response.data.visitsCount);
+            } else {
+              console.log("Unable to fetch site visits");
+            }
+          } catch (e) {
+            if (e.response && e.response.status !== 200) {
+                console.log("Unable to fetch site visits");
+            } else {
+              console.log("Something went wrong, please try again later.");
+            }
+          }
     }
 
     useEffect(() => {
         getsiteVisits();
-        updateSiteVisits();
-        console.log("updateSiteVisits : ", siteVisits);
         // eslint-disable-next-line
     },[])
 
@@ -35,7 +62,7 @@ const MainFooter = () => {
             <div className="w-75 d-flex justify-content-between m-auto flex-column flex-md-row">
                 <div className="">
                     <h1>Let's Connect</h1>
-                    <p>Visits : <Badge bg="warning" text="dark">{siteVisits}</Badge></p>
+                    <p>Visits : <Badge bg="warning" text="dark">{siteVisits?siteVisits:"Fetching..."}</Badge></p>
                 </div>
                 <div className="d-flex m-md-auto py-3">
                     <a href={data.footer.socials.linkedIn} target="_blank" rel="noreferrer"><BsLinkedin className="m-2" style={style}/></a>
