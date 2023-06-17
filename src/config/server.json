@@ -7,6 +7,8 @@
     "api": {
         "SEND_MESSAGE": "api/contact/sendMessage",
         "SEND_REPORT": "api/contact/sendReport",
-        "SEND_FEEDBACK": "api/contact/sendFeedback"
+        "SEND_FEEDBACK": "api/contact/sendFeedback",
+        "FETCH_SITE_VISITS": "api/visits/fetchSiteVisits",
+        "UPDATE_SITE_VISITS": "api/visits/updateSiteVisits"
     }
 }
