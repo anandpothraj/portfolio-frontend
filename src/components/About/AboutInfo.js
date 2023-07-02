@@ -32,8 +32,8 @@ const AboutInfo = () => {
                 <div className='d-flex justify-content-center'>
                     <Link to='/contact' className='my-auto'>
                         <Button className='btn-sm px-2 py-1 bgYellow border-none rounded my-1 mx-2'>Contact</Button>
-                    </Link><Link to='/profiles' className='my-auto'>
-                        <Button className='btn-sm px-2 py-1 bgBlueGreen border-none rounded my-1 mx-2'>Profiles</Button>
+                    </Link><Link to='/socials' className='my-auto'>
+                        <Button className='btn-sm px-2 py-1 bgBlueGreen border-none rounded my-1 mx-2'>Socials</Button>
                     </Link>
                 </div>
             </div>
