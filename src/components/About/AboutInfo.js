@@ -25,15 +25,15 @@ const AboutInfo = () => {
                     <Link to='/projects' className='my-auto'>
                         <Button className='btn-sm px-2 py-1 bgOrange border-none rounded my-1 mx-2'>Projects</Button>
                     </Link>
-                    <Link to='/blogs' className='my-auto '>
-                        <Button className='btn-sm px-2 py-1 bgLightBlue border-none rounded my-1 mx-2'>Blogs</Button>
-                    </Link>
+                    {/* <Link to='/blogs' className='my-auto '>
+                        <Button className='btn-sm px-2 py-1 bgBlueGreen border-none rounded my-1 mx-2'>Blogs</Button>
+                    </Link> */}
                 </div>
                 <div className='d-flex justify-content-center'>
                     <Link to='/contact' className='my-auto'>
                         <Button className='btn-sm px-2 py-1 bgYellow border-none rounded my-1 mx-2'>Contact</Button>
                     </Link><Link to='/socials' className='my-auto'>
-                        <Button className='btn-sm px-2 py-1 bgBlueGreen border-none rounded my-1 mx-2'>Socials</Button>
+                        <Button className='btn-sm px-2 py-1 bgLightBlue border-none rounded my-1 mx-2'>Socials</Button>
                     </Link>
                 </div>
             </div>
