@@ -32,21 +32,20 @@
   color: #9b9fa7;
   line-height: 30px;
 }
-.js-calendar-graph-svg {
-  margin: auto;
-}
 .contributions-graph .calendar {
   border: none;
-  background: #2f2f2f;
   padding: 2rem;
-  margin: 2%;
+  margin: auto;
 }
-.contributions-graph .calendar .border,
-.contributions-graph .calendar .contrib-column {
-  border: none !important;
+.calendar {
+  display: flex;
+  overflow-x: auto; 
 }
-.contributions-graph .calendar .contrib-number {
-    color: #9b9fa7 !important;
+.react-activity-calendar{
+  margin: auto;
+}
+.styles-module_calendar__-Ozc6{
+  max-width: none !important;
 }
 .imageDiv{
   max-width: 5rem;
@@ -105,17 +104,17 @@
   }
 }
 
-.techContainer .js-calendar-graph::-webkit-scrollbar {
+.techContainer .calendar::-webkit-scrollbar {
   background-color: none !important;
 }
 
-.techContainer .js-calendar-graph::-webkit-scrollbar-track {
+.techContainer .calendar::-webkit-scrollbar-track {
   background-color: #c5c5c5 !important;
 }
 
-.js-calendar-graph::-webkit-scrollbar-thumb {
+.calendar::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: rgb(0, 255, 17) !important;
+  background-color: rgb(0, 199, 13) !important;
   background-image: none !important;
 }
 
@@ -140,7 +139,7 @@
 }
 
 @media screen and (max-width: 992px) {
-  .contributions-graph .calendar {
+  .contributions-graph{
     padding: 1rem;
   }
 }
