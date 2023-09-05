@@ -9,12 +9,15 @@ const ContributionsGraph = () => {
       <div className="contributions-graph my-2 my-md-5">
         <h2 className='colorLightBlue my-4 textCenter'>OSS Contributions</h2>
         <div className="calendar rounded-3" style={{border:"none",background:"black", scrollbarColor: "green"}}>
-          <GitHubCalendar 
+          <GitHubCalendar
+            className="m-auto"
             username='anandpothraj' 
             year={2023}
             labels={{
               totalCount: '{{count}} contributions in the this year!',
             }}
+            hideColorLegend={false}
+            hideTotalCount={false}
             colorScheme='dark'
             renderBlock={(block, activity) =>
               React.cloneElement(block, {
