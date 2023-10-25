@@ -48,40 +48,48 @@
         }
         ,
         "recentProjects": {
-            "projects" : [
+          "projects" : [
+            {
+              "projectImage":"https://res.cloudinary.com/de3bkua6f/image/upload/v1698230410/bjpvdflzm95igfj8ui4z.png",
+              "projectName":"Anand Vaccination System",
+              "projectRepo":"https://github.com/anandpothraj/avs-frontend",
+              "projectUrl":"https://anand-vaccination-system.netlify.app/",
+              "techStack": [
                 {
-                    "projectImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676723074/htpyrnd1lyylgfijomz5.png",
-                    "projectName" : "CryptoSwitch",
-                    "projectRepo" : "https://github.com/anandpothraj/CryptoSwitch",
-                    "projectUrl" : "https://anand-cryptoswitch.netlify.app",
-                    "techStack" : [
-                        {
-                            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                            "title": "React"
-                        },
-                        {
-                            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-                            "title": "Bootstrap"
-                        }
-                    ]
+                  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+                  "title": "MongoDB"
                 },
                 {
-                    "projectImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676723121/gxorvwgsbdpjolcivtpp.png",
-                    "projectName" : "NewsHut",
-                    "projectRepo" : "https://github.com/anandpothraj/newshut",
-                    "projectUrl" : "https://anand-newshut.netlify.app/",
-                    "techStack" : [
-                        {
-                            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                            "title": "React"
-                        },
-                        {
-                            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-                            "title": "Bootstrap"
-                        }
-                    ]
+                  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                  "title": "React JS"
+                },
+                {
+                  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+                  "title": "Node JS"
+                },
+                {
+                  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+                  "title": "Bootstrap"
                 }
-            ]
+              ] 
+            },
+            {
+              "projectImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676723074/htpyrnd1lyylgfijomz5.png",
+              "projectName" : "CryptoSwitch",
+              "projectRepo" : "https://github.com/anandpothraj/CryptoSwitch",
+              "projectUrl" : "https://anand-cryptoswitch.netlify.app",
+              "techStack" : [
+                {
+                    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                    "title": "React"
+                },
+                {
+                    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+                    "title": "Bootstrap"
+                }
+              ]
+            }
+          ]
         },
         "hire" : {
             "strength" : [
@@ -151,54 +159,78 @@
         }
     },
     "projects" : [
-        {
-          "title":"NewsHut",
-          "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723121/gxorvwgsbdpjolcivtpp.png",
-          "repoName":"https://github.com/anandpothraj/newshut",
-          "liveUrl":"https://anand-newshut.netlify.app/",
-          "techs": [
-            {
-              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-              "title": "React"
-            },
-            {
-              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-              "title": "Bootstrap"
-            }
-          ]
-        },
-        {
-          "title":"Crypto Switch",
-          "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723074/htpyrnd1lyylgfijomz5.png",
-          "repoName":"https://github.com/anandpothraj/cryptoswitch",
-          "liveUrl":"https://anand-cryptoswitch.netlify.app/",
-          "techs": [
-            {
-              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-              "title": "React"
-            },
-            {
-              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-              "title": "Bootstrap"
-            }
-          ] 
-        },
-        {
-          "title":"Todo",
-          "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723687/mrpedgodcxlqkhhuklbc.png",
-          "repoName":"https://github.com/anandpothraj/todo",
-          "liveUrl":"https://anand-todo.netlify.app/",
-          "techs": [
-            {
-              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-              "title": "React"
-            },
-            {
-              "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-              "title": "Bootstrap"
-            }
-          ]        
-        }
+      {
+        "title":"Anand Vaccination System",
+        "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1698230410/bjpvdflzm95igfj8ui4z.png",
+        "repoName":"https://github.com/anandpothraj/avs-frontend",
+        "liveUrl":"https://anand-vaccination-system.netlify.app/",
+        "techs": [
+          {
+            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+            "title": "MongoDB"
+          },
+          {
+            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+            "title": "React JS"
+          },
+          {
+            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+            "title": "Node JS"
+          },
+          {
+            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+            "title": "Bootstrap"
+          }
+        ] 
+      },
+      {
+        "title":"Crypto Switch",
+        "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723074/htpyrnd1lyylgfijomz5.png",
+        "repoName":"https://github.com/anandpothraj/cryptoswitch",
+        "liveUrl":"https://anand-cryptoswitch.netlify.app/",
+        "techs": [
+          {
+            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+            "title": "React"
+          },
+          {
+            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+            "title": "Bootstrap"
+          }
+        ] 
+      },
+      {
+        "title":"Todo",
+        "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723687/mrpedgodcxlqkhhuklbc.png",
+        "repoName":"https://github.com/anandpothraj/todo",
+        "liveUrl":"https://anand-todo.netlify.app/",
+        "techs": [
+          {
+            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+            "title": "React"
+          },
+          {
+            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+            "title": "Bootstrap"
+          }
+        ]        
+      },
+      {
+        "title":"NewsHut",
+        "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723121/gxorvwgsbdpjolcivtpp.png",
+        "repoName":"https://github.com/anandpothraj/newshut",
+        "liveUrl":"https://anand-newshut.netlify.app/",
+        "techs": [
+          {
+            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+            "title": "React"
+          },
+          {
+            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+            "title": "Bootstrap"
+          }
+        ]
+      }
     ],
     "about" : {
         "aboutInfo" : {
