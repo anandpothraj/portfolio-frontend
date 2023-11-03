@@ -11,7 +11,7 @@
     background-color: #6fc2c5;
     border-radius: 50%;
     position: fixed;
-    bottom: 2rem;
+    bottom: 6rem;
     right: 2rem;
     z-index: 999;
     display: flex;
@@ -33,5 +33,11 @@
     }
     100%{
         transform: translateY(1rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .top-btn{
+        right: 1rem;
     }
 }
