@@ -29,6 +29,7 @@ const Projects = () => {
                   repoName={project.repoName}
                   liveUrl={project.liveUrl}
                   tech={project.techs}
+                  desc={project.desc}
                 />
               </Col>
             );
