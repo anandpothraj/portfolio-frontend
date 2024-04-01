@@ -181,7 +181,8 @@
             "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
             "title": "Bootstrap"
           }
-        ] 
+        ],
+        "desc" : "is a robust MERN stack web app designed for precise disease vaccination with stringent validation to minimize errors. It also includes features like vaccination status tracking, certification issuance, and secure travel facilitation to maintain a safe environment."
       },
       {
         "title":"Crypto Switch",
@@ -197,7 +198,8 @@
             "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
             "title": "Bootstrap"
           }
-        ] 
+        ],
+        "desc" : "is a highly responsive API-based cryptocurrency application constructed with ReactJS, ChartJS, and Bootstrap. It allows you to access comprehensive information about trending coins and track coin records using customizable graphs and filters."
       },
       {
         "title":"Todo",
@@ -213,7 +215,8 @@
             "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
             "title": "Bootstrap"
           }
-        ]        
+        ],
+        "desc" : "is a fully responsive front-end web application developed with ReactJS and Redux. It offers seamless task management, allowing you to organize to-dos based on task priority. You can effortlessly perform all CRUD operations, along with flexible filtering and sorting options"  
       },
       {
         "title":"NewsHut",
@@ -229,7 +232,8 @@
             "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
             "title": "Bootstrap"
           }
-        ]
+        ],
+        "desc" : "is an API-powered ReactJS and Redux app, offering personalized news recommendations across various categories. Switch between dark and light modes, and customize themes with endless colors."
       }
     ],
     "about" : {
