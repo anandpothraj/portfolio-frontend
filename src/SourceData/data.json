@@ -160,6 +160,7 @@
     },
     "projects" : [
       {
+        "type" : "mernStack",
         "title":"Anand Vaccination System",
         "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1698230410/bjpvdflzm95igfj8ui4z.png",
         "repoName":"https://github.com/anandpothraj/avs-frontend",
@@ -185,6 +186,7 @@
         "desc" : "is a robust MERN stack web app designed for precise disease vaccination with stringent validation to minimize errors. It also includes features like vaccination status tracking, certification issuance, and secure travel facilitation to maintain a safe environment."
       },
       {
+        "type" : "frontend",
         "title":"Crypto Switch",
         "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723074/htpyrnd1lyylgfijomz5.png",
         "repoName":"https://github.com/anandpothraj/cryptoswitch",
@@ -203,6 +205,7 @@
       },
       {
         "title":"Todo",
+        "type" : "frontend",
         "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723687/mrpedgodcxlqkhhuklbc.png",
         "repoName":"https://github.com/anandpothraj/todo",
         "liveUrl":"https://anand-todo.netlify.app/",
@@ -220,6 +223,7 @@
       },
       {
         "title":"NewsHut",
+        "type" : "frontend",
         "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723121/gxorvwgsbdpjolcivtpp.png",
         "repoName":"https://github.com/anandpothraj/newshut",
         "liveUrl":"https://anand-newshut.netlify.app/",
