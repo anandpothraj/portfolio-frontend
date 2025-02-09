@@ -26,7 +26,7 @@
     "home" : {
         "profile" : {
             "name" : "Anand Pothraj",
-            "designation": ["MERN Stack Developer", "Frontend Developer","OS Contributor"],
+            "designation": ["Full Stack Developer", "MERN Stack Developer", "Software Developer","OS Contributor"],
             "introBio" : "I have a passion for technology",
             "mailTo" : "mailto:pothrajanand@gmail.com",
             "images" : {
