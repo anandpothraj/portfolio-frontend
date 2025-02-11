@@ -33,7 +33,7 @@
                 "avatar1" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676910355/Secondary.25bdad2d724160c68f54_uwl0oe.png"
             },
             "socials"  : {
-                "linkedIn" :  "https://www.linkedin.com/in/anand-pothraj-599910195",
+                "linkedIn" :  "https://www.linkedin.com/in/anandpothraj",
                 "github" : "https://github.com/anandpothraj",
                 "twitter" : "https://twitter.com/PothrajAnand",
                 "devCommunity" : "https://dev.to/anandpothraj",
@@ -244,10 +244,10 @@
         "aboutInfo" : {
             "aboutImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1677051001/Third.3f76f85b2c22d0c9ec44_kjgk62.png",
             "name" : "Anand Pothraj",
-            "intro" : "MERN Stack Developer, technical writer, and a passionate learner.",
+            "intro" : "Full Stack Developer, MERN Stack Developer, technical writer, and a passionate learner.",
             "email" : "pothrajanand@gmail.com",
             "socials"  : {
-                "linkedIn" :  "https://www.linkedin.com/in/anand-pothraj-599910195",
+                "linkedIn" :  "https://www.linkedin.com/in/anandpothraj",
                 "github" : "https://github.com/anandpothraj",
                 "twitter" : "https://twitter.com/PothrajAnand",
                 "devCommunity" : "https://dev.to/anandpothraj",
@@ -256,9 +256,9 @@
         },
         "bio" : {
             "bioWelcomeText" : "Hi there! Thanks for visiting my portfolio.",
-            "bioLinkedIn" : "https://www.linkedin.com/in/anand-pothraj-599910195",
+            "bioLinkedIn" : "https://www.linkedin.com/in/anandpothraj",
             "bioName" : "Anand Pothraj",
-            "bioIntroText" : "a MERN Stack Developer, Content Writer, and a passionate learner. I had completed Bachelor's In Computer Science from",
+            "bioIntroText" : "a Full Stack Developer with nearly 3 years experience in building scalable web apps using React.js, Node.js, and AWS. Skilled in microservices, CI/CD, and database management. Proven track record in team leadership, code quality assurance, and success. I had completed Bachelor's In Computer Science from",
             "bioCollegeName" : "Mumbai University",
             "passoutYear" : 2022,
             "collegeLink" : "https://mu.ac.in/",
@@ -362,7 +362,7 @@
         {
             "profilePhoto" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1681129433/c6xc0hjqtxokupgdiago.png",
             "platform" : "LinkedIn",
-            "url" : "https://www.linkedin.com/in/anand-pothraj-599910195/"
+            "url" : "https://www.linkedin.com/in/anandpothraj/"
         },
         {
             "profilePhoto" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1688300519/github_nwstvx.jpg",
@@ -401,13 +401,13 @@
             }
         ],
         "socials"  : {
-            "linkedIn" :  "https://www.linkedin.com/in/anand-pothraj-599910195",
+            "linkedIn" :  "https://www.linkedin.com/in/anandpothraj",
             "github" : "https://github.com/anandpothraj",
             "twitter" : "https://twitter.com/PothrajAnand",
             "devCommunity" : "https://dev.to/anandpothraj",
             "medium" : "https://medium.com/@anandpothraj11052001"
         },
         "version": "v1.0.0",
-        "copyright": "© 2023 anandpothraj. All rights reserved."
+        "copyright": "© 2024 anandpothraj. All rights reserved."
     }
 }
