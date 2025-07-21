@@ -7,6 +7,40 @@
     <meta name="description" content="Portfolio website"/>
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="42fd7335-3b9f-498e-9419-2c310db0dbe3";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <script src="https://kollect.kreatorverse.com/sdk.js"></script>
+    <script>
+      window.onload = function () {
+        Kollect.init({
+          apiKey: 'kollect',
+          clientEmail: 'anand@kreatorverse.com',
+        });
+
+        Kollect.attachPayButton({
+          selector: '#kollect-pay-btn',
+          data: {
+            clientEmail: 'manisha@kreatorverse.com',
+            clientName: 'Manisha',
+            clientWalletAddress: '0xaa3d226893D626552b169628710Ee21E01bcda83',
+            countryCode: 'IN',
+            countryName: 'India',
+            dueDate: new Date().toISOString().split("T")[0],
+            currency: 'fUSDC-sepolia',
+            items:[
+              {
+                description: 'Laptop',
+                quantity: '2',
+                price:'1'
+              },
+              {
+                description: 'Shoes',
+                quantity: '1',
+                price:'2'
+              }
+            ],
+          }
+        });
+      };
+    </script>
     <title>Portfolio | Welcome to my website..</title>
   </head>
   <body>
