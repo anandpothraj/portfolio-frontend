@@ -11,8 +11,8 @@
     <script>
       window.onload = function () {
         Kollect.init({
-          apiKey: 'kollect',
-          clientEmail: 'anand@kreatorverse.com',
+          apiKey: 'kollect_54fdgph7ofpuxarr7q6kgl6fjqzw2eaj',
+          secretKey: '5a2e139b31d74f347fae724490321ab885d2be2edddee3ade04f90d8d5f36f45',
         });
 
         Kollect.attachPayButton({
@@ -37,6 +37,7 @@
                 price:'2'
               }
             ],
+            redirectUrl: window.location.origin,
           }
         });
       };
