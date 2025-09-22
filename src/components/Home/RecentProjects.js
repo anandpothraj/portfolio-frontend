@@ -1,47 +1,127 @@
 import './Home.css';
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IoEyeSharp } from 'react-icons/io5';
-import data from '../../SourceData/data.json';
+import apiConfig from '../../config/api.json';
 import { Button, Image, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { getServerUrl } from '../../config/env';
 import { BsInfoCircleFill } from 'react-icons/bs';
 
 const RecentProjects = () => {
 
-  const [ projectType, setProjectType ] = useState('professional');
+  const serverUrl = getServerUrl();
+  const [ projectType, setProjectType ] = useState('all');
+  const [ recentProjects, setRecentProjects ] = useState([]); // combined list for "all"
+  const [ recentProfessional, setRecentProfessional ] = useState([]);
+  const [ recentPersonal, setRecentPersonal ] = useState([]);
+  const [ isLoading, setIsLoading ] = useState(true);
 
-  // Filter projects based on selected type and limit to 2
-  const filteredProjects = data.projects
-    .filter(project => project.type === projectType)
-    .slice(0, 2);
+  useEffect(() => {
+    const fetchRecent = async () => {
+      try {
+        const url = `${serverUrl}${apiConfig.api.projects.FETCH_RECENTS_PROJECTS}`;
+        const response = await axios.get(url);
+        if (response.status === 200) {
+          const payload = response.data;
+          if (Array.isArray(payload)) {
+            // If API ever returns a flat array, keep first 4
+            setRecentProjects(payload.slice(0,4));
+            setRecentProfessional(payload.filter(p => p.type === 'professional').slice(0,2));
+            setRecentPersonal(payload.filter(p => p.type === 'personal').slice(0,2));
+          } else if (payload && Array.isArray(payload.projects)) {
+            const arr = payload.projects || [];
+            setRecentProjects(arr.slice(0,4));
+            setRecentProfessional(arr.filter(p => p.type === 'professional').slice(0,2));
+            setRecentPersonal(arr.filter(p => p.type === 'personal').slice(0,2));
+          } else if (payload && typeof payload === 'object') {
+            const professionalList = Array.isArray(payload.professional)
+              ? payload.professional
+              : payload.professional
+              ? [payload.professional]
+              : [];
+            const personalList = Array.isArray(payload.personal)
+              ? payload.personal
+              : payload.personal
+              ? [payload.personal]
+              : [];
+            const professionalTwo = professionalList.slice(0,2);
+            const personalTwo = personalList.slice(0,2);
+            setRecentProfessional(professionalTwo);
+            setRecentPersonal(personalTwo);
+            setRecentProjects([...professionalTwo, ...personalTwo]);
+          } else {
+            setRecentProjects([]);
+          }
+        } else {
+          setRecentProjects([]);
+        }
+      } catch (e) {
+        setRecentProjects([]);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchRecent();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const filteredProjects = (() => {
+    if (projectType === 'professional') return recentProfessional; // up to 2
+    if (projectType === 'personal') return recentPersonal; // up to 2
+    // 'all' => exactly 1 professional + 1 personal when available
+    const oneProfessional = recentProfessional[0] ? [recentProfessional[0]] : [];
+    const onePersonal = recentPersonal[0] ? [recentPersonal[0]] : [];
+    return [...oneProfessional, ...onePersonal];
+  })();
 
   return (
     <div className='text-light col-11 col-md-9 m-auto py-1'>
-        <div className="d-flex justify-content-between my-1 my-md-4">
-            <h1 className='primaryLightBlue w-50'>Recent Projects</h1>
-            <div className="d-flex align-items-center">
-                <label htmlFor="projectType" className="me-2 my-auto">Type:</label>
+        <div className="d-flex flex-wrap align-items-center justify-content-between gap-2 my-1 my-md-4 recent-header">
+            <h1 className='primaryLightBlue flex-grow-1 mb-0'>Recent Projects</h1>
+            <div className="d-flex align-items-center gap-2 recent-type order-2 order-md-1">
+                <label htmlFor="projectType" className="my-auto">Type:</label>
                 <select
                     id="projectType"
                     className="form-select form-select-sm"
-                    style={{ width: '130px' }}
                     value={projectType}
                     onChange={e => setProjectType(e.target.value)}
                 >
+                    <option value="all">All</option>
                     <option value="professional">Professional</option>
                     <option value="personal">Personal</option>
                 </select>
             </div>
-            <Link to='/projects' className='my-auto'>
-                <Button className='btn-sm px-md-3 py-md-2' variant='outline-warning'>View More</Button>
+            <Link to='/projects' className='my-auto order-3'>
+                <Button className='btn-sm px-3 py-2 px-md-3 py-md-2' size='sm' variant='outline-warning'>View More</Button>
             </Link>
         </div>
         <div className="my-3 rounded py-1 d-flex flex-column flex-md-row">
             {
-                filteredProjects.map(( project, i) => {
+                isLoading ? (
+                  <p className='text-secondary m-auto'>Loading...</p>
+                ) : filteredProjects.length === 0 ? (
+                  <p className='text-secondary m-auto'>No recent projects found.</p>
+                ) : filteredProjects.map(( project, i) => {
                     return (
-                        <div className="col-11 col-md-5 rounded shadow-lg bg-black m-auto my-3" key={i}>
-                            <Image src={project.image} className='w-100 h-auto rounded-top'/>
+                        <div className="col-12 col-md-5 rounded shadow-lg bg-black m-auto my-3 recent-card" key={i}>
+                            <div className='position-relative overflow-hidden rounded-top'>
+                                <Image src={project.image} className='w-100 h-auto'/>
+                                <div className='position-absolute top-0 end-0 m-2 project-badge'>
+                                  <div
+                                    style={{
+                                      color: project.type === 'professional' ? '#28e745' : '#ffc107',
+                                      borderRadius: '6px',
+                                      padding: '2px 8px',
+                                      fontSize: '12px',
+                                      fontWeight: 700,
+                                      textTransform: 'capitalize'
+                                    }}
+                                  >
+                                    {project.type}
+                                  </div>
+                                </div>
+                            </div>
                             <div className='w-100 d-flex p-2 p-md-3'>
                                 <p className='w-50'><b>{project.title}</b></p>
                                 <div className='w-50 d-flex justify-content-around'>

@@ -52,7 +52,6 @@ const Profile = () => {
           <div className="my-3 p-1 btnDiv mx-auto mx-md-0">
               <Button className='emailBtn btn-sm' href={data.home.profile.mailTo}><FiMail className='mx-1 logo2'/>Email Me</Button>
               <Button className='resumeBtn btn-sm mx-0 mx-md-3' href={Resume} target="_blank" rel="noopener noreferrer"><BsDownload className='mx-1 logo2'/>Resume</Button>
-              <button id="kollect-pay-btn" style={{padding:'5px 20px', borderRadius:'7px'}}>Pay using Kollect</button>
           </div>
         </div>
         <div className="w-75 w-md-50 m-auto my-1">

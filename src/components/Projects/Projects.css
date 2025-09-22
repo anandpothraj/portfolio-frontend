@@ -55,4 +55,11 @@
   .techStackImage{
     width: 20%;
   }
+  /* Filters: stack rows nicely on mobile */
+  .project-filters{
+    row-gap: 12px;
+  }
+  .project-filters label{
+    margin-right: 8px;
+  }
 }
