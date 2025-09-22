@@ -12,7 +12,6 @@ const RecentProjects = () => {
 
   const serverUrl = getServerUrl();
   const [ projectType, setProjectType ] = useState('all');
-  const [ recentProjects, setRecentProjects ] = useState([]); // combined list for "all"
   const [ recentProfessional, setRecentProfessional ] = useState([]);
   const [ recentPersonal, setRecentPersonal ] = useState([]);
   const [ isLoading, setIsLoading ] = useState(true);
@@ -26,12 +25,10 @@ const RecentProjects = () => {
           const payload = response.data;
           if (Array.isArray(payload)) {
             // If API ever returns a flat array, keep first 4
-            setRecentProjects(payload.slice(0,4));
             setRecentProfessional(payload.filter(p => p.type === 'professional').slice(0,2));
             setRecentPersonal(payload.filter(p => p.type === 'personal').slice(0,2));
           } else if (payload && Array.isArray(payload.projects)) {
             const arr = payload.projects || [];
-            setRecentProjects(arr.slice(0,4));
             setRecentProfessional(arr.filter(p => p.type === 'professional').slice(0,2));
             setRecentPersonal(arr.filter(p => p.type === 'personal').slice(0,2));
           } else if (payload && typeof payload === 'object') {
@@ -49,15 +46,17 @@ const RecentProjects = () => {
             const personalTwo = personalList.slice(0,2);
             setRecentProfessional(professionalTwo);
             setRecentPersonal(personalTwo);
-            setRecentProjects([...professionalTwo, ...personalTwo]);
           } else {
-            setRecentProjects([]);
+            setRecentProfessional([]);
+            setRecentPersonal([]);
           }
         } else {
-          setRecentProjects([]);
+          setRecentProfessional([]);
+          setRecentPersonal([]);
         }
       } catch (e) {
-        setRecentProjects([]);
+        setRecentProfessional([]);
+        setRecentPersonal([]);
       } finally {
         setIsLoading(false);
       }
