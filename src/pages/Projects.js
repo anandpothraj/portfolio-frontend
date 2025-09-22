@@ -19,7 +19,7 @@ const Projects = () => {
   const onFilterChange = () => {
     if (data.projects) {
       let filteredProjects = data.projects.filter((project) => {
-        return projectType === "all" || project.type === projectType;
+        return projectType === "all" || project.stack === projectType;
       });
       if(sortBy === "old"){
         filteredProjects = filteredProjects.slice().reverse();

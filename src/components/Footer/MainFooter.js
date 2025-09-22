@@ -3,12 +3,15 @@ import { FaDev } from 'react-icons/fa';
 import { Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import data from '../../SourceData/data.json';
-import server from '../../config/server.json';
+import apiConfig from '../../config/api.json';
 import React, { useState, useEffect } from 'react';
+import { getServerUrl } from '../../config/env';
 import { BsTwitter, BsGithub, BsMedium, BsLinkedin } from 'react-icons/bs';
 
 const MainFooter = () => {
 
+    const serverUrl = getServerUrl();
+    
     const [ siteVisits, setSiteVisits ] = useState(0);
 
     const style = {
@@ -20,7 +23,7 @@ const MainFooter = () => {
     const updateSiteVisits = async (pastVisits) => {
         try {
             const config = {"Content-type": "application/json"};
-            const response = await axios.post(`${server.url.production}${server.api.UPDATE_SITE_VISITS}`,{"visitsCount": pastVisits+1},{ headers: config });
+            const response = await axios.post(`${serverUrl}${apiConfig.api.visits.UPDATE_SITE_VISITS}`,{"visitsCount": pastVisits+1},{ headers: config });
             if (response.status === 201) {
                 setSiteVisits(pastVisits+1);
             } else {
@@ -37,7 +40,7 @@ const MainFooter = () => {
 
     const getsiteVisits = async () => {
         try {
-            const response = await axios.get(`${server.url.production}${server.api.FETCH_SITE_VISITS}`);
+            const response = await axios.get(`${serverUrl}${apiConfig.api.visits.FETCH_SITE_VISITS}`);
             if (response.status === 200) {
                 updateSiteVisits(response.data.visitsCount);
             } else {

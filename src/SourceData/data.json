@@ -26,7 +26,7 @@
     "home" : {
         "profile" : {
             "name" : "Anand Pothraj",
-            "designation": ["Full Stack Developer", "MERN Stack Developer", "Software Developer","OS Contributor"],
+            "designation": ["Full Stack Product Developer 🚀", "MERN Stack Developer 🚀", "OS Contributor 🚀", "Blockchain Developer 🚀 "],
             "introBio" : "I have a passion for technology",
             "mailTo" : "mailto:pothrajanand@gmail.com",
             "images" : {
@@ -47,50 +47,6 @@
             "workSubHeading" : "As a Software Engineer and Full Stack Developer, I'm always looking for new challenges and opportunities to further improve my knowledge and skills."
         }
         ,
-        "recentProjects": {
-          "projects" : [
-            {
-              "projectImage":"https://res.cloudinary.com/de3bkua6f/image/upload/v1698230410/bjpvdflzm95igfj8ui4z.png",
-              "projectName":"Anand Vaccination System",
-              "projectRepo":"https://github.com/anandpothraj/avs-frontend",
-              "projectUrl":"https://anand-vaccination-system.netlify.app/",
-              "techStack": [
-                {
-                  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-                  "title": "MongoDB"
-                },
-                {
-                  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                  "title": "React JS"
-                },
-                {
-                  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-                  "title": "Node JS"
-                },
-                {
-                  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-                  "title": "Bootstrap"
-                }
-              ] 
-            },
-            {
-              "projectImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676723074/htpyrnd1lyylgfijomz5.png",
-              "projectName" : "CryptoSwitch",
-              "projectRepo" : "https://github.com/anandpothraj/CryptoSwitch",
-              "projectUrl" : "https://anand-cryptoswitch.netlify.app",
-              "techStack" : [
-                {
-                    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                    "title": "React"
-                },
-                {
-                    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-                    "title": "Bootstrap"
-                }
-              ]
-            }
-          ]
-        },
         "hire" : {
             "strength" : [
                 {
@@ -160,8 +116,9 @@
     },
     "projects" : [
       {
-        "type" : "mernStack",
+        "type" : "professional",
         "title":"Anand Vaccination System",
+        "stack" : "fullStack",
         "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1698230410/bjpvdflzm95igfj8ui4z.png",
         "repoName":"https://github.com/anandpothraj/avs-frontend",
         "liveUrl":"https://anand-vaccination-system.netlify.app/",
@@ -186,8 +143,9 @@
         "desc" : "is a robust MERN stack web app designed for precise disease vaccination with stringent validation to minimize errors. It also includes features like vaccination status tracking, certification issuance, and secure travel facilitation to maintain a safe environment."
       },
       {
-        "type" : "frontend",
+        "type" : "professional",
         "title":"Crypto Switch",
+        "stack" : "frontend",
         "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723074/htpyrnd1lyylgfijomz5.png",
         "repoName":"https://github.com/anandpothraj/cryptoswitch",
         "liveUrl":"https://anand-cryptoswitch.netlify.app/",
@@ -204,8 +162,9 @@
         "desc" : "is a highly responsive API-based cryptocurrency application constructed with ReactJS, ChartJS, and Bootstrap. It allows you to access comprehensive information about trending coins and track coin records using customizable graphs and filters."
       },
       {
+        "type" : "personal",
         "title":"Todo",
-        "type" : "frontend",
+        "stack" : "frontend",
         "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723687/mrpedgodcxlqkhhuklbc.png",
         "repoName":"https://github.com/anandpothraj/todo",
         "liveUrl":"https://anand-todo.netlify.app/",
@@ -222,8 +181,9 @@
         "desc" : "is a fully responsive front-end web application developed with ReactJS and Redux. It offers seamless task management, allowing you to organize to-dos based on task priority. You can effortlessly perform all CRUD operations, along with flexible filtering and sorting options"  
       },
       {
+        "type" : "personal",
         "title":"NewsHut",
-        "type" : "frontend",
+        "stack" : "frontend",
         "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723121/gxorvwgsbdpjolcivtpp.png",
         "repoName":"https://github.com/anandpothraj/newshut",
         "liveUrl":"https://anand-newshut.netlify.app/",
@@ -244,7 +204,7 @@
         "aboutInfo" : {
             "aboutImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1677051001/Third.3f76f85b2c22d0c9ec44_kjgk62.png",
             "name" : "Anand Pothraj",
-            "intro" : "Full Stack Developer, MERN Stack Developer, technical writer, and a passionate learner.",
+            "intro" : "Full Stack Product Developer, MERN Stack Developer, tech enthusiast and a passionate learner.",
             "email" : "pothrajanand@gmail.com",
             "socials"  : {
                 "linkedIn" :  "https://www.linkedin.com/in/anandpothraj",
@@ -258,7 +218,7 @@
             "bioWelcomeText" : "Hi there! Thanks for visiting my portfolio.",
             "bioLinkedIn" : "https://www.linkedin.com/in/anandpothraj",
             "bioName" : "Anand Pothraj",
-            "bioIntroText" : "a Full Stack Developer with nearly 3 years experience in building scalable web apps using React.js, Node.js, and AWS. Skilled in microservices, CI/CD, and database management. Proven track record in team leadership, code quality assurance, and success. I had completed Bachelor's In Computer Science from",
+            "bioIntroText" : "a Full Stack Product Developer with nearly 3.5 years experience in building scalable web apps using React.js, TypeScript Node.js, Nest.js and AWS. Skilled in microservices, microfrontends, CI/CD, Web3, blockchain, database management and system design. Proven track record in team leadership, code quality assurance, and success. I had completed Bachelor's In Computer Science from",
             "bioCollegeName" : "Mumbai University",
             "passoutYear" : 2022,
             "collegeLink" : "https://mu.ac.in/",
@@ -267,12 +227,20 @@
         "experience" : {
             "ExperienceDetails" : [
                 {
+                  "company" : "Kreatorverse Venture Studios",
+                  "companyImgUrl" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1758398625/kreatorverse_logo_zcizeb.jpg",
+                  "type" : "Full Time", 
+                  "position" : "Full Stack Product Developer",
+                  "startDate" : "May 2025",
+                  "endDate" : "Present"
+                },
+                {
                     "company" : "Tech Sierra",
                     "companyImgUrl" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1676124557/dnsn9cbrwc3rzek5hkhm.jpg",
                     "type" : "Full Time", 
                     "position" : "Software Development Engineer - 1",
                     "startDate" : "Aug 2022",
-                    "endDate" : "Present"
+                    "endDate" : "May 2025"
                 },
                 {
                     "company" : "Tech Sierra",
@@ -350,9 +318,7 @@
                   }
             ]
         },
-        "services" : {
-            "skills" : [ "Frontend Web Developer", "Passionate Learner" ]
-        }
+        "services" : ["Full Stack Product Developer 🚀", "MERN Stack Developer 🚀", "OS Contributor 🚀", "Blockchain Developer 🚀 ", "Passionate Learner 🚀"]
     },
     "contact" : {
       "twitterUserName" : "@Anand Pothraj",
@@ -408,6 +374,6 @@
             "medium" : "https://medium.com/@anandpothraj11052001"
         },
         "version": "v1.0.0",
-        "copyright": "© 2024 anandpothraj. All rights reserved."
+        "copyright": "© 2025 anandpothraj. All rights reserved."
     }
 }

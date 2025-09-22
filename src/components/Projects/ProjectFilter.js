@@ -17,7 +17,7 @@ const ProjectFilter = ({ sortBy, setSortBy, projectType, setProjectType }) => {
             <option value="all">All</option>
             <option value="frontend">Frontend</option>
             <option value="backend">Backend</option>
-            <option value="mernStack">Mern Stack</option>
+            <option value="fullStack">Full Stack</option>
           </Form.Select>
       </div>
     </div>

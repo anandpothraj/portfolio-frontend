@@ -1,0 +1,17 @@
+{
+    "api": {
+        "contact": {
+            "SEND_MESSAGE": "api/contact/sendMessage"
+        },
+        "report": {
+            "SEND_REPORT": "api/contact/sendReport"
+        },
+        "feedback": {
+            "SEND_FEEDBACK": "api/contact/sendFeedback"
+        },
+        "visits": {
+            "FETCH_SITE_VISITS": "api/visits/fetchSiteVisits",
+            "UPDATE_SITE_VISITS": "api/visits/updateSiteVisits"
+        }
+    }
+}

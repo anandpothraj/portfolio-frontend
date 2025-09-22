@@ -1,19 +1,22 @@
 import axios from 'axios';
 import { toast } from "react-toastify";
 import React, { useState } from 'react';
-import server from "../../config/server.json";
+import apiConfig from "../../config/api.json";
 import { useNavigate } from 'react-router-dom';
 import { Form, Button, Spinner } from 'react-bootstrap';
+import { getServerUrl } from '../../config/env';
 
 const FormComponent = (props) => {
+
+  const serverUrl = getServerUrl();
 
   const navigate = useNavigate();
   const [ name, setName ] = useState("");
   const [ email, setEmail ] = useState("");
-  const SEND_REPORT = server.api.SEND_REPORT;
+  const SEND_REPORT = apiConfig.api.report.SEND_REPORT;
   const [ message, setMessage ] = useState("");
-  const SEND_MESSAGE = server.api.SEND_MESSAGE;
-  const SEND_FEEDBACK = server.api.SEND_FEEDBACK;
+  const SEND_MESSAGE = apiConfig.api.contact.SEND_MESSAGE;
+  const SEND_FEEDBACK = apiConfig.api.report.SEND_REPORT;
   const [ disableBtn, setDisableBtn ] = useState(false);
   const [ showSpinner, setShowSpinner ] = useState(false);
 
@@ -31,7 +34,7 @@ const FormComponent = (props) => {
         "Content-type": "application/json"
       };
       const response = await axios.post(
-        `${server.url.production}${requestType}`,
+        `${serverUrl}${requestType}`,
         sendMessageDetails,
         { headers: config }
       );
