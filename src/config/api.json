@@ -4,6 +4,9 @@
             "FETCH_RECENTS_PROJECTS": "api/projects/fetchRecentProjects",
             "FETCH_ALL_PROJECTS": "api/projects/fetchAllProjects"
         },
+        "testimonials": {
+            "FETCH_ALL_TESTIMONIALS": "api/testimonials/fetchAllTestimonials"
+        },
         "contact": {
             "SEND_MESSAGE": "api/contact/sendMessage"
         },
