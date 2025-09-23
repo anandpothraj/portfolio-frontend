@@ -62,4 +62,43 @@
   .project-filters label{
     margin-right: 8px;
   }
+
+  /* Mobile filter offcanvas */
+  .filter-offcanvas .offcanvas-header {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .filter-offcanvas .offcanvas,
+  .filter-offcanvas .offcanvas-body {
+    background: #0f1218;
+    color: #fff;
+  }
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .filter-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .filter-chip {
+    border-radius: 12px;
+    padding: 8px 14px;
+    background: #202532;
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #cfd8ff;
+  }
+  .filter-chip.active {
+    background: #ffffff;
+    color: #0f1218;
+  }
+  .filter-mobile-toggle {
+    background: #202532;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #cfd8ff;
+  }
 }

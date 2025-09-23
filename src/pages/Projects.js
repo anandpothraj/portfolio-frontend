@@ -80,8 +80,8 @@ const Projects = () => {
 
   return (
     <div className='col-11 col-md-9 my-3 mx-auto text-light'>
-      <div className="d-block d-md-flex mb-3 mb-md-0">
-        <h1 className='col-12 col-md-4 mb-3 mb-md-0'>Projects</h1>
+      <div className="d-flex align-items-center justify-content-between flex-nowrap mb-3 mb-md-0">
+        <h1 className='mb-3 mb-md-0'>Projects</h1>
         <ProjectFilter projects={projects} setProjects={setProjects} sortBy={sortBy} setSortBy={setSortBy} projectType={projectType} setProjectType={setProjectType} projectKind={projectKind} setProjectKind={setProjectKind}/>
         <Button className='d-none d-md-block mx-2' variant='warning' onClick={resetFilter}><GrPowerReset color='white'/></Button>
       </div>
