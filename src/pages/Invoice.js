@@ -355,14 +355,27 @@ const Invoice = () => {
                     <Button variant="outline-secondary" onClick={() => window.history.back()}>
                       Cancel
                     </Button>
-                    <Button 
-                      id="kollect-pay-btn" 
-                      variant="success" 
-                      size="lg"
+                    <button                       
+                      data-kollect-button
                       onClick={handlePayment}
+                      data-payment-data={JSON.stringify({
+                        clientEmail: selectedClient?.clientEmail || '',
+                        clientName: selectedClient?.clientName || '',
+                        clientWalletAddress: selectedClient?.clientWalletAddress?.[0] || '',
+                        countryCode: selectedClient?.countryCode || '',
+                        countryName: selectedClient?.countryName || '',
+                        dueDate: formData.dueDate,
+                        currency: formData.currency,
+                        items: formData.items.map(item => ({
+                          description: item.description,
+                          quantity: item.quantity,
+                          price: item.price
+                        })),
+                        notes: formData.notes,
+                        redirectUrl: window.location.origin,
+                      })}
                     >
-                      Create Invoice & Pay with Kollect
-                    </Button>
+                    </button>
                   </div>
                 </Form>
               </Card.Body>
