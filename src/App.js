@@ -11,6 +11,7 @@ import Privacy from './pages/Privacy';
 import Socials from './pages/Socials';
 import Feedback from './pages/Feedback';
 import Projects from './pages/Projects';
+import Invoice from './pages/Invoice';
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from 'react-toastify';
 import GoToTop from './components/GoToTop/GoToTop';
@@ -34,6 +35,7 @@ const App = () => {
           <Route path='/report' element={<Report/>} exact/>
           <Route path='/privacy-policy' element={<Privacy/>} exact/>
           <Route path='/feedback' element={<Feedback/>} exact/>
+          <Route path='/invoice' element={<Invoice/>} exact/>
         </Routes>
         </div>
         <Footer/>

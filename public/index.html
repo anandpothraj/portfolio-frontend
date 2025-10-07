@@ -7,6 +7,32 @@
     <meta name="description" content="Portfolio website"/>
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="42fd7335-3b9f-498e-9419-2c310db0dbe3";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <script src="./sdk.js"></script>
+    <script>
+      window.onload = function () {
+        Kollect.init({
+          apiKey: 'kollect_54fdgph7ofpuxarr7q6kgl6fjqzw2eaj',
+          secretKey: '5a2e139b31d74f347fae724490321ab885d2be2edddee3ade04f90d8d5f36f45',
+        });
+        window.Kollect.updatePaymentData = function(data) {
+          console.log('updatePaymentData called with:', data);
+          const btn = document.querySelector('#kollect-pay-btn');
+          if (btn) {
+            btn.replaceWith(btn.cloneNode(true));
+          }
+          Kollect.attachPayButton({
+            selector: '#kollect-pay-btn',
+            data: data
+          });
+          setTimeout(() => {
+            const newBtn = document.querySelector('#kollect-pay-btn');
+            if (newBtn) {
+              newBtn.click();
+            }
+          }, 50);
+        };
+      };
+    </script>
     <title>Portfolio | Welcome to my website..</title>
   </head>
   <body>
