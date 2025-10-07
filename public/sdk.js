@@ -441,11 +441,12 @@
       getPaymentData(button) {
         // Try to get data from button attributes
         const dataAttr = button.getAttribute('data-payment-data');
-        if (dataAttr) {
+        if (dataAttr && dataAttr.trim() !== '') {
           try {
             return JSON.parse(dataAttr);
           } catch (e) {
             console.error('[Kollect SDK] Invalid payment data JSON:', e);
+            console.error('[Kollect SDK] Raw data:', dataAttr);
           }
         }
 

@@ -16,6 +16,7 @@ const Invoice = () => {
   const [selectedClient, setSelectedClient] = useState(null);
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
+  const [invoiceData, setInvoiceData] = useState(null);
 
   // Generate invoice number on component mount
   useEffect(() => {
@@ -35,6 +36,33 @@ const Invoice = () => {
       window.onKollectPaymentSuccess = null;
     };
   }, []);
+
+  // Update invoice data whenever form data or selected client changes
+  useEffect(() => {
+    if (selectedClient && formData.dueDate && formData.items.length > 0) {
+      const paymentData = {
+        clientEmail: selectedClient.clientEmail,
+        clientName: selectedClient.clientName,
+        clientWalletAddress: selectedClient.clientWalletAddress[0],
+        countryCode: selectedClient.countryCode,
+        countryName: selectedClient.countryName,
+        dueDate: formData.dueDate,
+        currency: formData.currency,
+        items: formData.items.map(item => ({
+          description: item.description,
+          quantity: item.quantity,
+          price: item.price
+        })),
+        notes: formData.notes,
+        redirectUrl: window.location.origin,
+      };
+      console.log('Setting invoice data:', paymentData);
+      setInvoiceData(paymentData);
+    } else {
+      console.log('Clearing invoice data - missing required fields');
+      setInvoiceData(null);
+    }
+  }, [selectedClient, formData]);
 
   // Handle client selection
   const handleClientChange = (clientId) => {
@@ -77,35 +105,6 @@ const Invoice = () => {
     return formData.items.reduce((total, item) => total + (item.quantity * item.price), 0);
   };
 
-  // Validate form
-  const validateForm = () => {
-    if (!formData.clientId) {
-      setAlertMessage('Please select a client');
-      setShowAlert(true);
-      return false;
-    }
-    if (!selectedClient) {
-      setAlertMessage('Please select a valid client');
-      setShowAlert(true);
-      return false;
-    }
-    if (!formData.invoiceNumber.trim()) {
-      setAlertMessage('Please enter an invoice number');
-      setShowAlert(true);
-      return false;
-    }
-    if (!formData.dueDate) {
-      setAlertMessage('Please select a due date');
-      setShowAlert(true);
-      return false;
-    }
-    if (formData.items.some(item => !item.description.trim() || item.quantity <= 0 || item.price <= 0)) {
-      setAlertMessage('Please fill in all item details correctly');
-      setShowAlert(true);
-      return false;
-    }
-    return true;
-  };
 
   // Reset form to initial state
   const resetForm = () => {
@@ -120,36 +119,9 @@ const Invoice = () => {
     setSelectedClient(null);
     setShowAlert(false);
     setAlertMessage('');
+    setInvoiceData(null);
   };
 
-  // Handle payment
-  const handlePayment = () => {
-    if (!validateForm()) return;
-
-    const paymentData = {
-      clientEmail: selectedClient.clientEmail,
-      clientName: selectedClient.clientName,
-      clientWalletAddress: selectedClient.clientWalletAddress[0],
-      countryCode: selectedClient.countryCode,
-      countryName: selectedClient.countryName,
-      dueDate: formData.dueDate,
-      currency: formData.currency,
-      items: formData.items.map(item => ({
-        description: item.description,
-        quantity: item.quantity,
-        price: item.price
-      })),
-      notes: formData.notes,
-      redirectUrl: window.location.origin,
-    };
-
-    // Use updatePaymentData to attach the button with data and trigger payment
-    if (window.Kollect && window.Kollect.updatePaymentData) {
-      window.Kollect.updatePaymentData(paymentData);
-    } else {
-      alert('Kollect SDK not available. Please refresh the page.');
-    }
-  };
 
   return (
     <div className="invoice-page">
@@ -357,23 +329,8 @@ const Invoice = () => {
                     </Button>
                     <button                       
                       data-kollect-button
-                      onClick={handlePayment}
-                      data-payment-data={JSON.stringify({
-                        clientEmail: selectedClient?.clientEmail || '',
-                        clientName: selectedClient?.clientName || '',
-                        clientWalletAddress: selectedClient?.clientWalletAddress?.[0] || '',
-                        countryCode: selectedClient?.countryCode || '',
-                        countryName: selectedClient?.countryName || '',
-                        dueDate: formData.dueDate,
-                        currency: formData.currency,
-                        items: formData.items.map(item => ({
-                          description: item.description,
-                          quantity: item.quantity,
-                          price: item.price
-                        })),
-                        notes: formData.notes,
-                        redirectUrl: window.location.origin,
-                      })}
+                      data-payment-data={invoiceData ? JSON.stringify(invoiceData) : ''}
+                      disabled={!invoiceData}
                     >
                     </button>
                   </div>
