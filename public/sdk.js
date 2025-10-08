@@ -318,7 +318,10 @@
                 </div>
                 <div class="kollect-btn-right">
                   <img 
-                    src="https://res.cloudinary.com/djncgl9p3/image/upload/v1759833303/73AOXU_n3nt8j.svg" 
+                    src="${variant === 'black-and-white' 
+                      ? 'https://res.cloudinary.com/djncgl9p3/image/upload/v1759906362/73AOXU_1_o2lnvf.svg'
+                      : 'https://res.cloudinary.com/djncgl9p3/image/upload/v1759833303/73AOXU_n3nt8j.svg'
+                    }" 
                     alt="Kollect" 
                     class="kollect-btn-logo"
                   />
@@ -330,7 +333,10 @@
             button.innerHTML = `
               <div class="kollect-btn-content">
                 <img 
-                  src="https://res.cloudinary.com/djncgl9p3/image/upload/v1759833303/73AOXU_n3nt8j.svg" 
+                  src="${variant === 'black-and-white' 
+                    ? 'https://res.cloudinary.com/djncgl9p3/image/upload/v1759906362/73AOXU_1_o2lnvf.svg'
+                    : 'https://res.cloudinary.com/djncgl9p3/image/upload/v1759833303/73AOXU_n3nt8j.svg'
+                  }" 
                   alt="Kollect" 
                   class="kollect-btn-logo-only"
                 />
@@ -379,7 +385,10 @@
               </div>
               <div class="kollect-btn-right">
                 <img 
-                  src="https://res.cloudinary.com/djncgl9p3/image/upload/v1759833303/73AOXU_n3nt8j.svg" 
+                  src="${variant === 'black-and-white' 
+                    ? 'https://res.cloudinary.com/djncgl9p3/image/upload/v1759906362/73AOXU_1_o2lnvf.svg'
+                    : 'https://res.cloudinary.com/djncgl9p3/image/upload/v1759833303/73AOXU_n3nt8j.svg'
+                  }" 
                   alt="Kollect" 
                   class="kollect-btn-logo"
                 />
@@ -391,7 +400,10 @@
           button.innerHTML = `
             <div class="kollect-btn-content">
               <img 
-                src="https://res.cloudinary.com/djncgl9p3/image/upload/v1759833303/73AOXU_n3nt8j.svg" 
+                src="${variant === 'black-and-white' 
+                  ? 'https://res.cloudinary.com/djncgl9p3/image/upload/v1759906362/73AOXU_1_o2lnvf.svg'
+                  : 'https://res.cloudinary.com/djncgl9p3/image/upload/v1759833303/73AOXU_n3nt8j.svg'
+                }" 
                 alt="Kollect" 
                 class="kollect-btn-logo-only"
               />

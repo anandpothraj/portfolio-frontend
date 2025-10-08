@@ -330,7 +330,6 @@ const Invoice = () => {
                     <button                       
                       data-kollect-button
                       data-payment-data={invoiceData ? JSON.stringify(invoiceData) : ''}
-                      disabled={!invoiceData}
                     >
                     </button>
                   </div>
