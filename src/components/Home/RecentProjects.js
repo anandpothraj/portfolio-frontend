@@ -3,10 +3,12 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IoEyeSharp } from 'react-icons/io5';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import apiConfig from '../../config/api.json';
 import { Button, Image, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { getServerUrl } from '../../config/env';
 import { BsInfoCircleFill } from 'react-icons/bs';
+import { PiPlantFill } from "react-icons/pi";
 
 const RecentProjects = () => {
 
@@ -15,6 +17,34 @@ const RecentProjects = () => {
   const [ recentProfessional, setRecentProfessional ] = useState([]);
   const [ recentPersonal, setRecentPersonal ] = useState([]);
   const [ isLoading, setIsLoading ] = useState(true);
+  const [ showAllTech, setShowAllTech ] = useState({});
+
+  const toggleShowAllTech = (projectId) => {
+    setShowAllTech(prev => ({
+      ...prev,
+      [projectId]: !prev[projectId]
+    }));
+  };
+
+  const getCompanyName = (companyUrl) => {
+    let companyName = companyUrl;
+    if (companyName.includes('://')) {
+      companyName = companyName.split('://')[1];
+    }
+    if (companyName.startsWith('www.')) {
+      companyName = companyName.substring(4);
+    }
+    companyName = companyName.split('.')[0];
+
+    companyName = companyName
+      .replace(/([A-Z])/g, ' $1')
+      .trim()
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' ');
+    
+    return companyName;
+  };
 
   useEffect(() => {
     const fetchRecent = async () => {
@@ -107,25 +137,56 @@ const RecentProjects = () => {
                             <div className='position-relative overflow-hidden rounded-top'>
                                 <Image src={project.image} className='w-100 h-auto'/>
                                 <div className='position-absolute top-0 end-0 m-2 project-badge'>
-                                  <div
-                                    style={{
-                                      color: project.type === 'professional' ? '#28e745' : '#ffc107',
-                                      borderRadius: '6px',
-                                      padding: '2px 8px',
-                                      fontSize: '12px',
-                                      fontWeight: 700,
-                                      textTransform: 'capitalize'
-                                    }}
-                                  >
-                                    {project.type}
+                                  <div className='position-absolute top-0 end-0 m-2' style={{ backgroundColor: 'black', borderRadius: '8px', padding: '2px 6px' }}>
+                                    <div
+                                      style={{
+                                        color: project.type === 'professional' ? '#28e745' : '#ffc107',
+                                        borderRadius: '6px',
+                                        padding: '2px 8px',
+                                        fontSize: '12px',
+                                        fontWeight: 700,
+                                        textTransform: 'capitalize'
+                                      }}
+                                    >
+                                      {project.type}
+                                    </div>
                                   </div>
                                 </div>
                             </div>
-                            <div className='w-100 d-flex p-2 p-md-3'>
-                                <p className='w-50'><b>{project.title}</b></p>
-                                <div className='w-50 d-flex justify-content-around'>
+                            <div className='w-100 p-2 p-md-3'>
+                                <div className='d-flex justify-content-between align-items-center mb-2'>
+                                    <p className='mb-0'><b>{project.title}</b></p>
+                                    {project.techs.length > 5 && (
+                                        <Button
+                                            variant="outline-light"
+                                            size="sm"
+                                            className="tech-show-more-btn"
+                                            onClick={() => toggleShowAllTech(project._id)}
+                                            style={{ 
+                                                fontSize: '10px', 
+                                                padding: '4px 8px',
+                                                minWidth: 'auto',
+                                                border: '1px solid rgba(255,255,255,0.3)',
+                                                background: 'transparent'
+                                            }}
+                                        >
+                                            {showAllTech[project._id] ? (
+                                                <>
+                                                    <FaChevronUp size={8} className="me-1" />
+                                                    Less
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <FaChevronDown size={8} className="me-1" />
+                                                    +{project.techs.length - 5}
+                                                </>
+                                            )}
+                                        </Button>
+                                    )}
+                                </div>
+                                <div className='tech-stack-grid'>
                                     {
-                                        project.techs.map((tech, i) => {
+                                        (showAllTech[project._id] ? project.techs : project.techs.slice(0, 5)).map((tech, i) => {
                                             return (
                                                 <OverlayTrigger
                                                     key={tech.title}
@@ -134,12 +195,14 @@ const RecentProjects = () => {
                                                     <Tooltip id={`tooltip-top`}>{tech.title}</Tooltip>
                                                     }
                                                 >
-                                                <img
-                                                    src={tech.url}
-                                                    alt={tech.title}
-                                                    loading="lazy"
-                                                    className='techStackImage'
-                                                />
+                                                    <div className='tech-icon-wrapper'>
+                                                        <img
+                                                            src={tech.url}
+                                                            alt={tech.title}
+                                                            loading="lazy"
+                                                            className='tech-stack-icon'
+                                                        />
+                                                    </div>
                                                 </OverlayTrigger>
                                             )
                                         })
@@ -148,7 +211,12 @@ const RecentProjects = () => {
                             </div>
                             <div className="w-100 d-flex p-2 p-md-3">
                                 <div className='w-50 d-flex'>
-                                    <a href={project.repoName} target="_blank" rel="noopener noreferrer" className='mx-auto text-decoration-none text-light'><BsInfoCircleFill className='mx-2 logo2'/>Details</a>
+                                    {project.type === 'personal' && (
+                                        <a href={project.repoName} target="_blank" rel="noopener noreferrer" className='mx-auto text-decoration-none text-light'><BsInfoCircleFill className='mx-2 logo2'/>Details</a>
+                                    )}
+                                    {project.type === 'professional' && (
+                                        <a href={project.repoName} target="_blank" rel="noopener noreferrer" className='mx-auto text-decoration-none text-light'><PiPlantFill className='mx-2 logo2'/>Associated with {getCompanyName(project.repoName)}</a>
+                                    )}
                                 </div>
                                 <div className='w-50 d-flex'>
                                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className='mx-auto text-decoration-none text-light'><IoEyeSharp className='mx-2 logo2'/>Preview</a>

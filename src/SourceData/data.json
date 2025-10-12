@@ -258,70 +258,133 @@
             ]
         },
         "technology" : {
-            "techData" : [
-                {
-                    "techName" : "REACT JS",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                    "bg" : "#121212"
-                  },
-                  {
-                    "techName" : "REDUX",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-                    "bg" : "#121212"
-                  },
-                  {
-                    "techName" : "NODE JS",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-                    "bg" : "#121212"
-                  },
-                  {
-                    "techName" : "MONGODB",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                  },
-                  {
-                    "techName" : "EXPRESS JS",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-                    "bg" : "#fff"
-                  },
-                  {
-                    "techName" : "JAVASCRIPT",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                  },
-                  {
-                    "techName" : "GIT",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                  },
-                  {
-                    "techName" : "PYTHON",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                  },
-                  {
-                    "techName" : "BOOTSTRAP",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-                    "bg" : "#121212"
-                  },
-                  {
-                    "techName" : "GITHUB",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-                    "bg" : "#fff"
-                  },
-                  {
-                    "techName" : "HTML",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                  },
-                  {
-                    "techName" : "CSS",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                  },
-                  {
-                    "techName" : "SASS",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
-                  },
-                  {
-                    "techName" : "M-UI",
-                    "imageUrl" : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
-                  }
-            ]
+          "techData": [
+            {
+              "techName": "MongoDB",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "React JS",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "Node JS",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "Bootstrap",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "Redux",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "JavaScript",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "Git",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "HTML",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "CSS",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "SASS",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "Express JS",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+              "bg": "#FFFFFF"
+            },
+            {
+              "techName": "Zustand",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265354/zustand_ulagqg.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "AWS",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265355/aws_flzr45.svg",
+              "bg": "#FFFFFF"
+            },
+            {
+              "techName": "Redis",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265355/redis_y0fuxc.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "Blockchain",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265354/blockchain_xwry5k.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "Next JS",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265354/nextjs_pmp4ki.svg",
+              "bg": "#FFFFFF"
+            },
+            {
+              "techName": "Nest JS",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265345/nestjs_d8xln7.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "Tailwind CSS",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265345/tailwindcss_yeigod.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "SQL1",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265345/sql1_urbwv2.svg",
+              "bg": "#FFFFFF"
+            },
+            {
+              "techName": "SQL2",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265345/sql2_ayuw7k.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "TypeScript",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265355/typescript_o0preb.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "NPM",
+              "imageUrl": "https://user-images.githubusercontent.com/25181517/121401671-49102800-c959-11eb-9f6f-74d49a5e1774.png",
+              "bg": "#121212"
+            },
+            {
+              "techName": "Python",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "GitHub",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+              "bg": "#FFFFFF"
+            },
+            {
+              "techName": "M-UI",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+              "bg": "#121212"
+            }
+          ]
         },
         "services" : ["Full Stack Product Developer 🚀", "MERN Stack Developer 🚀", "OS Contributor 🚀", "Blockchain Developer 🚀 ", "Passionate Learner 🚀"]
     },
