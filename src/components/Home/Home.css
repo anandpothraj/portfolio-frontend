@@ -174,8 +174,54 @@
     }
 }
 
+/* Tech Stack Grid Layout */
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 8px;
+  align-items: center;
+  justify-items: center;
+}
+
+.tech-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+
+.tech-icon-wrapper:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.tech-stack-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.tech-show-more-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.tech-show-more-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-1px);
+}
+
+/* Legacy support for old class names */
 .techStackImage{
     width: 10%;
+    flex-shrink: 0;
   }
   
   .projectItem{
@@ -183,30 +229,94 @@
   }
   
   @media screen and (max-width: 1500px) {
+    .tech-stack-grid {
+      grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+      gap: 6px;
+    }
+    .tech-icon-wrapper {
+      width: 35px;
+      height: 35px;
+    }
+    .tech-stack-icon {
+      width: 20px;
+      height: 20px;
+    }
+    .tech-show-more-btn {
+      font-size: 9px;
+      padding: 3px 6px;
+    }
     .techStackImage{
       width: 15%;
     }
   }
   
   @media screen and (max-width: 1200px) {
+    .tech-stack-grid {
+      grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
+      gap: 5px;
+    }
+    .tech-icon-wrapper {
+      width: 32px;
+      height: 32px;
+    }
+    .tech-stack-icon {
+      width: 18px;
+      height: 18px;
+    }
+    .tech-show-more-btn {
+      font-size: 8px;
+      padding: 2px 5px;
+    }
     .techStackImage{
       width: 20%;
     }
   }
   
   @media screen and (max-width: 900px) {
-    .techStackImage{
-      width: 25%;
+    .tech-stack-grid {
+      grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+      gap: 4px;
+    }
+    .tech-icon-wrapper {
+      width: 30px;
+      height: 30px;
+    }
+    .tech-stack-icon {
+      width: 16px;
+      height: 16px;
     }
     .projectItem{
       width: 100% !important;
+    }
+    .tech-show-more-btn {
+      font-size: 7px;
+      padding: 2px 4px;
+    }
+    .techStackImage{
+      width: 25%;
     }
   }
   
   @media screen and (max-width: 767px) {
     .textCenter {
       text-align: center !important;
-    }  
+    }
+    .tech-stack-grid {
+      grid-template-columns: repeat(auto-fit, minmax(28px, 1fr));
+      gap: 3px;
+    }
+    .tech-icon-wrapper {
+      width: 28px;
+      height: 28px;
+    }
+    .tech-stack-icon {
+      width: 14px;
+      height: 14px;
+    }
+    .tech-show-more-btn {
+      font-size: 6px;
+      padding: 1px 3px;
+    }
     .techStackImage{
       width: 20%;
     }
