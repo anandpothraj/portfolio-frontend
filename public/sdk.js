@@ -2,7 +2,7 @@
   const Kollect = {
     async init({ apiKey }) {
       this.apiKey = apiKey;
-      this.endpoint = "https://zapnow-backend-npzgd.ondigitalocean.app";
+      this.endpoint = "http://localhost:5000";
 
       try {
         // Create DPoP key pair first for session authentication
@@ -428,12 +428,12 @@
         const sessionToken = await this.mintSessionToken('invoice');
 
         // Create DPoP proof for invoice creation
-        const dpopProof = await this.createDpopProof('POST', `${this.endpoint}/create/dPopProof/invoice`, sessionToken);
+        const dpopProof = await this.createDpopProof('POST', `${this.endpoint}/sdk/create/dPopProof/invoice`, sessionToken);
 
         // Generate idempotency key
         const idempotencyKey = crypto.randomUUID();
 
-        const res = await this.fetchWithTimeout(`${this.endpoint}/invoice/invoiceWithPayment`, {
+        const res = await this.fetchWithTimeout(`${this.endpoint}/sdk/invoice/invoiceWithPayment`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -591,10 +591,10 @@
         };
 
         // Create DPoP proof for session creation
-        const dpopProof = await this.createDpopProof('POST', `${this.endpoint}/create/dPopProof/session`);
+        const dpopProof = await this.createDpopProof('POST', `${this.endpoint}/sdk/create/dPopProof/session`);
 
         // Calling API to Create session token (with timeout)
-        const response = await this.fetchWithTimeout(`${this.endpoint}/create/session`, {
+        const response = await this.fetchWithTimeout(`${this.endpoint}/sdk/create/session`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

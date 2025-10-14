@@ -5,15 +5,15 @@ import './Invoice.css';
 
 const Invoice = () => {
   const [formData, setFormData] = useState({
-    clientId: '',
+    clientId: clientsData[0]?.clientId || '',
     invoiceNumber: '',
-    dueDate: '',
+    dueDate: new Date().toISOString().split('T')[0],
     currency: 'fUSDC-sepolia',
     notes: '',
-    items: [{ description: '', quantity: 1, price: 0 }]
+    items: [{ description: 'Misc', quantity: 1, price: 1 }]
   });
 
-  const [selectedClient, setSelectedClient] = useState(null);
+  const [selectedClient, setSelectedClient] = useState(clientsData[0] || null);
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
   const [invoiceData, setInvoiceData] = useState(null);
