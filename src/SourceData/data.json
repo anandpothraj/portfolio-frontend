@@ -20,6 +20,11 @@
                 "title" : "Contact",
                 "path" : "/contact",
                 "navigate" : "contact"
+            },
+            {
+                "title" : "Chat",
+                "path" : "/chat",
+                "navigate" : "chat"
             }
         ]
     },
