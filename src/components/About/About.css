@@ -72,8 +72,12 @@
 }
 .techContainer{
   margin-top: 5%;
-  max-height: 20rem;
   padding: 0 1rem;
+  width: 100%;
+}
+.techContainer .row {
+  margin: 0;
+  width: 100%;
 }
 .techCard{
   max-width: 6rem;
@@ -86,9 +90,25 @@
   background: #121212;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
 }
+.techImageContainer{
+  width: 100%;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+}
+.techImageContainer.whiteBg{
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
 .techImage{
   width: 80%;
   height: auto;
+  object-fit: contain;
 }
 .techName{
   font-size: 0.7rem;
@@ -99,8 +119,9 @@
 
 @media screen and (max-width: 1290px) {
   .techContainer{
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
+    max-height: none;
   }
 }
 
