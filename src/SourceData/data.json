@@ -31,7 +31,7 @@
     "home" : {
         "profile" : {
             "name" : "Anand Pothraj",
-            "designation": ["Full Stack Product Developer 🚀", "MERN Stack Developer 🚀", "OS Contributor 🚀", "Blockchain Developer 🚀 "],
+            "designation": ["Full Stack AI Product Developer 🚀", "Agentic AI Developer 🚀", "MERN Stack Developer 🚀", "Web3 Developer 🚀 ", "OS Contributor 🚀"],
             "introBio" : "I have a passion for technology",
             "mailTo" : "mailto:pothrajanand@gmail.com",
             "images" : {
@@ -119,97 +119,11 @@
             "email" : "mailto:pothrajanand@gmail.com"
         }
     },
-    "projects" : [
-      {
-        "type" : "professional",
-        "title":"Anand Vaccination System",
-        "stack" : "fullStack",
-        "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1698230410/bjpvdflzm95igfj8ui4z.png",
-        "repoName":"https://github.com/anandpothraj/avs-frontend",
-        "liveUrl":"https://anand-vaccination-system.netlify.app/",
-        "techs": [
-          {
-            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-            "title": "MongoDB"
-          },
-          {
-            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            "title": "React JS"
-          },
-          {
-            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-            "title": "Node JS"
-          },
-          {
-            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-            "title": "Bootstrap"
-          }
-        ],
-        "desc" : "is a robust MERN stack web app designed for precise disease vaccination with stringent validation to minimize errors. It also includes features like vaccination status tracking, certification issuance, and secure travel facilitation to maintain a safe environment."
-      },
-      {
-        "type" : "professional",
-        "title":"Crypto Switch",
-        "stack" : "frontend",
-        "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723074/htpyrnd1lyylgfijomz5.png",
-        "repoName":"https://github.com/anandpothraj/cryptoswitch",
-        "liveUrl":"https://anand-cryptoswitch.netlify.app/",
-        "techs": [
-          {
-            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            "title": "React"
-          },
-          {
-            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-            "title": "Bootstrap"
-          }
-        ],
-        "desc" : "is a highly responsive API-based cryptocurrency application constructed with ReactJS, ChartJS, and Bootstrap. It allows you to access comprehensive information about trending coins and track coin records using customizable graphs and filters."
-      },
-      {
-        "type" : "personal",
-        "title":"Todo",
-        "stack" : "frontend",
-        "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723687/mrpedgodcxlqkhhuklbc.png",
-        "repoName":"https://github.com/anandpothraj/todo",
-        "liveUrl":"https://anand-todo.netlify.app/",
-        "techs": [
-          {
-            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            "title": "React"
-          },
-          {
-            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-            "title": "Bootstrap"
-          }
-        ],
-        "desc" : "is a fully responsive front-end web application developed with ReactJS and Redux. It offers seamless task management, allowing you to organize to-dos based on task priority. You can effortlessly perform all CRUD operations, along with flexible filtering and sorting options"  
-      },
-      {
-        "type" : "personal",
-        "title":"NewsHut",
-        "stack" : "frontend",
-        "image":"https://res.cloudinary.com/de3bkua6f/image/upload/v1676723121/gxorvwgsbdpjolcivtpp.png",
-        "repoName":"https://github.com/anandpothraj/newshut",
-        "liveUrl":"https://anand-newshut.netlify.app/",
-        "techs": [
-          {
-            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            "title": "React"
-          },
-          {
-            "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-            "title": "Bootstrap"
-          }
-        ],
-        "desc" : "is an API-powered ReactJS and Redux app, offering personalized news recommendations across various categories. Switch between dark and light modes, and customize themes with endless colors."
-      }
-    ],
     "about" : {
         "aboutInfo" : {
             "aboutImage" : "https://res.cloudinary.com/de3bkua6f/image/upload/v1677051001/Third.3f76f85b2c22d0c9ec44_kjgk62.png",
             "name" : "Anand Pothraj",
-            "intro" : "Full Stack Product Developer, MERN Stack Developer, tech enthusiast and a passionate learner.",
+            "intro" : "Full Stack AI Product Developer, Agentic AI Developer, MERN Stack Developer, Web3 Developer, tech enthusiast and a passionate learner.",
             "email" : "pothrajanand@gmail.com",
             "socials"  : {
                 "linkedIn" :  "https://www.linkedin.com/in/anandpothraj",
@@ -223,11 +137,11 @@
             "bioWelcomeText" : "Hi there! Thanks for visiting my portfolio.",
             "bioLinkedIn" : "https://www.linkedin.com/in/anandpothraj",
             "bioName" : "Anand Pothraj",
-            "bioIntroText" : "a Full Stack Product Developer with nearly 3.5 years experience in building scalable web apps using React.js, TypeScript Node.js, Nest.js and AWS. Skilled in microservices, microfrontends, CI/CD, Web3, blockchain, database management and system design. Proven track record in team leadership, code quality assurance, and success. I had completed Bachelor's In Computer Science from",
+            "bioIntroText": "Full-Stack AI Product Developer with 3.6+ years of experience building scalable AI-powered web applications using React.js, TypeScript, Python, Node.js, NestJS, LangChain, LangGraph, and PgVector. Skilled in microservices, micro-frontends, system design, CI/CD pipelines, AWS, Web3, blockchain technologies, and database management. Proven track record in team leadership, high code quality, and successful product delivery. Holds a Bachelor's degree in Computer Science.",
             "bioCollegeName" : "Mumbai University",
             "passoutYear" : 2022,
             "collegeLink" : "https://mu.ac.in/",
-            "bioText" : "I have worked on a wide range of technologies and have worked on projects ranging from small to large scale. I am a self-motivated and self-driven individual who is always looking for new challenges and opportunities. I love to get engage in communities and learn from others."
+            "bioText": "I have worked across a wide range of technologies and delivered projects spanning from small-scale applications to large, production-grade systems. I am a self-motivated and growth-driven individual who actively seeks new challenges and opportunities to improve both technically and professionally. I enjoy engaging with developer communities, sharing knowledge, and continuously learning from others."
         },
         "experience" : {
             "ExperienceDetails" : [
@@ -260,8 +174,8 @@
         "technology" : {
           "techData": [
             {
-              "techName": "MongoDB",
-              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+              "techName": "Redis",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265355/redis_y0fuxc.svg",
               "bg": "#121212"
             },
             {
@@ -270,13 +184,58 @@
               "bg": "#121212"
             },
             {
+              "techName": "LangGraph",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/langgraph.svg",
+              "bg": "#FFFFFF"
+            },
+            {
+              "techName": "GitHub",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+              "bg": "#FFFFFF"
+            },
+            {
+              "techName": "TypeScript",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265355/typescript_o0preb.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "FastAPI",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "MongoDB",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "AWS",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265355/aws_flzr45.svg",
+              "bg": "#FFFFFF"
+            },
+            {
+              "techName": "HTML",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "OpenAI APIs",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg",
+              "bg": "#FFFFFF"
+            },
+            {
               "techName": "Node JS",
               "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
               "bg": "#121212"
             },
             {
-              "techName": "Bootstrap",
-              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+              "techName": "Tailwind",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265345/tailwindcss_yeigod.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "PostgreSQL",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
               "bg": "#121212"
             },
             {
@@ -285,28 +244,18 @@
               "bg": "#121212"
             },
             {
-              "techName": "JavaScript",
-              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-              "bg": "#121212"
-            },
-            {
               "techName": "Git",
               "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
               "bg": "#121212"
             },
             {
-              "techName": "HTML",
-              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-              "bg": "#121212"
+              "techName": "LangChain",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/langchain.svg",
+              "bg": "#FFFFFF"
             },
             {
               "techName": "CSS",
               "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-              "bg": "#121212"
-            },
-            {
-              "techName": "SASS",
-              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
               "bg": "#121212"
             },
             {
@@ -320,53 +269,18 @@
               "bg": "#121212"
             },
             {
-              "techName": "AWS",
-              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265355/aws_flzr45.svg",
-              "bg": "#FFFFFF"
-            },
-            {
-              "techName": "Redis",
-              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265355/redis_y0fuxc.svg",
-              "bg": "#121212"
-            },
-            {
-              "techName": "Blockchain",
-              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265354/blockchain_xwry5k.svg",
-              "bg": "#121212"
-            },
-            {
               "techName": "Next JS",
               "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265354/nextjs_pmp4ki.svg",
               "bg": "#FFFFFF"
             },
             {
+              "techName": "WCAG",
+              "imageUrl": "https://icons.getbootstrap.com/assets/icons/universal-access.svg",
+              "bg": "#121212"
+            },
+            {
               "techName": "Nest JS",
               "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265345/nestjs_d8xln7.svg",
-              "bg": "#121212"
-            },
-            {
-              "techName": "Tailwind CSS",
-              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265345/tailwindcss_yeigod.svg",
-              "bg": "#121212"
-            },
-            {
-              "techName": "SQL1",
-              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265345/sql1_urbwv2.svg",
-              "bg": "#FFFFFF"
-            },
-            {
-              "techName": "SQL2",
-              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265345/sql2_ayuw7k.svg",
-              "bg": "#121212"
-            },
-            {
-              "techName": "TypeScript",
-              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265355/typescript_o0preb.svg",
-              "bg": "#121212"
-            },
-            {
-              "techName": "NPM",
-              "imageUrl": "https://user-images.githubusercontent.com/25181517/121401671-49102800-c959-11eb-9f6f-74d49a5e1774.png",
               "bg": "#121212"
             },
             {
@@ -375,9 +289,49 @@
               "bg": "#121212"
             },
             {
-              "techName": "GitHub",
-              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+              "techName": "CI/CD",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "SQL2",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265345/sql2_ayuw7k.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "JavaScript",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "Blockchain",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265354/blockchain_xwry5k.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "Bootstrap",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "SASS",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+              "bg": "#121212"
+            },
+            {
+              "techName": "NPM",
+              "imageUrl": "https://user-images.githubusercontent.com/25181517/121401671-49102800-c959-11eb-9f6f-74d49a5e1774.png",
+              "bg": "#121212"
+            },
+            {
+              "techName": "SQL1",
+              "imageUrl": "https://res.cloudinary.com/de3bkua6f/image/upload/v1760265345/sql1_urbwv2.svg",
               "bg": "#FFFFFF"
+            },
+            {
+              "techName": "PGVector",
+              "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+              "bg": "#121212"
             },
             {
               "techName": "M-UI",
@@ -386,7 +340,7 @@
             }
           ]
         },
-        "services" : ["Full Stack Product Developer 🚀", "MERN Stack Developer 🚀", "OS Contributor 🚀", "Blockchain Developer 🚀 ", "Passionate Learner 🚀"]
+        "services" : ["Full Stack AI Product Developer 🚀", "Agentic AI Developer 🚀", "MERN Stack Developer 🚀", "Web3 Developer 🚀 ", "OS Contributor 🚀"]
     },
     "contact" : {
       "twitterUserName" : "@Anand Pothraj",
