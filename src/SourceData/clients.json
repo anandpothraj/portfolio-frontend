@@ -1,0 +1,63 @@
+[
+    {
+      "_id": "68d1154424bef0c33c242f8f",
+      "clientType": "individual",
+      "clientId": "9da86304-49ad-4a34-9f18-4564c19cc7e9",
+      "clientWalletAddress": ["0x4ef9f832d1626a2ff9138062ca48ddfc5a7373b8"],
+      "clientName": "Anand",
+      "clientEmail": "anand@kreatorverse.com",
+      "businesses": ["qmtyOKlFQEM0iXat9Kl4Bpza5NA2"],
+      "countryName": "India",
+      "countryCode": "IN",
+      "phone": "+91",
+      "feedbackSubmitted": false,
+      "createdAt": "2025-09-22T09:22:12.475Z",
+      "__v": 0
+    },
+    {
+      "_id": "68d1112224bef0c33c242e8b",
+      "clientType": "individual",
+      "clientId": "8fda9931-1b15-4db0-a2a8-913e85db2a42",
+      "clientWalletAddress": ["0x4ef9f832d1626a2ff9138062ca48ddfc5a7373b8"],
+      "clientName": "Anand Pothraj",
+      "clientEmail": "pothrajanand@gmail.com",
+      "businesses": ["GnhThe2pg3eCQj0UnZk2pv1oHIA2"],
+      "countryName": "India",
+      "countryCode": "IN",
+      "phone": "+91",
+      "feedbackSubmitted": false,
+      "createdAt": "2025-09-22T09:04:34.074Z",
+      "__v": 0
+    },
+    {
+      "_id": "68cd351d24bef0c33c242c30",
+      "clientType": "individual",
+      "clientId": "eea5e49a-d2e3-4f05-bec1-c2f30ffdf863",
+      "clientWalletAddress": ["0x4ef9f832d1626a2ff9138062ca48ddfc5a7373b8"],
+      "clientName": "Anand",
+      "clientEmail": "anand@kreatorverse.com",
+      "businesses": ["axrs3ZOOYHRBNPjufLo1pQNtbM02"],
+      "countryName": "American Samoa",
+      "countryCode": "AS",
+      "phone": "+91",
+      "feedbackSubmitted": false,
+      "createdAt": "2025-09-19T10:49:01.362Z",
+      "__v": 0
+    },
+    {
+      "_id": "68cd329624bef0c33c242bdd",
+      "clientType": "individual",
+      "clientId": "af04ec98-677e-476d-ac82-32c6e8bbd146",
+      "clientWalletAddress": ["0x2223fa8e60d08a12a27a899399f86157d14f0dce"],
+      "clientName": "Saeb",
+      "clientEmail": "saeb@kreatorverse.com",
+      "businesses": ["axrs3ZOOYHRBNPjufLo1pQNtbM02"],
+      "countryName": "Albania",
+      "countryCode": "AL",
+      "phone": "+91",
+      "feedbackSubmitted": false,
+      "createdAt": "2025-09-19T10:38:14.108Z",
+      "__v": 0
+    }
+  ]
+  

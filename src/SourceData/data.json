@@ -17,6 +17,11 @@
                 "navigate" : "about"
             },
             {
+                "title" : "Invoice",
+                "path" : "/invoice",
+                "navigate" : "invoice"
+            },
+            {
                 "title" : "Contact",
                 "path" : "/contact",
                 "navigate" : "contact"

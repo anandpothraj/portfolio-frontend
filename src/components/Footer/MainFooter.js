@@ -56,7 +56,7 @@ const MainFooter = () => {
     }
 
     useEffect(() => {
-        getsiteVisits();
+        // getsiteVisits();
         // eslint-disable-next-line
     },[])
 

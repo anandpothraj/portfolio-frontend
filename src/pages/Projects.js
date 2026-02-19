@@ -74,7 +74,7 @@ const Projects = () => {
         setIsLoading(false);
       }
     };
-    fetchAll();
+    // fetchAll();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

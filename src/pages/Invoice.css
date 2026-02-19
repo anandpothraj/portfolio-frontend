@@ -1,0 +1,214 @@
+.invoice-page {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.invoice-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.invoice-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px 15px 0 0 !important;
+  border: none;
+  padding: 20px;
+}
+
+.invoice-header h2 {
+  font-weight: 600;
+  margin: 0;
+}
+
+.client-info-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+}
+
+.client-info-card .card-header {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+  color: white;
+  border-radius: 10px 10px 0 0 !important;
+  border: none;
+  padding: 15px;
+}
+
+.client-info-card .card-body {
+  padding: 20px;
+}
+
+.client-info-card p {
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+.client-info-card strong {
+  color: #212529;
+}
+
+.items-section {
+  margin: 30px 0;
+}
+
+.item-card {
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.item-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.total-card {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.total-card .card-body {
+  padding: 25px;
+}
+
+.total-card h5 {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.total-card h3 {
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.btn-outline-primary {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.btn-outline-primary:hover {
+  background-color: #667eea;
+  border-color: #667eea;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+}
+
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 25px;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.alert {
+  border-radius: 10px;
+  border: none;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .invoice-page {
+    padding: 10px 0;
+  }
+  
+  .invoice-card {
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  .invoice-header {
+    padding: 15px;
+    border-radius: 10px 10px 0 0 !important;
+  }
+  
+  .total-card .card-body {
+    padding: 20px;
+  }
+  
+  .btn-success,
+  .btn-outline-secondary {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* Animation for form elements */
+.form-control,
+.form-select {
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  transform: translateY(-1px);
+}
+
+/* Loading state for buttons */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Custom scrollbar for textarea */
+.form-control[as="textarea"] {
+  resize: vertical;
+}
+
+/* Print styles */
+@media print {
+  .invoice-page {
+    background: white;
+  }
+  
+  .invoice-card {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  
+  .btn {
+    display: none;
+  }
+}

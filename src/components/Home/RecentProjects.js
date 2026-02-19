@@ -91,7 +91,7 @@ const RecentProjects = () => {
         setIsLoading(false);
       }
     };
-    fetchRecent();
+    // fetchRecent();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
