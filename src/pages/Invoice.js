@@ -24,6 +24,25 @@ const Invoice = () => {
     setFormData(prev => ({ ...prev, invoiceNumber }));
   }, []);
 
+  useEffect(() => {
+    if (typeof window.Kollect === 'undefined') return;
+    const initKollect = async () => {
+      try {
+        const r = await fetch('/api/kollect/config');
+        if (!r.ok) throw new Error('Kollect config unavailable');
+        const { kollectSdkUrl } = await r.json();
+        if (!kollectSdkUrl) throw new Error('kollectSdkUrl missing');
+        window.Kollect.init({
+          endpoint: kollectSdkUrl,
+          paymentEndpoint: '/api/kollect/create-payment',
+        });
+      } catch (e) {
+        console.warn('[Kollect] Init failed (ensure backend has KOLLECT_BACKEND_URL and /api is proxied):', e);
+      }
+    };
+    initKollect();
+  }, []);
+
   // Set up payment success callback
   useEffect(() => {
     window.onKollectPaymentSuccess = (result) => {
@@ -327,11 +346,13 @@ const Invoice = () => {
                     <Button variant="outline-secondary" onClick={() => window.history.back()}>
                       Cancel
                     </Button>
-                    <button                       
+                    <button
+                      type="button"
                       data-kollect-button
+                      data-type="pay-kollect"
+                      data-variant="basic"
                       data-payment-data={invoiceData ? JSON.stringify(invoiceData) : ''}
-                    >
-                    </button>
+                    />
                   </div>
                 </Form>
               </Card.Body>

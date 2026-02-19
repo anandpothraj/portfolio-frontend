@@ -1,18 +1,45 @@
 (function () {
   const Kollect = {
-    async init({ apiKey }) {
-      this.apiKey = apiKey;
-      this.endpoint = "http://localhost:5001";
+    async init(options = {}) {
+      const { apiKey, createPayment, paymentEndpoint } = options || {};
+      // Kollect backend base URL for DPoP session and status polling (must not be empty when using status polling)
+      const raw = options.endpoint;
+      this.endpoint = typeof raw === "string" && raw.trim() ? raw.replace(/\/$/, "") : "";
+      // Hybrid: createPayment callback or paymentEndpoint (API key stays on merchant server — never stored in SDK)
+      if (typeof createPayment === "function") {
+        this.createPayment = createPayment;
+        this.apiKey = null;
+      } else if (paymentEndpoint) {
+        this.createPayment = (data) =>
+          fetch(paymentEndpoint, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          }).then(async (r) => {
+            if (!r.ok) throw new Error(r.statusText || (await r.text()));
+            return r.json();
+          }).then((j) => (j && j.data ? j.data : j));
+        this.apiKey = null;
+      } else {
+        this.createPayment = null;
+        this.apiKey = apiKey || null;
+      }
+
+      // Inject styles first so buttons look correct even before DPoP or when button mounts later
+      this.injectStyles();
 
       try {
-        // Create DPoP key pair first for session authentication
         await this.createDpopKeyPair();
         console.info("[Kollect SDK] DPoP key pair created for secure authentication");
-        // Initialize button styles and functionality
         this.initButtons();
+        // Re-scan for buttons added later (e.g. React mounts Invoice page after init)
+        [100, 400, 1200].forEach((ms) => {
+          setTimeout(() => this.initButtons(), ms);
+        });
       } catch (err) {
         console.error("[Kollect SDK] Network/auth error", err);
         alert("Unable to authenticate. Please check your network or contact support.");
+        this.initButtons();
       }
     },
 
@@ -29,11 +56,8 @@
     },
 
     initButtons() {
-      // Inject CSS styles
-      this.injectStyles();
-
-      // Find and enhance all Kollect buttons
-      const buttons = document.querySelectorAll('[data-kollect-button]');
+      // Only enhance buttons not yet enhanced (avoids duplicate listeners when re-scanning)
+      const buttons = document.querySelectorAll('[data-kollect-button]:not(.kollect-btn-enhanced)');
       buttons.forEach(button => this.enhanceButton(button));
     },
 
@@ -509,10 +533,14 @@
             true
           );
 
-          // Create DPoP proof for status check
-          const dpopProof = await this.createDpopProof('GET', `${this.endpoint}/sdk/status/${paymentId}`);
+          // Status must be requested from Kollect backend (not merchant origin)
+          if (!this.endpoint) {
+            throw new Error("Kollect SDK: endpoint (Kollect backend URL) is required for status polling. Pass endpoint to init({ endpoint: 'https://...' }).");
+          }
+          const statusUrl = `${this.endpoint}/sdk/status/${paymentId}`;
+          const dpopProof = await this.createDpopProof('GET', statusUrl);
 
-          const response = await this.fetchWithTimeout(`${this.endpoint}/sdk/status/${paymentId}`, {
+          const response = await this.fetchWithTimeout(statusUrl, {
             method: 'GET',
             headers: {
               'DPoP': dpopProof
@@ -641,6 +669,13 @@
       const type = button.getAttribute('data-type') || 'kollect';
       const variant = button.getAttribute('data-variant') || 'basic';
 
+      // Prevent form submit and link navigation: ensure click does not submit form or change URL
+      button.setAttribute('type', 'button');
+      if (button.tagName === 'A') {
+        button.setAttribute('href', '#');
+        button.setAttribute('role', 'button');
+      }
+
       // Set default attributes if not present
       if (!button.hasAttribute('data-type')) {
         button.setAttribute('data-type', type);
@@ -723,10 +758,12 @@
         const content = (type === 'pay-kollect') ? buildPayKollectContent() : buildKollectOnlyContent();
         replaceContent(content);
 
-        // Click handler using the payment data
+        // Click handler: prevent form submit and any navigation
         button.addEventListener('click', (e) => {
           e.preventDefault();
+          e.stopPropagation();
           this.handleButtonClick(button);
+          return false;
         });
 
         return;
@@ -737,7 +774,9 @@
         button.classList.add('kollect-btn-enhanced');
         button.addEventListener('click', (e) => {
           e.preventDefault();
+          e.stopPropagation();
           this.handleButtonClick(button);
+          return false;
         });
         return;
       }
@@ -747,10 +786,12 @@
       const content = (type === 'pay-kollect') ? buildPayKollectContent() : buildKollectOnlyContent();
       replaceContent(content);
 
-      // Click handler
+      // Click handler: prevent form submit and any navigation
       button.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         this.handleButtonClick(button);
+        return false;
       });
     },
 
@@ -789,7 +830,60 @@
         true
       );
 
-      this.createInvoice(paymentData);
+      if (this.createPayment) {
+        this.createPaymentHybrid(paymentData);
+      } else {
+        this.createInvoice(paymentData);
+      }
+    },
+
+    buildPaymentPayload(paymentData) {
+      return {
+        clientEmail: paymentData.clientEmail,
+        clientName: paymentData.clientName,
+        dueDate: paymentData.dueDate || new Date().toISOString().split("T")[0],
+        invoiceNumber: paymentData.invoiceNumber || `INV-${Date.now()}`,
+        clientWalletAddress: paymentData.clientWalletAddress,
+        countryCode: paymentData.countryCode,
+        countryName: paymentData.countryName,
+        items: paymentData.items || [],
+        paymentCurrency: paymentData.currency,
+        invoiceCurrency: paymentData.currency,
+        notes: paymentData.notes || "",
+        source: encodeURIComponent(paymentData.source || window.location.origin),
+        isSelfIncurredFee: "false",
+      };
+    },
+
+    async createPaymentHybrid(paymentData) {
+      const payload = this.buildPaymentPayload(paymentData);
+      try {
+        this.updateModalContent("Paying through Kollect", "Creating your payment...", true);
+        const result = await this.createPayment(payload);
+        const data = result && result.data ? result.data : result;
+        const paymentUrl = data?.paymentUrl;
+        const paymentId = data?.paymentId || (paymentUrl ? this.extractPaymentIdFromUrl(paymentUrl) : null);
+        if (!paymentUrl) {
+          this.updateModalContent("Payment Failed", "Invalid response: missing paymentUrl.", false);
+          setTimeout(() => this.hideModal(), 3000);
+          return;
+        }
+        this.updateModalContent("Redirecting to Kollect", "Opening payment page in a new tab...", true);
+        const redirectUrl = encodeURIComponent(paymentData.redirectUrl || window.location.origin);
+        const fullUrl = `${paymentUrl}?redirect=${redirectUrl}`;
+        const newWin = window.open(fullUrl, "_blank", "noopener,noreferrer");
+        if (newWin) newWin.opener = null;
+        if (paymentId) {
+          this.updateModalContent("Payment in Progress", "Please complete your payment in the new tab. We'll verify the status automatically...", true);
+          setTimeout(() => this.pollPaymentStatus(paymentId), 10000);
+        } else {
+          this.updateModalContent("Payment in Progress", "Please complete your payment in the new tab.", false);
+        }
+      } catch (e) {
+        console.error("[Kollect SDK] createPayment failed", e);
+        this.updateModalContent("Payment Failed", e?.message || "Payment could not be started. Please try again.", false);
+        setTimeout(() => this.hideModal(), 3000);
+      }
     },
 
     getPaymentData(button) {
@@ -1046,6 +1140,9 @@
     async mintSessionToken(intent = 'invoice') {
       if (!this.dpopKeyPair) {
         throw new Error("DPoP key pair not found. Please initialize the SDK first.");
+      }
+      if (!this.apiKey) {
+        throw new Error("API key is required for the legacy flow. Use hybrid mode (createPayment or paymentEndpoint) so the key stays on your server.");
       }
 
       try {
