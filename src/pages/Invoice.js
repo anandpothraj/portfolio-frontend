@@ -24,6 +24,14 @@ const Invoice = () => {
     setFormData(prev => ({ ...prev, invoiceNumber }));
   }, []);
 
+  // If this tab was opened by Kollect redirect after payment (?status=success), close it so the user stays on the original tab
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('status') === 'success') {
+      window.close();
+    }
+  }, []);
+
   useEffect(() => {
     if (typeof window.Kollect === 'undefined') return;
     const initKollect = async () => {
@@ -73,7 +81,7 @@ const Invoice = () => {
           price: item.price
         })),
         notes: formData.notes,
-        redirectUrl: window.location.origin,
+        redirectUrl: window.location.origin + window.location.pathname,
       };
       console.log('Setting invoice data:', paymentData);
       setInvoiceData(paymentData);
