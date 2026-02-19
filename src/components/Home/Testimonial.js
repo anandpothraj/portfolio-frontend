@@ -48,7 +48,7 @@ const Testimonial = () => {
                 setIsLoading(false);
             }
         };
-        // fetchTestimonials();
+        fetchTestimonials();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
