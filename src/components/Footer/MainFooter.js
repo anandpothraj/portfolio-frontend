@@ -56,9 +56,9 @@ const MainFooter = () => {
     }
 
     useEffect(() => {
-        // getsiteVisits();
-        // eslint-disable-next-line
-    },[])
+        getsiteVisits();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <div className='text-light bg-black p-3 p-md-5'>
