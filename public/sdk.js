@@ -1,8 +1,8 @@
 (function () {
   const Kollect = {
-    async init({ apiKey, endpoint }) {
+    async init({ apiKey }) {
       this.apiKey = apiKey;
-      this.endpoint = endpoint;
+      this.endpoint = "http://localhost:5001";
 
       try {
         // Create DPoP key pair first for session authentication
