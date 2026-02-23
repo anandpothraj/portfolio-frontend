@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button, Row, Col, Card, Alert } from 'react-bootstrap';
 import clientsData from '../SourceData/clients.json';
+import { getServerUrl } from '../config/env';
 import './Invoice.css';
 
 const Invoice = () => {
@@ -36,16 +37,21 @@ const Invoice = () => {
     if (typeof window.Kollect === 'undefined') return;
     const initKollect = async () => {
       try {
-        const r = await fetch('/api/kollect/config');
+        // Use backend base URL from env when set (e.g. production); otherwise relative for dev proxy
+        const apiBase = (getServerUrl() || '').replace(/\/$/, '');
+        const configUrl = apiBase ? `${apiBase}/api/kollect/config` : '/api/kollect/config';
+        const paymentEndpoint = apiBase ? `${apiBase}/api/kollect/create-payment` : '/api/kollect/create-payment';
+
+        const r = await fetch(configUrl);
         if (!r.ok) throw new Error('Kollect config unavailable');
         const { kollectSdkUrl } = await r.json();
         if (!kollectSdkUrl) throw new Error('kollectSdkUrl missing');
         window.Kollect.init({
           endpoint: kollectSdkUrl,
-          paymentEndpoint: '/api/kollect/create-payment',
+          paymentEndpoint,
         });
       } catch (e) {
-        console.warn('[Kollect] Init failed (ensure backend has KOLLECT_BACKEND_URL and /api is proxied):', e);
+        console.warn('[Kollect] Init failed (backend needs KOLLECT_BACKEND_URL; for production set REACT_APP_ENVIRONMENT and backend URL):', e);
       }
     };
     initKollect();
