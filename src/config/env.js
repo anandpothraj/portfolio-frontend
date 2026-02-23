@@ -5,7 +5,7 @@ export const getServerUrl = () => {
   const environment = process.env.REACT_APP_ENVIRONMENT;
   if (environment === 'local') return process.env.REACT_APP_LOCAL;
   if (environment === 'development') return process.env.REACT_APP_DEVELOPMENT;
-  if (environment === 'production') return process.env.REACT_APP_BACKEND_URL;
+  if (environment === 'production') return process.env.REACT_APP_BACKEND_URL || process.env.REACT_APP_PRODUCTION;
   return '';
 };
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button, Row, Col, Card, Alert } from 'react-bootstrap';
 import clientsData from '../SourceData/clients.json';
+import { getServerUrl } from '../config/env';
 import './Invoice.css';
 
 const Invoice = () => {
@@ -36,16 +37,22 @@ const Invoice = () => {
     if (typeof window.Kollect === 'undefined') return;
     const initKollect = async () => {
       try {
-        const r = await fetch('/api/kollect/config');
+        // Development: use relative URLs so CRA proxy forwards to backend. Production: use backend URL from env.
+        const isDev = process.env.NODE_ENV === 'development';
+        const apiBase = isDev ? '' : (getServerUrl() || '').replace(/\/$/, '');
+        const configUrl = apiBase ? `${apiBase}/api/kollect/config` : '/api/kollect/config';
+        const paymentEndpoint = apiBase ? `${apiBase}/api/kollect/create-payment` : '/api/kollect/create-payment';
+
+        const r = await fetch(configUrl);
         if (!r.ok) throw new Error('Kollect config unavailable');
         const { kollectSdkUrl } = await r.json();
         if (!kollectSdkUrl) throw new Error('kollectSdkUrl missing');
         window.Kollect.init({
           endpoint: kollectSdkUrl,
-          paymentEndpoint: '/api/kollect/create-payment',
+          paymentEndpoint,
         });
       } catch (e) {
-        console.warn('[Kollect] Init failed (ensure backend has KOLLECT_BACKEND_URL and /api is proxied):', e);
+        console.warn('[Kollect] Init failed (backend needs KOLLECT_BACKEND_URL; in production set REACT_APP_ENVIRONMENT=production and REACT_APP_BACKEND_URL):', e);
       }
     };
     initKollect();
