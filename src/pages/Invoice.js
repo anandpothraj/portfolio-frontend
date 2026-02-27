@@ -37,9 +37,7 @@ const Invoice = () => {
     if (typeof window.Kollect === 'undefined') return;
     const initKollect = async () => {
       try {
-        // Development: use relative URLs so CRA proxy forwards to backend. Production: use backend URL from env.
-        const isDev = process.env.NODE_ENV === 'development';
-        const apiBase = isDev ? '' : (getServerUrl() || '').replace(/\/$/, '');
+        const apiBase = getServerUrl();
         const configUrl = apiBase ? `${apiBase}/api/kollect/config` : '/api/kollect/config';
         const paymentEndpoint = apiBase ? `${apiBase}/api/kollect/create-payment` : '/api/kollect/create-payment';
 
@@ -52,7 +50,7 @@ const Invoice = () => {
           paymentEndpoint,
         });
       } catch (e) {
-        console.warn('[Kollect] Init failed (backend needs KOLLECT_BACKEND_URL; in production set REACT_APP_ENVIRONMENT=production and REACT_APP_BACKEND_URL):', e);
+        console.warn('[Kollect] Init failed (backend needs KOLLECT_BACKEND_URL; set REACT_APP_API_URL when not using dev proxy):', e);
       }
     };
     initKollect();

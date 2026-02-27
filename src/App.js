@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
 import Home from './pages/Home';
-// import Chat from './pages/Chat';
 // import Blogs from './pages/Blogs';
 import About from './pages/About';
 import Report from './pages/Report';
@@ -37,7 +36,6 @@ const App = () => {
           <Route path='/privacy-policy' element={<Privacy/>} exact/>
           <Route path='/feedback' element={<Feedback/>} exact/>
           <Route path='/invoice' element={<Invoice/>} exact/>
-          {/* <Route path='/chat' element={<Chat/>} exact/> */}
         </Routes>
         </div>
         <Footer/>

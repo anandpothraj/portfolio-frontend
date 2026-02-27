@@ -19,9 +19,6 @@
         "visits": {
             "FETCH_SITE_VISITS": "api/visits/fetchSiteVisits",
             "UPDATE_SITE_VISITS": "api/visits/updateSiteVisits"
-        },
-        "chat": {
-            "CHATKIT_TOKEN": "api/chat/chatkitToken"
         }
     }
 }
