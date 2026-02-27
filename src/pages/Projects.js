@@ -55,7 +55,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchAll = async () => {
       try {
-        const url = `${serverUrl}${apiConfig.api.projects.FETCH_ALL_PROJECTS}`;
+        const url = `${serverUrl}/${apiConfig.api.projects.FETCH_ALL_PROJECTS}`;
         const response = await axios.get(url);
         if (response.status === 200 && Array.isArray(response.data)) {
           setAllProjects(response.data);

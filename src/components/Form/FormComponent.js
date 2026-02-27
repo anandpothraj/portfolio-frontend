@@ -34,7 +34,7 @@ const FormComponent = (props) => {
         "Content-type": "application/json"
       };
       const response = await axios.post(
-        `${serverUrl}${requestType}`,
+        `${serverUrl}/${requestType}`,
         sendMessageDetails,
         { headers: config }
       );

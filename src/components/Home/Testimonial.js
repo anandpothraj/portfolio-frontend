@@ -19,7 +19,7 @@ const Testimonial = () => {
     useEffect(() => {
         const fetchTestimonials = async () => {
             try {
-                const url = `${serverUrl}${apiConfig.api.testimonials.FETCH_ALL_TESTIMONIALS}`;
+                const url = `${serverUrl}/${apiConfig.api.testimonials.FETCH_ALL_TESTIMONIALS}`;
                 const response = await axios.get(url);
                 if (response.status === 200) {
                     const payload = response.data;

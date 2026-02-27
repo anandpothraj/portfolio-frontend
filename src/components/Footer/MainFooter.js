@@ -23,7 +23,7 @@ const MainFooter = () => {
     const updateSiteVisits = async (pastVisits) => {
         try {
             const config = {"Content-type": "application/json"};
-            const response = await axios.post(`${serverUrl}${apiConfig.api.visits.UPDATE_SITE_VISITS}`,{"visitsCount": pastVisits+1},{ headers: config });
+            const response = await axios.post(`${serverUrl}/${apiConfig.api.visits.UPDATE_SITE_VISITS}`,{"visitsCount": pastVisits+1},{ headers: config });
             if (response.status === 201) {
                 setSiteVisits(pastVisits+1);
             } else {
@@ -40,7 +40,7 @@ const MainFooter = () => {
 
     const getsiteVisits = async () => {
         try {
-            const response = await axios.get(`${serverUrl}${apiConfig.api.visits.FETCH_SITE_VISITS}`);
+            const response = await axios.get(`${serverUrl}/${apiConfig.api.visits.FETCH_SITE_VISITS}`);
             if (response.status === 200) {
                 updateSiteVisits(response.data.visitsCount);
             } else {

@@ -49,7 +49,7 @@ const RecentProjects = () => {
   useEffect(() => {
     const fetchRecent = async () => {
       try {
-        const url = `${serverUrl}${apiConfig.api.projects.FETCH_RECENTS_PROJECTS}`;
+        const url = `${serverUrl}/${apiConfig.api.projects.FETCH_RECENTS_PROJECTS}`;
         const response = await axios.get(url);
         if (response.status === 200) {
           const payload = response.data;
