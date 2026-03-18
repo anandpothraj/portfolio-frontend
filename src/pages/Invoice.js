@@ -18,6 +18,13 @@ const Invoice = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
   const [invoiceData, setInvoiceData] = useState(null);
+  const [creatingInvoice, setCreatingInvoice] = useState(false);
+  const [successAlert, setSuccessAlert] = useState({
+    show: false,
+    message: '',
+    copyText: '',
+    copied: false,
+  });
 
   // Generate invoice number on component mount
   useEffect(() => {
@@ -137,6 +144,121 @@ const Invoice = () => {
     return formData.items.reduce((total, item) => total + (item.quantity * item.price), 0);
   };
 
+  const copyToClipboard = async (text) => {
+    if (!text) return false;
+    try {
+      if (navigator?.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    } catch (e) {
+      // fall back below
+    }
+    try {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'absolute';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      const ok = document.execCommand('copy');
+      document.body.removeChild(textarea);
+      return ok;
+    } catch (e) {
+      return false;
+    }
+  };
+
+  const createInvoiceS2S = async () => {
+    try {
+      if (!selectedClient) {
+        setAlertMessage('Please select a client.');
+        setShowAlert(true);
+        return;
+      }
+      if (!formData.invoiceNumber || !formData.dueDate) {
+        setAlertMessage('Invoice number and due date are required.');
+        setShowAlert(true);
+        return;
+      }
+      if (!formData.items?.length) {
+        setAlertMessage('At least one item is required.');
+        setShowAlert(true);
+        return;
+      }
+
+      setCreatingInvoice(true);
+      setShowAlert(false);
+      setAlertMessage('');
+      setSuccessAlert({ show: false, message: '', copyText: '', copied: false });
+
+      const apiBase = getServerUrl();
+      const endpoint = apiBase
+        ? `${apiBase}/api/kollect/s2s/create-payment`
+        : '/api/kollect/s2s/create-payment';
+
+      const payload = {
+        clientEmail: selectedClient.clientEmail,
+        clientName: selectedClient.clientName,
+        clientWalletAddress: selectedClient.clientWalletAddress[0],
+        countryCode: selectedClient.countryCode,
+        countryName: selectedClient.countryName,
+        items: formData.items.map((item) => ({
+          description: item.description,
+          quantity: Number(item.quantity),
+          price: Number(item.price),
+        })),
+        paymentCurrency: formData.currency,
+        invoiceCurrency: formData.currency,
+        notes: formData.notes || '',
+        source: 'merchant-backend',
+        interface: 'kollect-server',
+        dueDate: formData.dueDate,
+        invoiceNumber: formData.invoiceNumber,
+        isSelfIncurredFee: true,
+      };
+
+      const r = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok || data?.ok === false) {
+        const msg =
+          data?.data?.error?.message ||
+          data?.data?.error?.code ||
+          data?.message ||
+          'Failed to create invoice';
+        throw new Error(msg);
+      }
+
+      const paymentUrl =
+        data?.response?.data?.paymentUrl ||
+        data?.response?.data?.data?.paymentUrl ||
+        data?.response?.data?.paymentUrl ||
+        data?.data?.paymentUrl ||
+        '';
+
+      const copied = await copyToClipboard(paymentUrl);
+      setSuccessAlert({
+        show: true,
+        message: copied
+          ? 'Invoice created successfully. Payment URL copied to clipboard.'
+          : 'Invoice created successfully.',
+        copyText: paymentUrl,
+        copied,
+      });
+      resetForm();
+    } catch (e) {
+      setAlertMessage(e.message || 'Failed to create invoice');
+      setShowAlert(true);
+    } finally {
+      setCreatingInvoice(false);
+    }
+  };
 
   // Reset form to initial state
   const resetForm = () => {
@@ -165,6 +287,40 @@ const Invoice = () => {
                 <h2 className="mb-0">Create Invoice</h2>
               </Card.Header>
               <Card.Body>
+                {successAlert.show && (
+                  <Alert variant="success" onClose={() => setSuccessAlert((s) => ({ ...s, show: false }))} dismissible>
+                    <div className="d-flex justify-content-between align-items-start gap-3">
+                      <div>
+                        <div>{successAlert.message}</div>
+                        {successAlert.copyText ? (
+                          <div className="mt-2">
+                            <div className="small text-muted">Payment URL</div>
+                            <div style={{ wordBreak: 'break-all' }}>{successAlert.copyText}</div>
+                          </div>
+                        ) : null}
+                      </div>
+                      {successAlert.copyText ? (
+                        <Button
+                          variant="outline-success"
+                          size="sm"
+                          type="button"
+                          onClick={async () => {
+                            const ok = await copyToClipboard(successAlert.copyText);
+                            setSuccessAlert((s) => ({
+                              ...s,
+                              copied: ok,
+                              message: ok
+                                ? 'Invoice created successfully. Payment URL copied to clipboard.'
+                                : 'Invoice created successfully. Copy failed — please copy manually.',
+                            }));
+                          }}
+                        >
+                          Copy to clipboard
+                        </Button>
+                      ) : null}
+                    </div>
+                  </Alert>
+                )}
                 {showAlert && (
                   <Alert variant="danger" onClose={() => setShowAlert(false)} dismissible>
                     {alertMessage}
@@ -359,13 +515,23 @@ const Invoice = () => {
                     <Button variant="outline-secondary" onClick={() => window.history.back()}>
                       Cancel
                     </Button>
-                    <button
-                      type="button"
-                      data-kollect-button
-                      data-type="pay-kollect"
-                      data-variant="basic"
-                      data-payment-data={invoiceData ? JSON.stringify(invoiceData) : ''}
-                    />
+                    <div className="d-flex gap-2">
+                      <Button
+                        type="button"
+                        variant="primary"
+                        onClick={createInvoiceS2S}
+                        disabled={creatingInvoice}
+                      >
+                        {creatingInvoice ? 'Creating…' : 'Create invoice'}
+                      </Button>
+                      <button
+                        type="button"
+                        data-kollect-button
+                        data-type="pay-kollect"
+                        data-variant="basic"
+                        data-payment-data={invoiceData ? JSON.stringify(invoiceData) : ''}
+                      />
+                    </div>
                   </div>
                 </Form>
               </Card.Body>
