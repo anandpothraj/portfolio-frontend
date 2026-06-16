@@ -47,6 +47,7 @@ const Invoice = () => {
         const apiBase = getServerUrl();
         const configUrl = apiBase ? `${apiBase}/api/kollect/config` : '/api/kollect/config';
         const paymentEndpoint = apiBase ? `${apiBase}/api/kollect/create-payment` : '/api/kollect/create-payment';
+        const statusEndpoint = apiBase ? `${apiBase}/api/kollect/status` : '/api/kollect/status';
 
         const r = await fetch(configUrl);
         if (!r.ok) throw new Error('Kollect config unavailable');
@@ -55,6 +56,7 @@ const Invoice = () => {
         window.Kollect.init({
           endpoint: kollectSdkUrl,
           paymentEndpoint,
+          statusEndpoint,
         });
       } catch (e) {
         console.warn('[Kollect] Init failed (backend needs KOLLECT_BACKEND_URL; set REACT_APP_API_URL when not using dev proxy):', e);
