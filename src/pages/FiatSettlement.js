@@ -28,7 +28,6 @@ const FiatSettlement = () => {
     show: false,
     message: '',
     paymentUrl: '',
-    qrCode: '',
     copied: false,
   });
 
@@ -94,7 +93,7 @@ const FiatSettlement = () => {
       setCreating(true);
       setShowAlert(false);
       setAlertMessage('');
-      setSuccessAlert({ show: false, message: '', paymentUrl: '', qrCode: '', copied: false });
+      setSuccessAlert({ show: false, message: '', paymentUrl: '', copied: false });
 
       const apiBase = getServerUrl();
       const endpoint = apiBase
@@ -131,11 +130,6 @@ const FiatSettlement = () => {
         data?.response?.data?.data?.paymentUrl ||
         data?.data?.paymentUrl ||
         '';
-      const qrCode =
-        data?.response?.data?.qrCode ||
-        data?.response?.data?.data?.qrCode ||
-        data?.data?.qrCode ||
-        '';
 
       const copied = await copyToClipboard(paymentUrl);
       setSuccessAlert({
@@ -144,7 +138,6 @@ const FiatSettlement = () => {
           ? 'Fiat settlement created. Payment URL copied to clipboard.'
           : 'Fiat settlement created.',
         paymentUrl,
-        qrCode,
         copied,
       });
       resetForm();
@@ -180,19 +173,6 @@ const FiatSettlement = () => {
                       <div className="mt-2">
                         <div className="small text-muted">Payment URL</div>
                         <div style={{ wordBreak: 'break-all' }}>{successAlert.paymentUrl}</div>
-                      </div>
-                    ) : null}
-                    {successAlert.qrCode ? (
-                      <div className="mt-3">
-                        <img
-                          alt="Settlement deposit QR code"
-                          style={{ maxWidth: 200 }}
-                          src={
-                            successAlert.qrCode.startsWith('data:')
-                              ? successAlert.qrCode
-                              : `data:image/png;base64,${successAlert.qrCode}`
-                          }
-                        />
                       </div>
                     ) : null}
                     {successAlert.paymentUrl ? (
